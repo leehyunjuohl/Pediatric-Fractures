@@ -1,203 +1,311 @@
+```javascript
 /* =========================================================
-   SURVEY QUESTIONS
+   WRIST FRACTURE MORPHOLOGY STUDY
+   CL-IOH SCORE 2026
+
+   script.js
+
+   This file controls the behavior of the survey.
+
+   HTML  = structure
+   CSS   = appearance
+   JS    = behavior/functionality
+   ========================================================= */
+
+
+/* =========================================================
+   1. SURVEY QUESTIONS
    =========================================================
 
-   This is where you will eventually put your
-   actual 10 questions.
+   Replace the placeholder questions and answers below
+   with your actual survey questions.
 
    Each question contains:
 
-   - question
-   - image
-   - choices
+   id
+   prompt
+   image
+   alt
+   choices
 
+   You can have 3, 4, or 5 choices per question.
    ========================================================= */
+
 
 const questions = [
 
     {
-        question:
-            "Which option best describes the finding shown in the image?",
+        id: 1,
+
+        prompt:
+            "How would you classify the fracture shown in this radiograph?",
 
         image:
             "images/question-1.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 1",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ]
     },
 
 
     {
-        question:
-            "Which of the following would you select based on this image?",
+        id: 2,
+
+        prompt:
+            "What fracture morphology best describes this image?",
 
         image:
             "images/question-2.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 2",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D",
+            "Choice E"
         ]
     },
 
 
     {
-        question:
-            "What is the most appropriate interpretation of this image?",
+        id: 3,
+
+        prompt:
+            "Which classification would you assign to this fracture?",
 
         image:
             "images/question-3.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 3",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D",
-            "Answer choice E"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ]
     },
 
 
     {
-        question:
-            "Which response best matches what you see?",
+        id: 4,
+
+        prompt:
+            "Which treatment approach would you recommend for this fracture?",
 
         image:
             "images/question-4.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 4",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ]
     },
 
 
     {
-        question:
-            "Which option would you choose for this scenario?",
+        id: 5,
+
+        prompt:
+            "How would you describe the fracture morphology shown?",
 
         image:
             "images/question-5.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 5",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D",
+            "Choice E"
         ]
     },
 
 
     {
-        question:
-            "What is your interpretation of the following image?",
+        id: 6,
+
+        prompt:
+            "Which classification best represents this fracture?",
 
         image:
             "images/question-6.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 6",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ]
     },
 
 
     {
-        question:
-            "Which answer best describes this finding?",
+        id: 7,
+
+        prompt:
+            "What treatment method would you select for this fracture?",
 
         image:
             "images/question-7.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 7",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D",
-            "Answer choice E"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D",
+            "Choice E"
         ]
     },
 
 
     {
-        question:
-            "Which option would you select?",
+        id: 8,
+
+        prompt:
+            "Which description most accurately characterizes this fracture?",
 
         image:
             "images/question-8.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 8",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ]
     },
 
 
     {
-        question:
-            "What is the most appropriate response?",
+        id: 9,
+
+        prompt:
+            "How would you classify this wrist fracture?",
 
         image:
             "images/question-9.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 9",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D",
+            "Choice E"
         ]
     },
 
 
     {
-        question:
-            "Which of the following best represents your answer?",
+        id: 10,
+
+        prompt:
+            "Which treatment approach would you recommend for this fracture?",
 
         image:
             "images/question-10.jpg",
 
+        alt:
+            "Radiographic image of wrist fracture for Question 10",
+
         choices: [
-            "Answer choice A",
-            "Answer choice B",
-            "Answer choice C",
-            "Answer choice D"
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ]
     }
 
 ];
 
 
+
 /* =========================================================
-   SURVEY STATE
+   2. SURVEY STATE
+   =========================================================
+
+   These variables keep track of where the participant is
+   and what they have selected.
    ========================================================= */
+
 
 let currentQuestion = 0;
 
-let responses = [];
 
-let personalInformation = {
+/*
+   Stores the participant's answers.
+
+   Example:
+
+   responses[0] = "Choice A";
+   responses[1] = "Choice C";
+   responses[2] = "Choice B";
+*/
+
+
+let responses = new Array(
+    questions.length
+).fill(null);
+
+
+/*
+   Stores participant information.
+*/
+
+
+let participantInfo = {
 
     name: "",
 
     institution: "",
 
-    contact: ""
+    contact: "",
+
+    anonymous: false
 
 };
 
 
+
 /* =========================================================
-   PAGE MANAGEMENT
+   3. PAGE NAVIGATION
+   =========================================================
+
+   This function hides every survey page and then
+   displays the page we request.
    ========================================================= */
+
 
 function showPage(pageId) {
 
@@ -212,10 +320,20 @@ function showPage(pageId) {
     });
 
 
-    document
-        .getElementById(pageId)
-        .classList.add("active");
+    const selectedPage =
+        document.getElementById(pageId);
 
+
+    if (selectedPage) {
+
+        selectedPage.classList.add("active");
+
+    }
+
+
+    /*
+       Move the participant back to the top of the page.
+    */
 
     window.scrollTo({
 
@@ -228,20 +346,28 @@ function showPage(pageId) {
 }
 
 
+
 /* =========================================================
-   INTRO
+   4. WELCOME → CONSENT
    ========================================================= */
 
-function goToPersonalInfo() {
 
-    showPage("personal-page");
+function goToConsent() {
+
+    showPage("consent-page");
 
     updateProgress(1);
 
 }
 
 
-function goToIntro() {
+
+/* =========================================================
+   5. CONSENT → WELCOME
+   ========================================================= */
+
+
+function goToWelcome() {
 
     showPage("intro-page");
 
@@ -250,42 +376,146 @@ function goToIntro() {
 }
 
 
+
 /* =========================================================
-   PERSONAL INFORMATION
+   6. CONSENT → PERSONAL INFORMATION
    ========================================================= */
 
-document
-    .getElementById("personal-form")
-    .addEventListener("submit", function(event) {
 
-        event.preventDefault();
+function goToPersonalInfo() {
 
+    showPage("personal-page");
 
-        personalInformation.name =
-            document.getElementById("name").value.trim();
+    updateProgress(2);
 
+}
 
-        personalInformation.institution =
-            document.getElementById("institution").value.trim();
-
-
-        personalInformation.contact =
-            document.getElementById("contact").value.trim();
-
-
-        currentQuestion = 0;
-
-
-        showQuestion();
-
-        updateProgress(2);
-
-    });
 
 
 /* =========================================================
-   DISPLAY QUESTION
+   7. PERSONAL INFORMATION → FIRST QUESTION
    ========================================================= */
+
+
+function startSurvey() {
+
+    /*
+       Get participant information from the form.
+    */
+
+
+    const name =
+        document.getElementById(
+            "participant-name"
+        ).value.trim();
+
+
+    const institution =
+        document.getElementById(
+            "participant-institution"
+        ).value.trim();
+
+
+    const contact =
+        document.getElementById(
+            "participant-contact"
+        ).value.trim();
+
+
+    const anonymous =
+        document.getElementById(
+            "anonymous-participant"
+        ).checked;
+
+
+
+    /*
+       Store participant information.
+    */
+
+
+    participantInfo = {
+
+        name: name,
+
+        institution: institution,
+
+        contact: contact,
+
+        anonymous: anonymous
+
+    };
+
+
+
+    /*
+       If the participant selected anonymous,
+       we don't require name or contact information.
+    */
+
+
+    if (!anonymous) {
+
+        if (name === "") {
+
+            alert(
+                "Please enter your name or select anonymous participation."
+            );
+
+            return;
+
+        }
+
+
+        if (institution === "") {
+
+            alert(
+                "Please enter your institution."
+            );
+
+            return;
+
+        }
+
+
+        if (contact === "") {
+
+            alert(
+                "Please enter your contact information."
+            );
+
+            return;
+
+        }
+
+    }
+
+
+
+    /*
+       Begin with Question 1.
+    */
+
+
+    currentQuestion = 0;
+
+
+    showQuestion();
+
+
+    showPage("question-page");
+
+
+    updateProgress(3);
+
+}
+
+
+
+/* =========================================================
+   8. DISPLAY QUESTION
+   ========================================================= */
+
 
 function showQuestion() {
 
@@ -293,142 +523,291 @@ function showQuestion() {
         questions[currentQuestion];
 
 
-    document
-        .getElementById("current-question-number")
-        .textContent =
-        currentQuestion + 1;
+
+    /*
+       Question number
+    */
 
 
-    document
-        .getElementById("total-question-number")
-        .textContent =
-        questions.length;
+    document.getElementById(
+        "question-number"
+    ).textContent =
+        `Question ${currentQuestion + 1} of ${questions.length}`;
 
 
-    document
-        .getElementById("question-text")
-        .textContent =
-        question.question;
+
+    /*
+       Question prompt
+    */
 
 
-    document
-        .getElementById("question-image")
-        .src =
+    document.getElementById(
+        "question-prompt"
+    ).textContent =
+        question.prompt;
+
+
+
+    /*
+       Question image
+    */
+
+
+    const image =
+        document.getElementById(
+            "question-image"
+        );
+
+
+    image.src =
         question.image;
 
 
+    image.alt =
+        question.alt;
+
+
+
+    /*
+       Answer choices
+    */
+
+
     const answerContainer =
-        document.getElementById("answer-options");
+        document.getElementById(
+            "answer-choices"
+        );
+
+
+    /*
+       Remove previous choices.
+    */
 
 
     answerContainer.innerHTML = "";
 
 
+
+    /*
+       Create a button for each answer.
+    */
+
+
     question.choices.forEach(
         function(choice, index) {
 
-            const label =
-                document.createElement("label");
+
+            const choiceButton =
+                document.createElement("button");
 
 
-            label.className =
-                "answer-option";
+            choiceButton.type =
+                "button";
 
 
-            if (
-                responses[currentQuestion] === choice
-            ) {
-
-                label.classList.add("selected");
-
-            }
+            choiceButton.className =
+                "answer-choice";
 
 
-            const radio =
-                document.createElement("input");
+            choiceButton.textContent =
+                choice;
 
 
-            radio.type = "radio";
 
-            radio.name = "survey-answer";
-
-            radio.value = choice;
-
-
-            if (
-                responses[currentQuestion] === choice
-            ) {
-
-                radio.checked = true;
-
-            }
+            /*
+               Store which answer this button represents.
+            */
 
 
-            radio.addEventListener(
-                "change",
+            choiceButton.dataset.answer =
+                choice;
+
+
+
+            /*
+               When clicked, save the answer.
+            */
+
+
+            choiceButton.addEventListener(
+                "click",
                 function() {
 
-                    selectAnswer(choice);
+                    selectAnswer(
+                        choice,
+                        choiceButton
+                    );
 
                 }
             );
 
 
-            label.appendChild(radio);
 
-            label.appendChild(
-                document.createTextNode(choice)
+            /*
+               If the participant previously selected
+               this answer, show it as selected.
+            */
+
+
+            if (
+                responses[currentQuestion] ===
+                choice
+            ) {
+
+                choiceButton.classList.add(
+                    "selected"
+                );
+
+            }
+
+
+
+            answerContainer.appendChild(
+                choiceButton
             );
-
-
-            answerContainer.appendChild(label);
 
         }
     );
 
 
-    updateQuestionButtons();
 
-}
-
-
-/* =========================================================
-   SELECT ANSWER
-   ========================================================= */
-
-function selectAnswer(answer) {
-
-    responses[currentQuestion] = answer;
+    /*
+       Change the Back button depending on
+       which question we're on.
+    */
 
 
-    const options =
+    const questionButtons =
         document.querySelectorAll(
-            ".answer-option"
+            ".question-actions .button"
         );
 
 
-    options.forEach(function(option) {
+    if (questionButtons.length >= 2) {
 
-        option.classList.remove("selected");
+        const backButton =
+            questionButtons[0];
 
-    });
+
+        const nextButton =
+            questionButtons[1];
 
 
-    event.target
-        .closest(".answer-option")
-        .classList.add("selected");
+
+        if (currentQuestion === 0) {
+
+            backButton.textContent =
+                "Back to Participant Info";
+
+        }
+
+        else {
+
+            backButton.textContent =
+                "Back";
+
+        }
+
+
+
+        if (
+            currentQuestion ===
+            questions.length - 1
+        ) {
+
+            nextButton.textContent =
+                "Review Responses";
+
+        }
+
+        else {
+
+            nextButton.textContent =
+                "Next";
+
+        }
+
+    }
 
 }
 
 
+
 /* =========================================================
-   NEXT QUESTION
+   9. SELECT ANSWER
    ========================================================= */
+
+
+function selectAnswer(
+    answer,
+    selectedButton
+) {
+
+
+    /*
+       Save the answer.
+    */
+
+
+    responses[currentQuestion] =
+        answer;
+
+
+
+    /*
+       Remove the selected state from
+       all answer buttons.
+    */
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".answer-choice"
+        );
+
+
+    buttons.forEach(
+        function(button) {
+
+            button.classList.remove(
+                "selected"
+            );
+
+        }
+    );
+
+
+
+    /*
+       Highlight the selected answer.
+    */
+
+
+    selectedButton.classList.add(
+        "selected"
+    );
+
+}
+
+
+
+/* =========================================================
+   10. NEXT QUESTION
+   ========================================================= */
+
 
 function nextQuestion() {
 
+
+    /*
+       Make sure the participant selected
+       an answer.
+    */
+
+
     if (
-        !responses[currentQuestion]
+        responses[currentQuestion] ===
+        null
     ) {
 
         alert(
@@ -438,6 +817,13 @@ function nextQuestion() {
         return;
 
     }
+
+
+
+    /*
+       If this is not the last question,
+       move to the next question.
+    */
 
 
     if (
@@ -450,182 +836,242 @@ function nextQuestion() {
         showQuestion();
 
         updateProgress(
-            2 + currentQuestion
+            3 + currentQuestion
         );
 
-    } else {
-
-        showSummary();
+        return;
 
     }
+
+
+
+    /*
+       If this IS the last question,
+       show the summary page.
+    */
+
+
+    showSummary();
+
+    showPage("summary-page");
+
+    updateProgress(
+        questions.length + 3
+    );
 
 }
 
 
+
 /* =========================================================
-   PREVIOUS QUESTION
+   11. PREVIOUS QUESTION
    ========================================================= */
+
 
 function previousQuestion() {
 
-    if (currentQuestion > 0) {
 
-        currentQuestion--;
-
-        showQuestion();
-
-        updateProgress(
-            2 + currentQuestion
-        );
-
-    } else {
-
-        showPage("personal-page");
-
-        updateProgress(1);
-
-    }
-
-}
-
-
-/* =========================================================
-   QUESTION BUTTON
-   ========================================================= */
-
-function updateQuestionButtons() {
-
-    const backButton =
-        document.getElementById(
-            "question-back-button"
-        );
+    /*
+       If we're on Question 1,
+       go back to participant information.
+    */
 
 
     if (currentQuestion === 0) {
 
-        backButton.textContent =
-            "Back to Personal Information";
+        showPage("personal-page");
 
-    } else {
+        updateProgress(2);
 
-        backButton.textContent =
-            "Back";
+        return;
 
     }
 
 
-    const nextButton =
-        document.getElementById(
-            "question-next-button"
-        );
+
+    /*
+       Otherwise move to the previous question.
+    */
 
 
-    if (
-        currentQuestion ===
-        questions.length - 1
-    ) {
+    currentQuestion--;
 
-        nextButton.textContent =
-            "Review Responses";
+    showQuestion();
 
-    } else {
 
-        nextButton.textContent =
-            "Next";
-
-    }
+    updateProgress(
+        3 + currentQuestion
+    );
 
 }
 
 
+
 /* =========================================================
-   SUMMARY
+   12. CREATE SUMMARY
    ========================================================= */
+
 
 function showSummary() {
 
-    document
-        .getElementById("summary-name")
-        .textContent =
-        personalInformation.name;
-
-
-    document
-        .getElementById("summary-institution")
-        .textContent =
-        personalInformation.institution;
-
-
-    document
-        .getElementById("summary-contact")
-        .textContent =
-        personalInformation.contact;
-
-
-    const summary =
+    const container =
         document.getElementById(
-            "response-summary"
+            "summary-container"
         );
 
 
-    summary.innerHTML = "";
+    /*
+       Clear existing summary.
+    */
+
+
+    container.innerHTML = "";
+
+
+
+    /*
+       Participant information section.
+    */
+
+
+    const participantHeading =
+        document.createElement("h3");
+
+
+    participantHeading.textContent =
+        "Participant Information";
+
+
+    container.appendChild(
+        participantHeading
+    );
+
+
+
+    /*
+       Participant information.
+    */
+
+
+    const participantList =
+        document.createElement("div");
+
+
+    participantList.className =
+        "summary-participant";
+
+
+
+    if (participantInfo.anonymous) {
+
+        participantList.innerHTML = `
+            <p>
+                <strong>Participation:</strong>
+                Anonymous
+            </p>
+        `;
+
+    }
+
+    else {
+
+        participantList.innerHTML = `
+
+            <p>
+                <strong>Name:</strong>
+                ${escapeHTML(participantInfo.name)}
+            </p>
+
+            <p>
+                <strong>Institution:</strong>
+                ${escapeHTML(participantInfo.institution)}
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                ${escapeHTML(participantInfo.contact)}
+            </p>
+
+        `;
+
+    }
+
+
+    container.appendChild(
+        participantList
+    );
+
+
+
+    /*
+       Survey responses heading.
+    */
+
+
+    const responseHeading =
+        document.createElement("h3");
+
+
+    responseHeading.textContent =
+        "Survey Responses";
+
+
+    container.appendChild(
+        responseHeading
+    );
+
+
+
+    /*
+       Display every question and answer.
+    */
 
 
     questions.forEach(
         function(question, index) {
 
-            const item =
+
+            const responseCard =
                 document.createElement("div");
 
 
-            item.className =
-                "response-summary-item";
+            responseCard.className =
+                "summary-question";
 
 
-            const questionText =
-                document.createElement("strong");
+            responseCard.innerHTML = `
+
+                <div class="summary-question-number">
+                    Question ${index + 1}
+                </div>
+
+                <div class="summary-question-prompt">
+                    ${escapeHTML(question.prompt)}
+                </div>
+
+                <div class="summary-answer">
+                    <strong>Your answer:</strong>
+                    ${escapeHTML(responses[index])}
+                </div>
+
+            `;
 
 
-            questionText.textContent =
-                `${index + 1}. ${question.question}`;
-
-
-            const answer =
-                document.createElement("div");
-
-
-            answer.className =
-                "response-answer";
-
-
-            answer.textContent =
-                responses[index] ||
-                "No response";
-
-
-            item.appendChild(questionText);
-
-            item.appendChild(answer);
-
-
-            summary.appendChild(item);
+            container.appendChild(
+                responseCard
+            );
 
         }
-    );
-
-
-    showPage("summary-page");
-
-    updateProgress(
-        questions.length + 2
     );
 
 }
 
 
+
 /* =========================================================
-   RETURN TO LAST QUESTION
+   13. RETURN TO LAST QUESTION
    ========================================================= */
+
 
 function returnToLastQuestion() {
 
@@ -635,47 +1081,80 @@ function returnToLastQuestion() {
 
     showQuestion();
 
+
+    showPage("question-page");
+
+
     updateProgress(
-        2 + currentQuestion
+        3 + currentQuestion
     );
 
 }
 
 
+
 /* =========================================================
-   SUBMIT SURVEY
+   14. SUBMIT SURVEY
    ========================================================= */
+
 
 function submitSurvey() {
 
+
     /*
-       IMPORTANT:
+       Make sure every question has an answer.
+    */
 
-       At this point the survey exists only in the browser.
 
-       The function below can later be connected to:
+    const unanswered =
+        responses.some(
+            function(response) {
 
-       - Google Apps Script
-       - Google Sheets
-       - Firebase
-       - Supabase
-       - Your own server/database
+                return response === null;
 
+            }
+        );
+
+
+
+    if (unanswered) {
+
+        alert(
+            "Please answer all questions before submitting."
+        );
+
+        return;
+
+    }
+
+
+
+    /*
+       Create the complete survey data object.
     */
 
 
     const surveyData = {
 
-        personalInformation:
-            personalInformation,
+        timestamp:
+            new Date().toISOString(),
+
+        participant:
+            participantInfo,
 
         responses:
-            responses,
-
-        submittedAt:
-            new Date().toISOString()
+            responses
 
     };
+
+
+
+    /*
+       For now, display the data in the browser console.
+
+       Later, this is where we will connect the survey
+       to Google Apps Script and Google Sheets.
+    */
 
 
     console.log(
@@ -684,77 +1163,95 @@ function submitSurvey() {
     );
 
 
+
     /*
-       For now, show the thank-you page.
+       Move to the Thank You page.
     */
+
 
     showPage("thank-you-page");
 
+
     updateProgress(
-        questions.length + 3
+        questions.length + 4
     );
 
 }
 
 
-/* =========================================================
-   RESTART SURVEY
-   ========================================================= */
-
-function restartSurvey() {
-
-    currentQuestion = 0;
-
-    responses = [];
-
-
-    personalInformation = {
-
-        name: "",
-
-        institution: "",
-
-        contact: ""
-
-    };
-
-
-    document
-        .getElementById("personal-form")
-        .reset();
-
-
-    showPage("intro-page");
-
-    updateProgress(0);
-
-}
-
 
 /* =========================================================
-   PROGRESS BAR
+   15. UPDATE PROGRESS BAR
    ========================================================= */
+
 
 function updateProgress(step) {
 
+
+    /*
+       Total pages/steps:
+
+       0 = Welcome
+       1 = Consent
+       2 = Personal Information
+       3 = Question 1
+       ...
+       12 = Question 10
+       13 = Summary
+       14 = Thank You
+
+       Therefore:
+       questions.length + 4 = 14
+    */
+
+
     const totalSteps =
-        questions.length + 3;
+        questions.length + 4;
+
 
 
     const percentage =
         (step / totalSteps) * 100;
 
 
-    document
-        .getElementById("progress-bar")
-        .style.width =
-        `${percentage}%`;
+
+    /*
+       Update visual progress bar.
+    */
+
+
+    const progressBar =
+        document.getElementById(
+            "progress-bar"
+        );
+
+
+    if (progressBar) {
+
+        progressBar.style.width =
+            `${percentage}%`;
+
+    }
+
+
+
+    /*
+       Update progress text.
+    */
 
 
     const progressText =
         document.getElementById(
             "progress-text"
         );
+
+
+    if (!progressText) {
+
+        return;
+
+    }
+
 
 
     if (step === 0) {
@@ -764,16 +1261,26 @@ function updateProgress(step) {
 
     }
 
+
     else if (step === 1) {
 
         progressText.textContent =
-            "Personal Information";
+            "Research Participation";
 
     }
 
+
+    else if (step === 2) {
+
+        progressText.textContent =
+            "Participant Information";
+
+    }
+
+
     else if (
-        step >= 2 &&
-        step < questions.length + 2
+        step >= 3 &&
+        step < questions.length + 3
     ) {
 
         progressText.textContent =
@@ -781,14 +1288,16 @@ function updateProgress(step) {
 
     }
 
+
     else if (
-        step === questions.length + 2
+        step === questions.length + 3
     ) {
 
         progressText.textContent =
             "Review Responses";
 
     }
+
 
     else {
 
@@ -798,3 +1307,102 @@ function updateProgress(step) {
     }
 
 }
+
+
+
+/* =========================================================
+   16. ESCAPE HTML
+   =========================================================
+
+   This prevents participant-entered information from
+   being interpreted as HTML when displayed on the
+   summary page.
+   ========================================================= */
+
+
+function escapeHTML(value) {
+
+    if (value === null || value === undefined) {
+
+        return "";
+
+    }
+
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* =========================================================
+   17. INITIALIZE SURVEY
+   =========================================================
+
+   This runs when the webpage first loads.
+   ========================================================= */
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+
+        /*
+           Make sure the welcome page is visible.
+        */
+
+
+        showPage("intro-page");
+
+
+        updateProgress(0);
+
+
+        /*
+           Make sure the progress bar starts empty.
+        */
+
+
+        const progressBar =
+            document.getElementById(
+                "progress-bar"
+            );
+
+
+        if (progressBar) {
+
+            progressBar.style.width =
+                "0%";
+
+        }
+
+    }
+);
+```
+
