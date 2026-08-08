@@ -204,6 +204,23 @@ body {
 
 
 /* =========================================================
+   SURVEY PAGE NAVIGATION
+   ========================================================= */
+
+/* Hide all survey pages by default */
+
+.survey-page {
+    display: none;
+}
+
+
+/* Show the currently active page */
+
+.survey-page.active {
+    display: block;
+}
+
+/* =========================================================
    SURVEY PAGES
    ========================================================= */
 
