@@ -1,17 +1,25 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
+    <!-- Makes the website display correctly on phones and tablets -->
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Research Survey</title>
+    <title>Wrist Fracture Morphology Study</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Connects this HTML file to your CSS file -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
 
@@ -23,15 +31,34 @@
 
     <header class="site-header">
 
-        <div class="header-container">
+        <div class="header-inner">
 
             <div class="site-logo">
-                Research Survey
+                Wrist Fracture Morphology Study
+            </div>
+
+            <div
+                id="progress-text"
+                class="progress-text"
+            >
+                Introduction
             </div>
 
         </div>
 
+        <!-- Progress bar -->
+
+        <div class="progress-container">
+
+            <div
+                id="progress-bar"
+                class="progress-bar"
+            ></div>
+
+        </div>
+
     </header>
+
 
 
     <!-- =====================================================
@@ -42,31 +69,7 @@
 
 
         <!-- =================================================
-             PROGRESS BAR
-             ================================================= -->
-
-        <div class="progress-container">
-
-            <div class="progress-label">
-                <span id="progress-text">
-                    Welcome
-                </span>
-            </div>
-
-            <div class="progress-bar-background">
-
-                <div
-                    id="progress-bar"
-                    class="progress-bar"
-                ></div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             PAGE 1: INTRODUCTION
+             PAGE 1: WELCOME
              ================================================= -->
 
         <section
@@ -74,61 +77,274 @@
             class="survey-page active"
         >
 
-            <div class="page-content">
+            <div class="welcome-content">
 
-                <h1>
-                    Welcome to Our Survey
+
+                <div class="welcome-eyebrow">
+                    CL-IOH SCORE 2026
+                </div>
+
+
+                <h1 class="welcome-title">
+                    Wrist Fracture Morphology
                 </h1>
 
-                <p class="intro-text">
-                    Thank you for taking the time to participate
-                    in this survey.
+
+                <p class="welcome-subtitle">
+                    Let's see how you classify and treat
+                    certain fractures.
                 </p>
 
-                <p>
-                    The purpose of this survey is to better
-                    understand your responses to a series of
-                    clinical and research-related questions.
+
+                <p class="welcome-desc">
+                    You will be given a radiographic image
+                    of a wrist fracture. For each image,
+                    we ask that you select how you would
+                    name the fracture, as well as what
+                    treatment method you would use.
+                    Don't overthink it — answer efficiently
+                    and as quickly as you can.
                 </p>
 
-                <p>
-                    You will first be asked to provide some
-                    basic information. You will then be shown
-                    10 questions. Each question will include
-                    an image and several answer choices.
-                </p>
 
-                <p>
-                    Please select the answer that best represents
-                    your response to each question.
-                </p>
-
-                <div class="important-note">
-
-                    <strong>
-                        Estimated time:
-                    </strong>
-
-                    Approximately 5–10 minutes.
-
+                <div class="welcome-time">
+                    ⏱ Estimated time: ~12–15 minutes
                 </div>
 
 
                 <button
-                    type="button"
                     class="button primary-button"
-                    onclick="goToPersonalInfo()"
+                    type="button"
+                    onclick="goToConsent()"
                 >
                     Begin Survey
                 </button>
+
+
+                <div class="welcome-links">
+
+                    <a
+                        href="#"
+                        onclick="event.preventDefault();"
+                    >
+                        ℹ About This Survey
+                    </a>
+
+                </div>
+
 
             </div>
 
         </section>
 
 
+
         <!-- =================================================
-             PAGE 2: PERSONAL INFORMATION
+             PAGE 2: CONSENT
+             ================================================= -->
+
+        <section
+            id="consent-page"
+            class="survey-page"
+        >
+
+            <div class="consent-content">
+
+
+                <h2 class="consent-title">
+                    Research Participation Information
+                </h2>
+
+
+                <p class="consent-sub">
+                    Please read before proceeding.
+                </p>
+
+
+                <div class="consent-scroll">
+
+
+                    <h3>
+                        Study Title
+                    </h3>
+
+                    <p>
+                        Wrist Fracture Morphology Study
+                        (CL-IOH SCORE 2026)
+                    </p>
+
+
+
+                    <h3>
+                        Principal Investigator
+                    </h3>
+
+                    <p>
+                        Soroush Baghdadi, MD -
+                        UCLA Department of Orthopedics
+                    </p>
+
+
+
+                    <h3>
+                        Purpose
+                    </h3>
+
+                    <p>
+                        This survey will determine whether
+                        orthopedic healthcare professionals
+                        can reach agreement regarding
+                        terminology and treatment methods.
+                        You will be asked to complete this
+                        survey twice, with the assistance
+                        of an educational pamphlet provided
+                        between survey administrations,
+                        over the span of two weeks.
+                    </p>
+
+
+
+                    <h3>
+                        What You'll Do
+                    </h3>
+
+                    <p>
+                        You will answer the prompted questions
+                        for a set of __ X-rays. Once complete,
+                        you will receive an educational pamphlet
+                        regarding wrist fracture management.
+                        We ask that you read through the
+                        pamphlet thoroughly. In two weeks,
+                        you will be asked to complete the same
+                        survey a second time.
+                    </p>
+
+
+
+                    <h3>
+                        Voluntary Participation
+                    </h3>
+
+                    <p>
+                        Your participation is entirely voluntary.
+                        You may stop at any time without
+                        consequence. You may also choose to
+                        participate anonymously.
+                    </p>
+
+
+
+                    <h3>
+                        Data Protection
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Your clinical opinions, not personal
+                            health information, are collected.
+                        </li>
+
+                        <li>
+                            Responses are stored on a secure,
+                            access-controlled platform.
+                        </li>
+
+                        <li>
+                            Your name is collected solely for
+                            delivering personalized results and
+                            is stored separately from survey
+                            responses.
+                        </li>
+
+                        <li>
+                            Published results will use only
+                            aggregate, de-identified data.
+                        </li>
+
+                        <li>
+                            Anonymous participants will not have
+                            identifying data collected.
+                        </li>
+
+                    </ul>
+
+
+
+                    <h3>
+                        How Results Will Be Used
+                    </h3>
+
+                    <p>
+                        Aggregate results may be published in
+                        peer-reviewed journals. Individual
+                        results will be shared only with you
+                        through a personalized report.
+                    </p>
+
+
+
+                    <h3>
+                        Questions?
+                    </h3>
+
+                    <p>
+                        Contact Dr. Baghdadi at
+
+                        <a
+                            href="mailto:sbaghdadi@mednet.ucla.edu"
+                        >
+                            sbaghdadi@mednet.ucla.edu
+                        </a>
+                    </p>
+
+
+
+                    <h3>
+                        IRB Status
+                    </h3>
+
+                    <p>
+                        This study is under review by
+                        UCLA's BruinIRB.
+                    </p>
+
+
+                </div>
+
+
+                <div class="consent-actions">
+
+
+                    <button
+                        type="button"
+                        class="button secondary-button"
+                        onclick="goToWelcome()"
+                    >
+                        Back
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="button primary-button"
+                        onclick="goToPersonalInfo()"
+                    >
+                        I Understand — Continue
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 3: PERSONAL INFORMATION
              ================================================= -->
 
         <section
@@ -136,106 +352,128 @@
             class="survey-page"
         >
 
-            <div class="page-content">
+            <div class="form-content">
+
 
                 <h2>
-                    About You
+                    Participant Information
                 </h2>
 
-                <p class="page-description">
+
+                <p class="form-introduction">
                     Please provide the following information
                     before beginning the survey.
                 </p>
 
 
-                <form id="personal-form">
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="participant-name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="participant-name"
+                        name="participant-name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
 
 
-                    <!-- NAME -->
 
-                    <div class="form-group">
+                <!-- Institution -->
 
-                        <label for="name">
-                            Name
-                        </label>
+                <div class="form-group">
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your name"
-                            required
-                        >
+                    <label for="participant-institution">
+                        Institution
+                    </label>
 
-                    </div>
+                    <input
+                        type="text"
+                        id="participant-institution"
+                        name="participant-institution"
+                        placeholder="Enter your institution"
+                    >
 
-
-                    <!-- INSTITUTION -->
-
-                    <div class="form-group">
-
-                        <label for="institution">
-                            Institution
-                        </label>
-
-                        <input
-                            type="text"
-                            id="institution"
-                            name="institution"
-                            placeholder="Enter your institution"
-                            required
-                        >
-
-                    </div>
+                </div>
 
 
-                    <!-- CONTACT -->
 
-                    <div class="form-group">
+                <!-- Contact Information -->
 
-                        <label for="contact">
-                            Contact Information
-                        </label>
+                <div class="form-group">
 
-                        <input
-                            type="text"
-                            id="contact"
-                            name="contact"
-                            placeholder="Email address or phone number"
-                            required
-                        >
+                    <label for="participant-contact">
+                        Contact Information
+                    </label>
 
-                    </div>
+                    <input
+                        type="text"
+                        id="participant-contact"
+                        name="participant-contact"
+                        placeholder="Email or other preferred contact"
+                    >
+
+                </div>
 
 
-                    <div class="navigation-buttons">
 
-                        <button
-                            type="button"
-                            class="button secondary-button"
-                            onclick="goToIntro()"
-                        >
-                            Back
-                        </button>
+                <!-- Anonymous option -->
 
-                        <button
-                            type="submit"
-                            class="button primary-button"
-                        >
-                            Next
-                        </button>
+                <div class="form-checkbox">
 
-                    </div>
+                    <input
+                        type="checkbox"
+                        id="anonymous-participant"
+                        name="anonymous-participant"
+                    >
 
-                </form>
+                    <label for="anonymous-participant">
+                        I would like to participate anonymously.
+                    </label>
+
+                </div>
+
+
+
+                <div class="form-actions">
+
+
+                    <button
+                        type="button"
+                        class="button secondary-button"
+                        onclick="goToConsent()"
+                    >
+                        Back
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="button primary-button"
+                        onclick="startSurvey()"
+                    >
+                        Continue to Survey
+                    </button>
+
+
+                </div>
+
 
             </div>
 
         </section>
 
 
+
         <!-- =================================================
-             PAGE 3: SURVEY QUESTIONS
+             PAGE 4: SURVEY QUESTIONS
              ================================================= -->
 
         <section
@@ -243,83 +481,93 @@
             class="survey-page"
         >
 
-            <div class="page-content">
+            <div class="question-content">
 
 
-                <div class="question-number">
+                <!-- Question number -->
 
-                    Question
-                    <span id="current-question-number">
-                        1
-                    </span>
-                    of
-                    <span id="total-question-number">
-                        10
-                    </span>
-
+                <div
+                    id="question-number"
+                    class="question-number"
+                >
+                    Question 1 of 10
                 </div>
 
 
-                <!-- QUESTION PROMPT -->
 
-                <h2 id="question-text">
-                    Question text
+                <!-- Question prompt -->
+
+                <h2
+                    id="question-prompt"
+                    class="question-prompt"
+                >
+                    Question prompt will appear here.
                 </h2>
 
 
-                <!-- QUESTION IMAGE -->
+
+                <!-- Image -->
 
                 <div class="question-image-container">
 
                     <img
                         id="question-image"
+                        class="question-image"
                         src=""
-                        alt="Survey question image"
+                        alt="Radiographic image for survey question"
                     >
 
                 </div>
 
 
-                <!-- ANSWER OPTIONS -->
+
+                <!-- Answer choices -->
 
                 <div
-                    id="answer-options"
-                    class="answer-options"
+                    id="answer-choices"
+                    class="answer-choices"
                 >
+
+                    <!-- JavaScript will insert answer choices here -->
+
                 </div>
 
 
-                <!-- QUESTION NAVIGATION -->
 
-                <div class="navigation-buttons">
+                <!-- Question navigation -->
+
+                <div class="question-actions">
+
 
                     <button
                         type="button"
-                        id="question-back-button"
                         class="button secondary-button"
                         onclick="previousQuestion()"
                     >
                         Back
                     </button>
 
+
                     <button
                         type="button"
-                        id="question-next-button"
                         class="button primary-button"
                         onclick="nextQuestion()"
                     >
                         Next
                     </button>
 
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+
         <!-- =================================================
-             PAGE 4: SUMMARY
+             PAGE 5: SUMMARY
              ================================================= -->
 
         <section
@@ -327,78 +575,43 @@
             class="survey-page"
         >
 
-            <div class="page-content">
+            <div class="summary-content">
+
 
                 <h2>
                     Review Your Responses
                 </h2>
 
-                <p class="page-description">
-                    Please review your responses below before
+
+                <p class="summary-introduction">
+                    Please review your responses before
                     submitting the survey.
                 </p>
 
 
-                <!-- PERSONAL INFORMATION SUMMARY -->
 
-                <div class="summary-section">
+                <div
+                    id="summary-container"
+                    class="summary-container"
+                >
 
-                    <h3>
-                        Personal Information
-                    </h3>
-
-                    <div class="summary-row">
-
-                        <strong>Name:</strong>
-
-                        <span id="summary-name"></span>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <strong>Institution:</strong>
-
-                        <span id="summary-institution"></span>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <strong>Contact:</strong>
-
-                        <span id="summary-contact"></span>
-
-                    </div>
+                    <!-- JavaScript will insert responses here -->
 
                 </div>
 
 
-                <!-- SURVEY RESPONSE SUMMARY -->
 
-                <div class="summary-section">
+                <div class="summary-actions">
 
-                    <h3>
-                        Survey Responses
-                    </h3>
-
-                    <div id="response-summary">
-                    </div>
-
-                </div>
-
-
-                <div class="navigation-buttons">
 
                     <button
                         type="button"
                         class="button secondary-button"
                         onclick="returnToLastQuestion()"
                     >
-                        Back
+                        Back to Survey
                     </button>
+
 
                     <button
                         type="button"
@@ -408,15 +621,18 @@
                         Submit Survey
                     </button>
 
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+
         <!-- =================================================
-             PAGE 5: THANK YOU
+             PAGE 6: THANK YOU
              ================================================= -->
 
         <section
@@ -424,31 +640,36 @@
             class="survey-page"
         >
 
-            <div class="page-content thank-you">
+            <div class="thank-you-content">
 
-                <div class="success-icon">
+
+                <div class="thank-you-icon">
                     ✓
                 </div>
 
+
                 <h1>
-                    Thank You!
+                    Thank You
                 </h1>
 
-                <p>
-                    Your survey has been submitted successfully.
-                </p>
 
                 <p>
-                    We appreciate your time and participation.
+                    Thank you for participating in the
+                    Wrist Fracture Morphology Study.
                 </p>
 
-                <button
-                    type="button"
-                    class="button primary-button"
-                    onclick="restartSurvey()"
-                >
-                    Return to Home
-                </button>
+
+                <p>
+                    Your responses have been recorded.
+                </p>
+
+
+                <p class="thank-you-followup">
+                    If applicable, you will receive
+                    information regarding the next phase
+                    of the study.
+                </p>
+
 
             </div>
 
@@ -458,21 +679,17 @@
     </main>
 
 
+
     <!-- =====================================================
-         FOOTER
+         JAVASCRIPT
          ===================================================== -->
 
-    <footer class="site-footer">
-
-        <p>
-            © 2026 Research Survey
-        </p>
-
-    </footer>
-
+    <!-- Connects this HTML file to your JavaScript file -->
 
     <script src="script.js"></script>
+
 
 </body>
 
 </html>
+```
