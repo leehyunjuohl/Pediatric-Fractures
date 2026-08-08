@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Research Survey</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="site-logo">
+                Research Survey
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN SURVEY CONTAINER
+         ===================================================== -->
+
+    <main class="survey-container">
+
+
+        <!-- =================================================
+             PROGRESS BAR
+             ================================================= -->
+
+        <div class="progress-container">
+
+            <div class="progress-label">
+                <span id="progress-text">
+                    Welcome
+                </span>
+            </div>
+
+            <div class="progress-bar-background">
+
+                <div
+                    id="progress-bar"
+                    class="progress-bar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PAGE 1: INTRODUCTION
+             ================================================= -->
+
+        <section
+            id="intro-page"
+            class="survey-page active"
+        >
+
+            <div class="page-content">
+
+                <h1>
+                    Welcome to Our Survey
+                </h1>
+
+                <p class="intro-text">
+                    Thank you for taking the time to participate
+                    in this survey.
+                </p>
+
+                <p>
+                    The purpose of this survey is to better
+                    understand your responses to a series of
+                    clinical and research-related questions.
+                </p>
+
+                <p>
+                    You will first be asked to provide some
+                    basic information. You will then be shown
+                    10 questions. Each question will include
+                    an image and several answer choices.
+                </p>
+
+                <p>
+                    Please select the answer that best represents
+                    your response to each question.
+                </p>
+
+                <div class="important-note">
+
+                    <strong>
+                        Estimated time:
+                    </strong>
+
+                    Approximately 5–10 minutes.
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="button primary-button"
+                    onclick="goToPersonalInfo()"
+                >
+                    Begin Survey
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PAGE 2: PERSONAL INFORMATION
+             ================================================= -->
+
+        <section
+            id="personal-page"
+            class="survey-page"
+        >
+
+            <div class="page-content">
+
+                <h2>
+                    About You
+                </h2>
+
+                <p class="page-description">
+                    Please provide the following information
+                    before beginning the survey.
+                </p>
+
+
+                <form id="personal-form">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- INSTITUTION -->
+
+                    <div class="form-group">
+
+                        <label for="institution">
+                            Institution
+                        </label>
+
+                        <input
+                            type="text"
+                            id="institution"
+                            name="institution"
+                            placeholder="Enter your institution"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CONTACT -->
+
+                    <div class="form-group">
+
+                        <label for="contact">
+                            Contact Information
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contact"
+                            name="contact"
+                            placeholder="Email address or phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="navigation-buttons">
+
+                        <button
+                            type="button"
+                            class="button secondary-button"
+                            onclick="goToIntro()"
+                        >
+                            Back
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="button primary-button"
+                        >
+                            Next
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PAGE 3: SURVEY QUESTIONS
+             ================================================= -->
+
+        <section
+            id="question-page"
+            class="survey-page"
+        >
+
+            <div class="page-content">
+
+
+                <div class="question-number">
+
+                    Question
+                    <span id="current-question-number">
+                        1
+                    </span>
+                    of
+                    <span id="total-question-number">
+                        10
+                    </span>
+
+                </div>
+
+
+                <!-- QUESTION PROMPT -->
+
+                <h2 id="question-text">
+                    Question text
+                </h2>
+
+
+                <!-- QUESTION IMAGE -->
+
+                <div class="question-image-container">
+
+                    <img
+                        id="question-image"
+                        src=""
+                        alt="Survey question image"
+                    >
+
+                </div>
+
+
+                <!-- ANSWER OPTIONS -->
+
+                <div
+                    id="answer-options"
+                    class="answer-options"
+                >
+                </div>
+
+
+                <!-- QUESTION NAVIGATION -->
+
+                <div class="navigation-buttons">
+
+                    <button
+                        type="button"
+                        id="question-back-button"
+                        class="button secondary-button"
+                        onclick="previousQuestion()"
+                    >
+                        Back
+                    </button>
+
+                    <button
+                        type="button"
+                        id="question-next-button"
+                        class="button primary-button"
+                        onclick="nextQuestion()"
+                    >
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PAGE 4: SUMMARY
+             ================================================= -->
+
+        <section
+            id="summary-page"
+            class="survey-page"
+        >
+
+            <div class="page-content">
+
+                <h2>
+                    Review Your Responses
+                </h2>
+
+                <p class="page-description">
+                    Please review your responses below before
+                    submitting the survey.
+                </p>
+
+
+                <!-- PERSONAL INFORMATION SUMMARY -->
+
+                <div class="summary-section">
+
+                    <h3>
+                        Personal Information
+                    </h3>
+
+                    <div class="summary-row">
+
+                        <strong>Name:</strong>
+
+                        <span id="summary-name"></span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <strong>Institution:</strong>
+
+                        <span id="summary-institution"></span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <strong>Contact:</strong>
+
+                        <span id="summary-contact"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SURVEY RESPONSE SUMMARY -->
+
+                <div class="summary-section">
+
+                    <h3>
+                        Survey Responses
+                    </h3>
+
+                    <div id="response-summary">
+                    </div>
+
+                </div>
+
+
+                <div class="navigation-buttons">
+
+                    <button
+                        type="button"
+                        class="button secondary-button"
+                        onclick="returnToLastQuestion()"
+                    >
+                        Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="button primary-button"
+                        onclick="submitSurvey()"
+                    >
+                        Submit Survey
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PAGE 5: THANK YOU
+             ================================================= -->
+
+        <section
+            id="thank-you-page"
+            class="survey-page"
+        >
+
+            <div class="page-content thank-you">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h1>
+                    Thank You!
+                </h1>
+
+                <p>
+                    Your survey has been submitted successfully.
+                </p>
+
+                <p>
+                    We appreciate your time and participation.
+                </p>
+
+                <button
+                    type="button"
+                    class="button primary-button"
+                    onclick="restartSurvey()"
+                >
+                    Return to Home
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Research Survey
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
