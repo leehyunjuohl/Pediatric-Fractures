@@ -346,119 +346,373 @@
         <!-- =================================================
              PAGE 3: PERSONAL INFORMATION
              ================================================= -->
+<section
+    id="personal-page"
+    class="survey-page"
+>
 
-        <section
-            id="personal-page"
-            class="survey-page"
+```
+<div class="form-content">
+
+    <h2 class="demo-title">
+        About You
+    </h2>
+
+    <p class="demo-sub">
+        Quick demographics — takes 30 seconds.
+    </p>
+
+
+    <!-- Anonymous participation -->
+
+    <div class="form-group">
+
+        <label class="anon-toggle">
+
+            <input
+                type="checkbox"
+                id="demoAnonymous"
+                onchange="toggleAnonymous(this.checked)"
+            >
+
+            <span class="anon-label">
+                I prefer to participate anonymously
+            </span>
+
+        </label>
+
+        <p class="form-hint">
+            Anonymous participants won't receive a
+            personalized report, but your responses
+            still count.
+        </p>
+
+    </div>
+
+
+    <!-- Name -->
+
+    <div
+        class="form-group"
+        id="nameGroup"
+    >
+
+        <label for="demoName">
+            Your Name
+        </label>
+
+        <input
+            type="text"
+            id="demoName"
+            placeholder="e.g. Tom Holland"
+            autocomplete="name"
         >
 
-            <div class="form-content">
-
-                <h2>
-                    Participant Information
-                </h2>
+    </div>
 
 
-                <p class="form-introduction">
-                    Please provide the following information
-                    before beginning the survey.
-                </p>
+    <!-- Display preference -->
+
+    <div
+        class="form-group"
+        id="displayNameGroup"
+    >
+
+        <label for="demoDisplayName">
+            Display Preference
+        </label>
+
+        <select id="demoDisplayName">
+
+            <option value="name">
+                Show my name
+            </option>
+
+            <option value="number">
+                Use study number only
+            </option>
+
+            <option value="nickname">
+                Use a nickname
+            </option>
+
+        </select>
+
+    </div>
 
 
+    <!-- Nickname -->
 
-                <div class="form-group">
+    <div
+        class="form-group"
+        id="nicknameGroup"
+        style="display:none;"
+    >
 
-                    <label for="participant-name">
-                        Name
-                    </label>
+        <label for="demoNickname">
+            Your Nickname
+        </label>
 
-                    <input
-                        type="text"
-                        id="participant-name"
-                        name="participant-name"
-                        placeholder="Enter your name"
-                    >
+        <input
+            type="text"
+            id="demoNickname"
+            placeholder="e.g. HipReplacement"
+            maxlength="20"
+        >
 
-                </div>
-
-
-
-                <div class="form-group">
-
-                    <label for="participant-institution">
-                        Institution
-                    </label>
-
-                    <input
-                        type="text"
-                        id="participant-institution"
-                        name="participant-institution"
-                        placeholder="Enter your institution"
-                    >
-
-                </div>
+    </div>
 
 
+    <!-- Institution -->
 
-                <div class="form-group">
+    <div class="form-group">
 
-                    <label for="participant-contact">
-                        Contact Information
-                    </label>
+        <label for="demoInstitution">
+            Institution
+        </label>
 
-                    <input
-                        type="text"
-                        id="participant-contact"
-                        name="participant-contact"
-                        placeholder="Email or other preferred contact"
-                    >
+        <select id="demoInstitution">
 
-                </div>
+            <option value="">
+                Select your institution...
+            </option>
+
+            <option value="Boston Children's Hospital">
+                Boston Children's Hospital
+            </option>
+
+            <option value="Children's Hospital Colorado">
+                Children's Hospital Colorado
+            </option>
+
+            <option value="Children's Hospital of Philadelphia">
+                Children's Hospital of Philadelphia
+            </option>
+
+            <option value="Children's Mercy Kansas City">
+                Children's Mercy Kansas City
+            </option>
+
+            <option value="Cincinnati Children's Hospital">
+                Cincinnati Children's Hospital
+            </option>
+
+            <option value="Emory / Children's Healthcare of Atlanta">
+                Emory / Children's Healthcare of Atlanta
+            </option>
+
+            <option value="Hospital for Special Surgery">
+                Hospital for Special Surgery
+            </option>
+
+            <option value="Nationwide Children's Hospital">
+                Nationwide Children's Hospital
+            </option>
+
+            <option value="Nicklaus Children's Hospital">
+                Nicklaus Children's Hospital
+            </option>
+
+            <option value="OhioHealth">
+                OhioHealth
+            </option>
+
+            <option value="Rady Children's Hospital San Diego">
+                Rady Children's Hospital San Diego
+            </option>
+
+            <option value="Scottish Rite for Children">
+                Scottish Rite for Children
+            </option>
+
+            <option value="St. Louis Children's Hospital / Washington University">
+                St. Louis Children's Hospital / Washington University
+            </option>
+
+            <option value="Stanford Children's Health">
+                Stanford Children's Health
+            </option>
+
+            <option value="Texas Children's Hospital / Baylor">
+                Texas Children's Hospital / Baylor
+            </option>
+
+            <option value="TSRH / UT Southwestern">
+                TSRH / UT Southwestern
+            </option>
+
+            <option value="UCLA">
+                UCLA
+            </option>
+
+            <option value="University of Michigan / C.S. Mott Children's Hospital">
+                University of Michigan / C.S. Mott Children's Hospital
+            </option>
+
+            <option value="University of Minnesota">
+                University of Minnesota
+            </option>
+
+            <option value="University of Wisconsin">
+                University of Wisconsin
+            </option>
+
+            <option value="Vanderbilt University Medical Center">
+                Vanderbilt University Medical Center
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
 
 
+    <!-- Other institution -->
 
-                <div class="form-checkbox">
+    <div
+        class="form-group"
+        id="otherInstitutionGroup"
+        style="display:none;"
+    >
 
-                    <input
-                        type="checkbox"
-                        id="anonymous-participant"
-                        name="anonymous-participant"
-                    >
+        <label for="demoOtherInstitution">
+            Institution Name
+        </label>
 
-                    <label for="anonymous-participant">
-                        I would like to participate anonymously.
-                    </label>
+        <input
+            type="text"
+            id="demoOtherInstitution"
+            placeholder="Enter your institution"
+        >
 
-                </div>
-
-
-
-                <div class="form-actions">
-
-
-                    <button
-                        type="button"
-                        class="button secondary-button"
-                        onclick="goToConsent()"
-                    >
-                        Back
-                    </button>
+    </div>
 
 
-                    <button
-                        type="button"
-                        class="button primary-button"
-                        onclick="startSurvey()"
-                    >
-                        Continue to Survey
-                    </button>
+    <!-- Years in practice -->
+
+    <div class="form-group">
+
+        <label for="demoYears">
+            Years in Practice (post-fellowship)
+        </label>
+
+        <input
+            type="number"
+            id="demoYears"
+            min="0"
+            max="50"
+            placeholder="e.g. 12"
+        >
+
+    </div>
 
 
-                </div>
+    <!-- Fellowship -->
 
-            </div>
+    <div class="form-group">
 
-        </section>
+        <label for="demoFellowship">
+            Fellowship Training
+        </label>
+
+        <select id="demoFellowship">
+
+            <option value="">
+                Select...
+            </option>
+
+            <option value="Sports Medicine">
+                Sports Medicine
+            </option>
+
+            <option value="Pediatric Orthopaedics">
+                Pediatric Orthopaedics
+            </option>
+
+            <option value="Both">
+                Both
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Geographic region -->
+
+    <div class="form-group">
+
+        <label for="demoRegion">
+            Geographic Region
+        </label>
+
+        <select id="demoRegion">
+
+            <option value="">
+                Select...
+            </option>
+
+            <option value="Northeast">
+                Northeast US
+            </option>
+
+            <option value="Southeast">
+                Southeast US
+            </option>
+
+            <option value="Midwest">
+                Midwest US
+            </option>
+
+            <option value="Southwest">
+                Southwest US
+            </option>
+
+            <option value="West">
+                West US
+            </option>
+
+            <option value="International">
+                International
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <div class="form-actions">
+
+        <button
+            type="button"
+            class="button secondary-button"
+            onclick="goToConsent()"
+        >
+            Back
+        </button>
+
+        <button
+            type="button"
+            class="button primary-button"
+            onclick="submitDemographics()"
+        >
+            Start Survey →
+        </button>
+
+    </div>
+
+</div>
+
+</section>
 
 
 
