@@ -1,5 +1,28 @@
-console.log("SCRIPT.JS LOADED SUCCESSFULLY");
+function showPage(pageId) {
+    const pages = document.querySelectorAll(".survey-page");
+
+    pages.forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    const selectedPage = document.getElementById(pageId);
+
+    if (selectedPage) {
+        selectedPage.classList.add("active");
+    }
+}
+
 
 function goToConsent() {
-    alert("The Go to Consent function is working!");
+    showPage("consent-page");
+}
+
+
+function goToWelcome() {
+    showPage("intro-page");
+}
+
+
+function goToPersonalInfo() {
+    showPage("personal-page");
 }
