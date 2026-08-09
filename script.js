@@ -1,4 +1,4 @@
-```javascript
+
 /* =========================================================
    WRIST FRACTURE MORPHOLOGY STUDY
    CL-IOH SCORE 2026
