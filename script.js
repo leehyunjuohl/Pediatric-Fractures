@@ -448,8 +448,8 @@ function toggleAttendingFields() {
         roleSelect.value;
 
 
-    const attendingGroup =
-        document.getElementById("Attending");
+    const yearsinPracticeSelect =
+        document.getElementById("demoyearsinPractice");
 
 
     const fellowshipSelect =
@@ -459,6 +459,8 @@ function toggleAttendingFields() {
     /*
        Fellowship is contained in a .form-group.
        Find its parent form-group.
+
+       And for YearsinPractice
     */
 
     let fellowshipGroup = null;
@@ -471,6 +473,16 @@ function toggleAttendingFields() {
 
     }
 
+    let yearsInPracticeGroup = null;
+
+
+    if (yearsInPracticeSelect) {
+
+        yearsInPracticeGroup =
+            yearsInPracticeSelect.closest(".form-group");
+
+    }
+
 
     if (role === "Attending") {
 
@@ -478,9 +490,9 @@ function toggleAttendingFields() {
            Show Years in Practice.
         */
 
-        if (attendingGroup) {
+        if (yearsInPracticeGroup) {
 
-            attendingGroup.style.display =
+            yearsInPracticeGroup.style.display =
                 "block";
 
         }
@@ -505,9 +517,9 @@ function toggleAttendingFields() {
            Hide Years in Practice.
         */
 
-        if (attendingGroup) {
+        if (yearsInPracticeGroup) {
 
-            attendingGroup.style.display =
+            yearsInPracticeGroup.style.display =
                 "none";
 
         }
@@ -535,9 +547,9 @@ function toggleAttendingFields() {
             );
 
 
-        if (attendingSelect) {
+        if (yearsInPracticeSelect) {
 
-            attendingSelect.value = "";
+            yearsInPracticeSelect.value = "";
 
         }
 
