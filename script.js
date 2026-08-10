@@ -1743,6 +1743,47 @@ function updateProgress(step) {
 }
 
 
+
+
+/* =========================================================
+   ATTENDING-SPECIFIC INFORMATION
+   ========================================================= */
+
+function updateAttendingFields() {
+
+    const role =
+        document.getElementById("participant-role");
+
+    const yearsPracticeGroup =
+        document.getElementById("years-practice-group");
+
+    const fellowshipGroup =
+        document.getElementById("fellowship-group");
+
+
+    if (!role || !yearsPracticeGroup || !fellowshipGroup) {
+        return;
+    }
+
+
+    if (role.value === "attending") {
+
+        yearsPracticeGroup.style.display = "block";
+
+        fellowshipGroup.style.display = "block";
+
+    }
+
+    else {
+
+        yearsPracticeGroup.style.display = "none";
+
+        fellowshipGroup.style.display = "none";
+
+    }
+
+}
+
 /* =========================================================
    22. ESCAPE HTML
    ========================================================= */
@@ -1787,6 +1828,9 @@ function escapeHTML(value) {
         );
 
 }
+
+
+
 
 
 /* =========================================================
@@ -1898,6 +1942,20 @@ document.addEventListener(
 
         }
 
-    }
-);
+       /*
+          load attending fields
+      */
+
+       const roleSelect =
+    document.getElementById("participant-role");
+
+
+if (roleSelect) {
+
+    roleSelect.addEventListener(
+        "change",
+        updateAttendingFields
+    );
+
+}
 
