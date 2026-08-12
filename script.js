@@ -1,30 +1,35 @@
+// Wait until the webpage has completely loaded
+document.addEventListener("DOMContentLoaded", function () {
 
-// Find the Introduction page
-const introductionPage =
-    document.getElementById("introduction-page");
+    // Find the two pages
+    const introductionPage =
+        document.getElementById("introduction-page");
 
-// Find the Consent page
-const consentPage =
-    document.getElementById("consent-page");
+    const consentPage =
+        document.getElementById("consent-page");
 
-// Find the Begin Survey button
-const beginSurveyButton =
-    document.getElementById("begin-survey-button");
+    // Find the Begin Survey button
+    const beginSurveyButton =
+        document.getElementById("begin-survey-button");
 
 
-// When the user clicks "Begin Survey"
-beginSurveyButton.addEventListener("click", function () {
+    // Make sure the button exists
+    if (beginSurveyButton) {
 
-    // Hide the Introduction page
-    introductionPage.classList.remove("active");
+        // Listen for the button being clicked
+        beginSurveyButton.addEventListener("click", function () {
 
-    // Show the Consent page
-    consentPage.classList.add("active");
+            // Hide Introduction
+            introductionPage.classList.remove("active");
 
-    // Move the user back to the top of the page
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+            // Show Consent
+            consentPage.classList.add("active");
+
+            // Return to the top of the page
+            window.scrollTo(0, 0);
+
+        });
+
+    }
 
 });
