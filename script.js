@@ -1,9 +1,10 @@
 // Wait until the webpage has completely loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
+
+    // =====================================================
     // FIND THE PAGES
-    // =========================
+    // =====================================================
 
     const introductionPage =
         document.getElementById("introduction-page");
@@ -15,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("demographics-page");
 
 
-    // =========================
+    // =====================================================
     // FIND THE BUTTONS
-    // =========================
+    // =====================================================
 
     const beginSurveyButton =
         document.getElementById("begin-survey-button");
@@ -26,41 +27,34 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("consent-next-button");
 
 
-    // =========================
+    // =====================================================
     // INTRODUCTION → CONSENT
-    // =========================
+    // =====================================================
 
-    if (beginSurveyButton) {
+    beginSurveyButton.addEventListener("click", function () {
 
-        beginSurveyButton.addEventListener("click", function () {
+        introductionPage.classList.remove("active");
 
-            introductionPage.classList.remove("active");
+        consentPage.classList.add("active");
 
-            consentPage.classList.add("active");
+        window.scrollTo(0, 0);
 
-            window.scrollTo(0, 0);
-
-        });
-
-    }
+    });
 
 
-    // =========================
+    // =====================================================
     // CONSENT → DEMOGRAPHICS
-    // =========================
+    // =====================================================
 
-    if (consentNextButton) {
+    consentNextButton.addEventListener("click", function () {
 
-        consentNextButton.addEventListener("click", function () {
+        consentPage.classList.remove("active");
 
-            consentPage.classList.remove("active");
+        demographicsPage.classList.add("active");
 
-            demographicsPage.classList.add("active");
+        window.scrollTo(0, 0);
 
-            window.scrollTo(0, 0);
+    });
 
-        });
-
-    }
 
 });
