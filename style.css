@@ -187,3 +187,167 @@ h1 {
         max-width: 320px;
     }
 }
+
+/* =========================
+   CONSENT PAGE
+   ========================= */
+
+#consent-page {
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 60px 24px;
+}
+
+#consent-page .content-container {
+    width: 100%;
+    max-width: 760px;
+}
+
+
+/* =========================
+   CONSENT TITLE
+   ========================= */
+
+#consent-page h2 {
+    margin: 0;
+
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+    color: #101828;
+}
+
+
+/* =========================
+   CONSENT INSTRUCTION
+   ========================= */
+
+.consent-instruction {
+    margin: 18px 0 30px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #667085;
+}
+
+
+/* =========================
+   CONSENT INFORMATION
+   ========================= */
+
+.consent-information {
+    margin-left: 28px;
+    padding-left: 28px;
+
+    border-left: 2px solid #e4e7ec;
+}
+
+.consent-information h3 {
+    margin: 0 0 8px 0;
+
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    color: #172033;
+}
+
+.consent-information p {
+    margin: 0 0 28px 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #475467;
+}
+
+
+/* =========================
+   NEXT BUTTON
+   ========================= */
+
+.consent-button-container {
+    margin-top: 36px;
+    margin-left: 28px;
+}
+
+#consent-next-button {
+    min-width: 120px;
+}
+
+
+/* =========================
+   DEMOGRAPHICS PAGE
+   ========================= */
+
+#demographics-page {
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 60px 24px;
+}
+
+#demographics-page .content-container {
+    width: 100%;
+    max-width: 760px;
+}
+
+#demographics-page h2 {
+    margin: 0;
+
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+    color: #101828;
+}
+
+.demographics-instruction {
+    margin-top: 24px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #475467;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    #consent-page,
+    #demographics-page {
+        padding: 40px 20px;
+    }
+
+    .consent-information {
+        margin-left: 8px;
+        padding-left: 18px;
+    }
+
+    .consent-information h3 {
+        font-size: 17px;
+    }
+
+    .consent-information p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .consent-button-container {
+        margin-left: 8px;
+    }
+
+    #consent-next-button {
+        width: 100%;
+        max-width: 320px;
+    }
+}
