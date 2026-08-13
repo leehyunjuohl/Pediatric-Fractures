@@ -118,16 +118,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (anonymousCheckbox.checked) {
 
+            // Hide demographic questions
             demographicForm.style.display = "none";
 
+            // Show anonymous message
             anonymousMessage.style.display = "block";
 
+            // Hide any previous error
             demographicsError.style.display = "none";
 
         } else {
 
+            // Show demographic questions
             demographicForm.style.display = "block";
 
+            // Hide anonymous message
             anonymousMessage.style.display = "none";
 
         }
@@ -149,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             otherInstitutionGroup.style.display = "none";
 
+            // Clear the Other institution field
             otherInstitution.value = "";
 
         }
@@ -170,8 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             attendingFields.style.display = "none";
 
+            // Clear attending-specific selections
             fellowshipSelect.value = "";
-
             yearsPracticeSelect.value = "";
 
         }
@@ -187,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // -------------------------------------------------
-        // ANONYMOUS PARTICIPANT
+        // OPTION 1: ANONYMOUS PARTICIPANT
         // -------------------------------------------------
 
         if (anonymousCheckbox.checked) {
@@ -201,18 +207,19 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo(0, 0);
 
             return;
-
         }
 
 
         // -------------------------------------------------
-        // NON-ANONYMOUS PARTICIPANT
+        // OPTION 2: NON-ANONYMOUS PARTICIPANT
         // -------------------------------------------------
 
         let formIsValid = true;
 
 
-        // Name
+        // -------------------------------------------------
+        // NAME
+        // -------------------------------------------------
 
         if (participantName.value.trim() === "") {
 
@@ -221,7 +228,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Institution
+        // -------------------------------------------------
+        // INSTITUTION
+        // -------------------------------------------------
 
         if (institutionSelect.value === "") {
 
@@ -230,7 +239,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Other Institution
+        // -------------------------------------------------
+        // OTHER INSTITUTION
+        // -------------------------------------------------
 
         if (
             institutionSelect.value === "Other" &&
@@ -242,7 +253,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Role
+        // -------------------------------------------------
+        // ROLE
+        // -------------------------------------------------
 
         if (roleSelect.value === "") {
 
@@ -251,16 +264,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Attending-specific requirements
+        // -------------------------------------------------
+        // ATTENDING-SPECIFIC REQUIREMENTS
+        // -------------------------------------------------
 
         if (roleSelect.value === "Attending") {
 
+            // Fellowship
             if (fellowshipSelect.value === "") {
 
                 formIsValid = false;
 
             }
 
+            // Years of Practice
             if (yearsPracticeSelect.value === "") {
 
                 formIsValid = false;
@@ -271,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // -------------------------------------------------
-        // INVALID FORM
+        // IF FORM IS NOT COMPLETE
         // -------------------------------------------------
 
         if (!formIsValid) {
@@ -284,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // -------------------------------------------------
-        // VALID FORM → INSTRUCTIONS
+        // FORM IS COMPLETE
         // -------------------------------------------------
 
         demographicsError.style.display = "none";
