@@ -599,24 +599,30 @@ h1 {
     min-width: 160px;
 }
 
-
 /* =====================================================
-   QUESTION 1 PAGE
+   SURVEY QUESTION PAGE
    ===================================================== */
 
-#question-1-page {
+#survey-question-page {
     align-items: flex-start;
     justify-content: center;
 
-    padding: 60px 24px;
+    padding: 50px 24px 40px 24px;
 }
 
-#question-1-page .content-container {
+.survey-question-container {
     width: 100%;
-    max-width: 760px;
+    max-width: 850px;
+
+    margin: 0 auto;
 }
 
-#question-1-page h2 {
+
+/* =====================================================
+   QUESTION TITLE
+   ===================================================== */
+
+#survey-question-title {
     margin: 0;
 
     font-size: clamp(36px, 6vw, 56px);
@@ -627,6 +633,266 @@ h1 {
     color: #101828;
 }
 
+
+/* =====================================================
+   QUESTION STEM
+   ===================================================== */
+
+.question-stem {
+    margin: 28px 0 30px 0;
+
+    font-size: 19px;
+    line-height: 1.6;
+
+    color: #475467;
+}
+
+
+/* =====================================================
+   QUESTION IMAGE
+   ===================================================== */
+
+.question-image-container {
+    width: 100%;
+
+    margin: 0 auto 35px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-image-container img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 450px;
+
+    width: auto;
+    height: auto;
+
+    border-radius: 10px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   ANSWER GRID
+   ===================================================== */
+
+.answer-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   ANSWER CHOICES
+   ===================================================== */
+
+.answer-choice {
+    min-height: 100px;
+
+    padding: 20px;
+
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+/* Four pastel boxes */
+
+.answer-choice-1 {
+    background: #fce8e6;
+}
+
+.answer-choice-2 {
+    background: #e8f1fb;
+}
+
+.answer-choice-3 {
+    background: #e9f5e9;
+}
+
+.answer-choice-4 {
+    background: #fff3d9;
+}
+
+
+/* Hover */
+
+.answer-choice:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 14px rgba(16, 24, 40, 0.10);
+}
+
+
+/* Selected answer */
+
+.answer-choice.selected {
+    border-color: #172033;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 32, 51, 0.10);
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+   ===================================================== */
+
+.survey-next-button-container {
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+#next-question-button {
+    min-width: 170px;
+}
+
+
+/* =====================================================
+   PROGRESS BAR
+   ===================================================== */
+
+.survey-progress-container {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 45px;
+}
+
+
+.progress-bar-wrapper {
+    flex: 1;
+
+    height: 14px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #e4e7ec;
+}
+
+
+.survey-progress-bar {
+    width: 10%;
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: #172033;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.survey-progress-text {
+    width: 50px;
+
+    margin-left: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #475467;
+}
+
+
+/* =====================================================
+   COMPLETION PAGE
+   ===================================================== */
+
+#completion-page {
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 24px;
+}
+
+#completion-page .content-container {
+    width: 100%;
+    max-width: 760px;
+
+    text-align: center;
+}
+
+#completion-page h2 {
+    margin: 0;
+
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+    color: #101828;
+}
+
+.completion-message {
+    margin-top: 24px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #475467;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    #survey-question-page {
+        padding: 40px 20px;
+    }
+
+    .question-stem {
+        font-size: 17px;
+    }
+
+    .answer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .answer-choice {
+        min-height: 75px;
+    }
+
+    .survey-progress-container {
+        margin-top: 35px;
+    }
+
+}
 
 /* =====================================================
    MOBILE
