@@ -618,12 +618,145 @@
 
 </main>
 
-
 <!-- =====================================================
-     QUESTION 1 PAGE
+     SURVEY QUESTION PAGE
      ===================================================== -->
 
-<main id="question-1-page" class="page">
+<main id="survey-question-page" class="page">
+
+    <section class="survey-question-container">
+
+        <!-- Question Title -->
+
+        <p class="eyebrow">
+            CL-IOH SCORE 2026
+        </p>
+
+        <h2 id="survey-question-title">
+            Page 1
+        </h2>
+
+
+        <!-- Question Stem -->
+
+        <p
+            id="question-stem"
+            class="question-stem"
+        >
+            You have a patient that has the following XR.
+        </p>
+
+
+        <!-- =================================================
+             X-RAY IMAGE
+             ================================================= -->
+
+        <div class="question-image-container">
+
+            <img
+                id="question-image"
+                src=""
+                alt="Radiographic image for survey question"
+            >
+
+        </div>
+
+
+        <!-- =================================================
+             ANSWER CHOICES
+             ================================================= -->
+
+        <div
+            id="answer-choices"
+            class="answer-grid"
+        >
+
+            <button
+                class="answer-choice answer-choice-1"
+                data-answer="0"
+                type="button"
+            >
+                Answer Choice 1
+            </button>
+
+            <button
+                class="answer-choice answer-choice-2"
+                data-answer="1"
+                type="button"
+            >
+                Answer Choice 2
+            </button>
+
+            <button
+                class="answer-choice answer-choice-3"
+                data-answer="2"
+                type="button"
+            >
+                Answer Choice 3
+            </button>
+
+            <button
+                class="answer-choice answer-choice-4"
+                data-answer="3"
+                type="button"
+            >
+                Answer Choice 4
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             NEXT QUESTION BUTTON
+             ================================================= -->
+
+        <div class="survey-next-button-container">
+
+            <button
+                id="next-question-button"
+                class="primary-button"
+                type="button"
+            >
+                Next Question
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             PROGRESS BAR
+             ================================================= -->
+
+        <div class="survey-progress-container">
+
+            <div class="progress-bar-wrapper">
+
+                <div
+                    id="survey-progress-bar"
+                    class="survey-progress-bar"
+                ></div>
+
+            </div>
+
+            <span
+                id="survey-progress-text"
+                class="survey-progress-text"
+            >
+                10%
+            </span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     CONGRATULATIONS PAGE
+     ===================================================== -->
+
+<main id="completion-page" class="page">
 
     <section class="content-container">
 
@@ -632,8 +765,12 @@
         </p>
 
         <h2>
-            Question 1
+            Congratulations! You are done
         </h2>
+
+        <p class="completion-message">
+            Thank you for completing the survey.
+        </p>
 
     </section>
 
