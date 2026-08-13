@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const demographicsPage =
         document.getElementById("demographics-page");
 
+    const instructionsPage =
+        document.getElementById("instructions-page");
+
 
     // =====================================================
     // FIND THE NAVIGATION BUTTONS
@@ -25,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const consentNextButton =
         document.getElementById("consent-next-button");
+
+    const demographicsNextButton =
+        document.getElementById("demographics-next-button");
 
 
     // =====================================================
@@ -71,11 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("anonymous-message");
 
 
+    const participantName =
+        document.getElementById("participant-name");
+
     const institutionSelect =
         document.getElementById("institution");
 
     const otherInstitutionGroup =
         document.getElementById("other-institution-group");
+
+    const otherInstitution =
+        document.getElementById("other-institution");
 
 
     const roleSelect =
@@ -83,6 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const attendingFields =
         document.getElementById("attending-fields");
+
+    const fellowshipSelect =
+        document.getElementById("fellowship");
+
+    const yearsPracticeSelect =
+        document.getElementById("years-practice");
+
+
+    const demographicsError =
+        document.getElementById("demographics-error");
 
 
     // =====================================================
@@ -98,6 +120,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Show anonymous message
             anonymousMessage.style.display = "block";
+
+            // Hide any previous error
+            demographicsError.style.display = "none";
 
         } else {
 
@@ -127,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
             otherInstitutionGroup.style.display = "none";
 
             // Clear the Other institution field
-            document.getElementById("other-institution").value = "";
+            otherInstitution.value = "";
 
         }
 
@@ -149,10 +174,140 @@ document.addEventListener("DOMContentLoaded", function () {
             attendingFields.style.display = "none";
 
             // Clear attending-specific selections
-            document.getElementById("fellowship").value = "";
-            document.getElementById("years-practice").value = "";
+            fellowshipSelect.value = "";
+            yearsPracticeSelect.value = "";
 
         }
+
+    });
+
+
+    // =====================================================
+    // PERSONAL INFORMATION → INSTRUCTIONS
+    // =====================================================
+
+    demographicsNextButton.addEventListener("click", function () {
+
+
+        // -------------------------------------------------
+        // OPTION 1: ANONYMOUS PARTICIPANT
+        // -------------------------------------------------
+
+        if (anonymousCheckbox.checked) {
+
+            demographicsPage.classList.remove("active");
+
+            instructionsPage.classList.add("active");
+
+            demographicsError.style.display = "none";
+
+            window.scrollTo(0, 0);
+
+            return;
+        }
+
+
+        // -------------------------------------------------
+        // OPTION 2: NON-ANONYMOUS PARTICIPANT
+        // -------------------------------------------------
+
+        let formIsValid = true;
+
+
+        // -------------------------------------------------
+        // NAME
+        // -------------------------------------------------
+
+        if (participantName.value.trim() === "") {
+
+            formIsValid = false;
+
+        }
+
+
+        // -------------------------------------------------
+        // INSTITUTION
+        // -------------------------------------------------
+
+        if (institutionSelect.value === "") {
+
+            formIsValid = false;
+
+        }
+
+
+        // -------------------------------------------------
+        // OTHER INSTITUTION
+        // -------------------------------------------------
+
+        if (
+            institutionSelect.value === "Other" &&
+            otherInstitution.value.trim() === ""
+        ) {
+
+            formIsValid = false;
+
+        }
+
+
+        // -------------------------------------------------
+        // ROLE
+        // -------------------------------------------------
+
+        if (roleSelect.value === "") {
+
+            formIsValid = false;
+
+        }
+
+
+        // -------------------------------------------------
+        // ATTENDING-SPECIFIC REQUIREMENTS
+        // -------------------------------------------------
+
+        if (roleSelect.value === "Attending") {
+
+            // Fellowship
+            if (fellowshipSelect.value === "") {
+
+                formIsValid = false;
+
+            }
+
+            // Years of Practice
+            if (yearsPracticeSelect.value === "") {
+
+                formIsValid = false;
+
+            }
+
+        }
+
+
+        // -------------------------------------------------
+        // IF FORM IS NOT COMPLETE
+        // -------------------------------------------------
+
+        if (!formIsValid) {
+
+            demographicsError.style.display = "block";
+
+            return;
+
+        }
+
+
+        // -------------------------------------------------
+        // FORM IS COMPLETE
+        // -------------------------------------------------
+
+        demographicsError.style.display = "none";
+
+        demographicsPage.classList.remove("active");
+
+        instructionsPage.classList.add("active");
+
+        window.scrollTo(0, 0);
 
     });
 
