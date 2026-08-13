@@ -231,29 +231,303 @@
     </main>
 
 
-    <!-- =====================================================
-         DEMOGRAPHICS PAGE
-         ===================================================== -->
+  <!-- =====================================================
+     DEMOGRAPHICS / PERSONAL INFORMATION PAGE
+     ===================================================== -->
 
-    <main id="demographics-page" class="page">
+<main id="demographics-page" class="page">
 
-        <section class="content-container">
+    <section class="content-container">
 
-            <p class="eyebrow">
-                CL-IOH SCORE 2026
-            </p>
+        <!-- Page Title -->
 
-            <h2>
-                Demographics
-            </h2>
+        <h2>
+            Personal Information
+        </h2>
 
-            <p class="demographics-instruction">
-                Please provide the following information.
-            </p>
 
-        </section>
+        <!-- Section Label -->
 
-    </main>
+        <p class="demographics-instruction">
+            About You
+        </p>
+
+
+        <!-- =================================================
+             ANONYMOUS PARTICIPATION
+             ================================================= -->
+
+        <div class="anonymous-option">
+
+            <label class="checkbox-container">
+
+                <input
+                    type="checkbox"
+                    id="anonymous-checkbox"
+                >
+
+                <span class="checkbox-box"></span>
+
+                <span class="checkbox-label">
+                    I prefer to participate anonymously
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- =================================================
+             ANONYMOUS MESSAGE
+             ================================================= -->
+
+        <div
+            id="anonymous-message"
+            class="anonymous-message"
+            style="display: none;"
+        >
+
+            Anonymous participants won't receive a
+            personalized report, but your responses still count.
+
+        </div>
+
+
+        <!-- =================================================
+             DEMOGRAPHIC INFORMATION
+             ================================================= -->
+
+        <div
+            id="demographic-form"
+            class="demographic-form"
+        >
+
+
+            <!-- =========================
+                 NAME
+                 ========================= -->
+
+            <div class="form-group">
+
+                <label for="participant-name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="participant-name"
+                    name="participant-name"
+                    placeholder="e.g. Tom Holland"
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 INSTITUTION
+                 ========================= -->
+
+            <div class="form-group">
+
+                <label for="institution">
+                    Institution
+                </label>
+
+                <select
+                    id="institution"
+                    name="institution"
+                >
+
+                    <option value="" selected disabled>
+                        Select your institution...
+                    </option>
+
+                    <option value="UCLA">
+                        UCLA
+                    </option>
+
+                    <option value="UCSF">
+                        UCSF
+                    </option>
+
+                    <option value="UCSD">
+                        UCSD
+                    </option>
+
+                    <option value="UC Irvine">
+                        UC Irvine
+                    </option>
+
+                    <option value="Cedars Sinai">
+                        Cedars Sinai
+                    </option>
+
+                    <option value="USC">
+                        USC
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- =========================
+                 OTHER INSTITUTION
+                 ========================= -->
+
+            <div
+                id="other-institution-group"
+                class="form-group"
+                style="display: none;"
+            >
+
+                <label for="other-institution">
+                    Other
+                </label>
+
+                <input
+                    type="text"
+                    id="other-institution"
+                    name="other-institution"
+                    placeholder="Enter your institution"
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 ROLE
+                 ========================= -->
+
+            <div class="form-group">
+
+                <label for="role">
+                    Role
+                </label>
+
+                <select
+                    id="role"
+                    name="role"
+                >
+
+                    <option value="" selected disabled>
+                        Select your role...
+                    </option>
+
+                    <option value="Physician Assistant">
+                        Physician Assistant (PA)
+                    </option>
+
+                    <option value="Nurse Practitioner">
+                        Nurse Practitioner (NP)
+                    </option>
+
+                    <option value="Medical Student">
+                        Medical Student
+                    </option>
+
+                    <option value="Resident">
+                        Resident
+                    </option>
+
+                    <option value="Fellow">
+                        Fellow
+                    </option>
+
+                    <option value="Attending">
+                        Attending
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- =================================================
+                 ATTENDING-ONLY QUESTIONS
+                 ================================================= -->
+
+            <div
+                id="attending-fields"
+                class="attending-fields"
+                style="display: none;"
+            >
+
+
+                <!-- =========================
+                     FELLOWSHIP
+                     ========================= -->
+
+                <div class="form-group">
+
+                    <label for="fellowship">
+                        Fellowship
+                    </label>
+
+                    <select
+                        id="fellowship"
+                        name="fellowship"
+                    >
+
+                        <option value="" selected disabled>
+                            Select fellowship...
+                        </option>
+
+                        <!-- Fellowship options can be added here -->
+
+                    </select>
+
+                </div>
+
+
+                <!-- =========================
+                     YEARS OF PRACTICE
+                     ========================= -->
+
+                <div class="form-group">
+
+                    <label for="years-practice">
+                        Years of Practice
+                    </label>
+
+                    <select
+                        id="years-practice"
+                        name="years-practice"
+                    >
+
+                        <option value="" selected disabled>
+                            Select years of practice...
+                        </option>
+
+                        <option value="0 to 5 years">
+                            0 to 5 years
+                        </option>
+
+                        <option value="6 to 10 years">
+                            6 to 10 years
+                        </option>
+
+                        <option value="over 10 years">
+                            Over 10 years
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+</main>
 
 
     <!-- =====================================================
