@@ -762,13 +762,11 @@ function displayQuestion() {
 
 
     // Question number
-    document.getElementById(
-        "survey-question-title"
-    ).textContent =
-        currentQuestionIndex === 0
-            ? "Page 1"
-            : "Question " +
-              (currentQuestionIndex + 1);
+document.getElementById(
+    "survey-question-title"
+).textContent =
+    "Question " +
+    (currentQuestionIndex + 1);
 
 
     // Question stem
