@@ -522,9 +522,8 @@ h1 {
     color: #b42318;
 }
 
-
 /* =====================================================
-   INSTRUCTIONS FOR SURVEY PAGE
+   INSTRUCTIONS FOR SURVEY
    ===================================================== */
 
 #instructions-page {
@@ -550,13 +549,82 @@ h1 {
     color: #101828;
 }
 
-.instructions-description {
-    margin-top: 24px;
+
+/* =====================================================
+   SURVEY INSTRUCTIONS BOX
+   ===================================================== */
+
+.survey-instructions-box {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 40px auto 0 auto;
+
+    padding: 28px 32px;
+
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 2px 8px rgba(16, 24, 40, 0.05);
+
+    box-sizing: border-box;
+}
+
+.survey-instructions-box p {
+    margin: 0;
 
     font-size: 18px;
     line-height: 1.7;
 
+    text-align: center;
+
     color: #475467;
+}
+
+
+/* =====================================================
+   START SURVEY BUTTON
+   ===================================================== */
+
+.instructions-button-container {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+#start-survey-button {
+    min-width: 160px;
+}
+
+
+/* =====================================================
+   QUESTION 1 PAGE
+   ===================================================== */
+
+#question-1-page {
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 60px 24px;
+}
+
+#question-1-page .content-container {
+    width: 100%;
+    max-width: 760px;
+}
+
+#question-1-page h2 {
+    margin: 0;
+
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+    color: #101828;
 }
 
 
@@ -566,17 +634,25 @@ h1 {
 
 @media (max-width: 600px) {
 
-    .personal-information-button-container {
-        margin-top: 32px;
+    #instructions-page,
+    #question-1-page {
+        padding: 40px 20px;
     }
 
-    #demographics-next-button {
+    .survey-instructions-box {
+        margin-top: 32px;
+
+        padding: 22px 20px;
+    }
+
+    .survey-instructions-box p {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    #start-survey-button {
         width: 100%;
         max-width: 320px;
-    }
-
-    #instructions-page {
-        padding: 40px 20px;
     }
 
 }
