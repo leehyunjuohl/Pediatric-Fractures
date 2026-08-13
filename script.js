@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const instructionsPage =
         document.getElementById("instructions-page");
 
+    const question1Page =
+        document.getElementById("question-1-page");
+
 
     // =====================================================
     // FIND THE NAVIGATION BUTTONS
@@ -31,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const demographicsNextButton =
         document.getElementById("demographics-next-button");
+
+    const startSurveyButton =
+        document.getElementById("start-survey-button");
 
 
     // =====================================================
@@ -76,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const anonymousMessage =
         document.getElementById("anonymous-message");
 
-
     const participantName =
         document.getElementById("participant-name");
 
@@ -88,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const otherInstitution =
         document.getElementById("other-institution");
-
 
     const roleSelect =
         document.getElementById("role");
@@ -102,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const yearsPracticeSelect =
         document.getElementById("years-practice");
 
-
     const demographicsError =
         document.getElementById("demographics-error");
 
@@ -115,21 +118,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (anonymousCheckbox.checked) {
 
-            // Hide demographic questions
             demographicForm.style.display = "none";
 
-            // Show anonymous message
             anonymousMessage.style.display = "block";
 
-            // Hide any previous error
             demographicsError.style.display = "none";
 
         } else {
 
-            // Show demographic questions
             demographicForm.style.display = "block";
 
-            // Hide anonymous message
             anonymousMessage.style.display = "none";
 
         }
@@ -151,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             otherInstitutionGroup.style.display = "none";
 
-            // Clear the Other institution field
             otherInstitution.value = "";
 
         }
@@ -173,8 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             attendingFields.style.display = "none";
 
-            // Clear attending-specific selections
             fellowshipSelect.value = "";
+
             yearsPracticeSelect.value = "";
 
         }
@@ -190,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // -------------------------------------------------
-        // OPTION 1: ANONYMOUS PARTICIPANT
+        // ANONYMOUS PARTICIPANT
         // -------------------------------------------------
 
         if (anonymousCheckbox.checked) {
@@ -204,19 +201,18 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo(0, 0);
 
             return;
+
         }
 
 
         // -------------------------------------------------
-        // OPTION 2: NON-ANONYMOUS PARTICIPANT
+        // NON-ANONYMOUS PARTICIPANT
         // -------------------------------------------------
 
         let formIsValid = true;
 
 
-        // -------------------------------------------------
-        // NAME
-        // -------------------------------------------------
+        // Name
 
         if (participantName.value.trim() === "") {
 
@@ -225,9 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // -------------------------------------------------
-        // INSTITUTION
-        // -------------------------------------------------
+        // Institution
 
         if (institutionSelect.value === "") {
 
@@ -236,9 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // -------------------------------------------------
-        // OTHER INSTITUTION
-        // -------------------------------------------------
+        // Other Institution
 
         if (
             institutionSelect.value === "Other" &&
@@ -250,9 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // -------------------------------------------------
-        // ROLE
-        // -------------------------------------------------
+        // Role
 
         if (roleSelect.value === "") {
 
@@ -261,20 +251,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // -------------------------------------------------
-        // ATTENDING-SPECIFIC REQUIREMENTS
-        // -------------------------------------------------
+        // Attending-specific requirements
 
         if (roleSelect.value === "Attending") {
 
-            // Fellowship
             if (fellowshipSelect.value === "") {
 
                 formIsValid = false;
 
             }
 
-            // Years of Practice
             if (yearsPracticeSelect.value === "") {
 
                 formIsValid = false;
@@ -285,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // -------------------------------------------------
-        // IF FORM IS NOT COMPLETE
+        // INVALID FORM
         // -------------------------------------------------
 
         if (!formIsValid) {
@@ -298,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // -------------------------------------------------
-        // FORM IS COMPLETE
+        // VALID FORM → INSTRUCTIONS
         // -------------------------------------------------
 
         demographicsError.style.display = "none";
@@ -306,6 +292,21 @@ document.addEventListener("DOMContentLoaded", function () {
         demographicsPage.classList.remove("active");
 
         instructionsPage.classList.add("active");
+
+        window.scrollTo(0, 0);
+
+    });
+
+
+    // =====================================================
+    // INSTRUCTIONS → QUESTION 1
+    // =====================================================
+
+    startSurveyButton.addEventListener("click", function () {
+
+        instructionsPage.classList.remove("active");
+
+        question1Page.classList.add("active");
 
         window.scrollTo(0, 0);
 
