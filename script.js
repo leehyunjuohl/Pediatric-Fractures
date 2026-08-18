@@ -359,9 +359,9 @@ document.addEventListener(
                 "fellowship"
             );
 
-        const yearsPracticeSelect =
+        const yearsExperienceSelect =
             document.getElementById(
-                "years-practice"
+                "years-Experience"
             );
 
         const demographicsError =
@@ -461,7 +461,7 @@ document.addEventListener(
 
                     fellowshipSelect.value = "";
 
-                    yearsPracticeSelect.value = "";
+                    yearsExperienceSelect.value = "";
 
                 }
 
