@@ -64,7 +64,7 @@
                 class="primary-button"
                 type="button"
             >
-                Begin Survey
+                Next
             </button>
 
         </section>
@@ -320,7 +320,25 @@
 
             </div>
 
+<!-- =========================
+     EMAIL ADDRESS
+     ========================= -->
 
+<div class="form-group">
+
+    <label for="participant-email">
+        Email Address
+    </label>
+
+    <input
+        type="email"
+        id="participant-email"
+        name="participant-email"
+        placeholder="e.g. name@example.com"
+    >
+
+</div>
+            
             <!-- =========================
                  INSTITUTION
                  ========================= -->
@@ -428,98 +446,223 @@
 
             </div>
 
+<!-- =================================================
+     FELLOWSHIP / ATTENDING INFORMATION
+     ================================================= -->
 
-            <!-- =================================================
-                 ATTENDING-ONLY QUESTIONS
-                 ================================================= -->
+<div
+    id="attending-fields"
+    class="attending-fields"
+    style="display: none;"
+>
 
-            <div
-                id="attending-fields"
-                class="attending-fields"
-                style="display: none;"
-            >
+    <!-- Fellowship is OPTIONAL -->
 
+    <div class="form-group">
 
-                <!-- =========================
-                     FELLOWSHIP
-                     ========================= -->
+        <p class="form-label">
+            Fellowship
+            <span class="optional-label">
+                (Optional)
+            </span>
+        </p>
 
-                <div class="form-group">
+        <div class="fellowship-checkboxes">
 
-                    <label for="fellowship">
-                        Fellowship
-                    </label>
+            <label class="checkbox-option">
+                <input
+                    type="checkbox"
+                    name="fellowship"
+                    value="Pediatrics"
+                >
+                Pediatrics
+            </label>
 
-                        <select
-                            id="fellowship"
-                            name="fellowship"
-                        >
+            <label class="checkbox-option">
+                <input
+                    type="checkbox"
+                    name="fellowship"
+                    value="Sports"
+                >
+                Sports
+            </label>
 
-                        <option value="" selected disabled>
-                            Select fellowship...
-                        </option>
+            <label class="checkbox-option">
+                <input
+                    type="checkbox"
+                    name="fellowship"
+                    value="Hand"
+                >
+                Hand
+            </label>
 
-                        <option value="Sports Medicine">
-                            Sports Medicine
-                        </option>
-
-                        <option value="Pediatric Orthopaedics">
-                            Pediatric Orthopaedics
-                        </option>
-
-                        <option value="Both">
-                            Both
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- =========================
-                     YEARS OF EXPERIENCE
-                     ========================= -->
-
-                <div class="form-group">
-
-                    <label for="years-experience">
-                        Years of Experience
-                    </label>
-
-                    <select
-                        id="years-experience"
-                        name="years-experience"
-                    >
-
-                        <option value="" selected disabled>
-                            Select years of experience...
-                        </option>
-
-                        <option value="0 to 5 years">
-                            0 to 5 years
-                        </option>
-
-                        <option value="6 to 10 years">
-                            6 to 10 years
-                        </option>
-
-                        <option value="over 10 years">
-                            Over 10 years
-                        </option>
-
-                    </select>
-
-                </div>
-
-            </div>
-
+            <label class="checkbox-option">
+                <input
+                    type="checkbox"
+                    name="fellowship"
+                    value="Other"
+                >
+                Other
+            </label>
 
         </div>
 
+    </div>
+
+
+    <!-- Attending Years of Experience -->
+
+    <div class="form-group">
+
+        <label for="years-experience">
+            Years of Experience
+        </label>
+
+        <select
+            id="years-experience"
+            name="years-experience"
+        >
+
+            <option value="" selected disabled>
+                Select years of experience...
+            </option>
+
+            <option value="0 to 5 years">
+                0 to 5 years
+            </option>
+
+            <option value="6 to 10 years">
+                6 to 10 years
+            </option>
+
+            <option value="over 10 years">
+                Over 10 years
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     PA / NP YEARS OF EXPERIENCE
+     ================================================= -->
+
+<div
+    id="pa-np-fields"
+    class="conditional-fields"
+    style="display: none;"
+>
+
+    <div class="form-group">
+
+        <label for="pa-np-years-experience">
+            Years of Experience
+        </label>
+
+        <select
+            id="pa-np-years-experience"
+            name="pa-np-years-experience"
+        >
+
+            <option value="" selected disabled>
+                Select years of experience...
+            </option>
+
+            <option value="0 to 5 years">
+                0 to 5 years
+            </option>
+
+            <option value="6 to 10 years">
+                6 to 10 years
+            </option>
+
+            <option value="over 10 years">
+                Over 10 years
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     MEDICAL STUDENT YEAR
+     ================================================= -->
+
+<div
+    id="medical-student-fields"
+    class="conditional-fields"
+    style="display: none;"
+>
+
+    <div class="form-group">
+
+        <label for="medical-student-year">
+            Medical Student Year
+        </label>
+
+        <select
+            id="medical-student-year"
+            name="medical-student-year"
+        >
+
+            <option value="" selected disabled>
+                Select your medical student year...
+            </option>
+
+            <option value="MS1">MS1</option>
+            <option value="MS2">MS2</option>
+            <option value="MS3">MS3</option>
+            <option value="MS4">MS4</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     RESIDENT YEAR
+     ================================================= -->
+
+<div
+    id="resident-fields"
+    class="conditional-fields"
+    style="display: none;"
+>
+
+    <div class="form-group">
+
+        <label for="resident-year">
+            Resident Year
+        </label>
+
+        <select
+            id="resident-year"
+            name="resident-year"
+        >
+
+            <option value="" selected disabled>
+                Select your resident year...
+            </option>
+
+            <option value="PGY-1">PGY-1</option>
+            <option value="PGY-2">PGY-2</option>
+            <option value="PGY-3">PGY-3</option>
+            <option value="PGY-4">PGY-4</option>
+            <option value="PGY-5">PGY-5</option>
+
+        </select>
+
+    </div>
+
+</div>
         <!-- =================================================
      NEXT BUTTON
      ================================================= -->
@@ -549,52 +692,6 @@
 
 </main>
 
-
- <!-- =====================================================
-     INSTRUCTIONS FOR SURVEY PAGE
-     ===================================================== -->
-
-<main id="instructions-page" class="page">
-
-    <section class="content-container">
-
-        <h2>
-            Instructions for Survey
-        </h2>
-
-
-        <!-- Instructions Box -->
-
-        <div class="survey-instructions-box">
-
-            <p>
-                After this page, you will get a series of
-                questions with images to categorize the
-                pediatric fracture types. Your response
-                time will be timed once you click the
-                “Start Survey” button at the bottom of this page!
-            </p>
-
-        </div>
-
-
-        <!-- Start Survey Button -->
-
-        <div class="instructions-button-container">
-
-            <button
-                id="start-survey-button"
-                class="primary-button"
-                type="button"
-            >
-                Start Survey
-            </button>
-
-        </div>
-
-    </section>
-
-</main>
 
 <!-- =====================================================
      SURVEY QUESTION PAGE
@@ -691,7 +788,7 @@
                 class="primary-button"
                 type="button"
             >
-                Next Question
+                Start Survey
             </button>
 
         </div>
