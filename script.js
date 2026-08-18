@@ -144,13 +144,9 @@ const questionBank = [
 const TOTAL_QUESTIONS = questionBank.length;
 
 let randomizedQuestions = [];
-
 let currentQuestionIndex = 0;
-
 let selectedAnswer = null;
-
 let questionStartTime = null;
-
 let surveyResponses = [];
 
 
@@ -171,14 +167,8 @@ function shuffleArray(array) {
         const j =
             Math.floor(Math.random() * (i + 1));
 
-        [
-            shuffled[i],
-            shuffled[j]
-        ] =
-        [
-            shuffled[j],
-            shuffled[i]
-        ];
+        [shuffled[i], shuffled[j]] =
+            [shuffled[j], shuffled[i]];
 
     }
 
@@ -197,7 +187,7 @@ document.addEventListener(
 
 
         // =================================================
-        // FIND PAGES
+        // PAGES
         // =================================================
 
         const introductionPage =
@@ -215,24 +205,14 @@ document.addEventListener(
                 "demographics-page"
             );
 
-        const instructionsPage =
-            document.getElementById(
-                "instructions-page"
-            );
-
         const surveyQuestionPage =
             document.getElementById(
                 "survey-question-page"
             );
 
-        const completionPage =
-            document.getElementById(
-                "completion-page"
-            );
-
 
         // =================================================
-        // FIND BUTTONS
+        // NAVIGATION BUTTONS
         // =================================================
 
         const beginSurveyButton =
@@ -250,11 +230,6 @@ document.addEventListener(
                 "demographics-next-button"
             );
 
-        const startSurveyButton =
-            document.getElementById(
-                "start-survey-button"
-            );
-
         const nextQuestionButton =
             document.getElementById(
                 "next-question-button"
@@ -269,13 +244,8 @@ document.addEventListener(
             "click",
             function () {
 
-                introductionPage
-                    .classList
-                    .remove("active");
-
-                consentPage
-                    .classList
-                    .add("active");
+                introductionPage.classList.remove("active");
+                consentPage.classList.add("active");
 
                 window.scrollTo(0, 0);
 
@@ -291,13 +261,8 @@ document.addEventListener(
             "click",
             function () {
 
-                consentPage
-                    .classList
-                    .remove("active");
-
-                demographicsPage
-                    .classList
-                    .add("active");
+                consentPage.classList.remove("active");
+                demographicsPage.classList.add("active");
 
                 window.scrollTo(0, 0);
 
@@ -329,6 +294,11 @@ document.addEventListener(
                 "participant-name"
             );
 
+        const participantEmail =
+            document.getElementById(
+                "participant-email"
+            );
+
         const institutionSelect =
             document.getElementById(
                 "institution"
@@ -354,14 +324,39 @@ document.addEventListener(
                 "attending-fields"
             );
 
-        const fellowshipSelect =
-            document.getElementById(
-                "fellowship"
-            );
-
         const yearsExperienceSelect =
             document.getElementById(
                 "years-experience"
+            );
+
+        const paNpFields =
+            document.getElementById(
+                "pa-np-fields"
+            );
+
+        const paNpYearsExperience =
+            document.getElementById(
+                "pa-np-years-experience"
+            );
+
+        const medicalStudentFields =
+            document.getElementById(
+                "medical-student-fields"
+            );
+
+        const medicalStudentYear =
+            document.getElementById(
+                "medical-student-year"
+            );
+
+        const residentFields =
+            document.getElementById(
+                "resident-fields"
+            );
+
+        const residentYear =
+            document.getElementById(
+                "resident-year"
             );
 
         const demographicsError =
@@ -371,33 +366,23 @@ document.addEventListener(
 
 
         // =================================================
-        // ANONYMOUS CHECKBOX
+        // ANONYMOUS PARTICIPATION
         // =================================================
 
         anonymousCheckbox.addEventListener(
             "change",
             function () {
 
-                if (
-                    anonymousCheckbox.checked
-                ) {
+                if (anonymousCheckbox.checked) {
 
-                    demographicForm.style.display =
-                        "none";
-
-                    anonymousMessage.style.display =
-                        "block";
-
-                    demographicsError.style.display =
-                        "none";
+                    demographicForm.style.display = "none";
+                    anonymousMessage.style.display = "block";
+                    demographicsError.style.display = "none";
 
                 } else {
 
-                    demographicForm.style.display =
-                        "block";
-
-                    anonymousMessage.style.display =
-                        "none";
+                    demographicForm.style.display = "block";
+                    anonymousMessage.style.display = "none";
 
                 }
 
@@ -406,27 +391,22 @@ document.addEventListener(
 
 
         // =================================================
-        // INSTITUTION → OTHER
+        // INSTITUTION → OTHER FIELD
         // =================================================
 
         institutionSelect.addEventListener(
             "change",
             function () {
 
-                if (
-                    institutionSelect.value ===
-                    "Other"
-                ) {
+                if (institutionSelect.value === "Other") {
 
-                    otherInstitutionGroup
-                        .style
-                        .display = "block";
+                    otherInstitutionGroup.style.display =
+                        "block";
 
                 } else {
 
-                    otherInstitutionGroup
-                        .style
-                        .display = "none";
+                    otherInstitutionGroup.style.display =
+                        "none";
 
                     otherInstitution.value = "";
 
@@ -437,31 +417,75 @@ document.addEventListener(
 
 
         // =================================================
-        // ROLE → ATTENDING
+        // HELPER: HIDE CONDITIONAL FIELDS
+        // =================================================
+
+        function hideConditionalFields() {
+
+            attendingFields.style.display = "none";
+            paNpFields.style.display = "none";
+            medicalStudentFields.style.display = "none";
+            residentFields.style.display = "none";
+
+            yearsExperienceSelect.value = "";
+            paNpYearsExperience.value = "";
+            medicalStudentYear.value = "";
+            residentYear.value = "";
+
+        }
+
+
+        // =================================================
+        // ROLE → CONDITIONAL FIELDS
         // =================================================
 
         roleSelect.addEventListener(
             "change",
             function () {
 
+                hideConditionalFields();
+
+
                 if (
-                    roleSelect.value ===
-                    "Attending"
+                    roleSelect.value === "Attending"
                 ) {
 
-                    attendingFields
-                        .style
-                        .display = "block";
+                    attendingFields.style.display =
+                        "block";
 
-                } else {
+                }
 
-                    attendingFields
-                        .style
-                        .display = "none";
 
-                    fellowshipSelect.value = "";
+                if (
+                    roleSelect.value ===
+                        "Physician Assistant" ||
+                    roleSelect.value ===
+                        "Nurse Practitioner"
+                ) {
 
-                    yearsExperienceSelect.value = "";
+                    paNpFields.style.display =
+                        "block";
+
+                }
+
+
+                if (
+                    roleSelect.value ===
+                    "Medical Student"
+                ) {
+
+                    medicalStudentFields.style.display =
+                        "block";
+
+                }
+
+
+                if (
+                    roleSelect.value === "Resident"
+                ) {
+
+                    residentFields.style.display =
+                        "block";
 
                 }
 
@@ -470,7 +494,7 @@ document.addEventListener(
 
 
         // =================================================
-        // PERSONAL INFORMATION → INSTRUCTIONS
+        // PERSONAL INFORMATION → START SURVEY
         // =================================================
 
         demographicsNextButton.addEventListener(
@@ -478,24 +502,13 @@ document.addEventListener(
             function () {
 
 
-                // Anonymous participants
-                if (
-                    anonymousCheckbox.checked
-                ) {
+                // ---------------------------------------------
+                // ANONYMOUS PARTICIPANT
+                // ---------------------------------------------
 
-                    demographicsPage
-                        .classList
-                        .remove("active");
+                if (anonymousCheckbox.checked) {
 
-                    instructionsPage
-                        .classList
-                        .add("active");
-
-                    demographicsError
-                        .style
-                        .display = "none";
-
-                    window.scrollTo(0, 0);
+                    startSurveyFromPersonalInfo();
 
                     return;
 
@@ -505,7 +518,10 @@ document.addEventListener(
                 let formIsValid = true;
 
 
-                // Name
+                // ---------------------------------------------
+                // REQUIRED: NAME
+                // ---------------------------------------------
+
                 if (
                     participantName.value.trim() === ""
                 ) {
@@ -515,7 +531,23 @@ document.addEventListener(
                 }
 
 
-                // Institution
+                // ---------------------------------------------
+                // REQUIRED: EMAIL
+                // ---------------------------------------------
+
+                if (
+                    participantEmail.value.trim() === ""
+                ) {
+
+                    formIsValid = false;
+
+                }
+
+
+                // ---------------------------------------------
+                // REQUIRED: INSTITUTION
+                // ---------------------------------------------
+
                 if (
                     institutionSelect.value === ""
                 ) {
@@ -525,10 +557,12 @@ document.addEventListener(
                 }
 
 
-                // Other institution
+                // ---------------------------------------------
+                // REQUIRED: OTHER INSTITUTION
+                // ---------------------------------------------
+
                 if (
-                    institutionSelect.value ===
-                    "Other" &&
+                    institutionSelect.value === "Other" &&
                     otherInstitution.value.trim() === ""
                 ) {
 
@@ -537,7 +571,10 @@ document.addEventListener(
                 }
 
 
-                // Role
+                // ---------------------------------------------
+                // REQUIRED: ROLE
+                // ---------------------------------------------
+
                 if (
                     roleSelect.value === ""
                 ) {
@@ -547,102 +584,127 @@ document.addEventListener(
                 }
 
 
-                // Attending requirements
+                // ---------------------------------------------
+                // ATTENDING
+                // Fellowship is optional
+                // Years of Experience is required
+                // ---------------------------------------------
+
                 if (
-                    roleSelect.value ===
-                    "Attending"
+                    roleSelect.value === "Attending" &&
+                    yearsExperienceSelect.value === ""
                 ) {
 
-                    if (
-                        fellowshipSelect.value === ""
-                    ) {
-
-                        formIsValid = false;
-
-                    }
-
-                    if (
-                        yearsExperienceSelect.value === ""
-                    ) {
-
-                        formIsValid = false;
-
-                    }
+                    formIsValid = false;
 
                 }
 
 
-                // Invalid
+                // ---------------------------------------------
+                // PA / NP
+                // ---------------------------------------------
+
+                if (
+                    (
+                        roleSelect.value ===
+                            "Physician Assistant" ||
+                        roleSelect.value ===
+                            "Nurse Practitioner"
+                    ) &&
+                    paNpYearsExperience.value === ""
+                ) {
+
+                    formIsValid = false;
+
+                }
+
+
+                // ---------------------------------------------
+                // MEDICAL STUDENT
+                // ---------------------------------------------
+
+                if (
+                    roleSelect.value ===
+                        "Medical Student" &&
+                    medicalStudentYear.value === ""
+                ) {
+
+                    formIsValid = false;
+
+                }
+
+
+                // ---------------------------------------------
+                // RESIDENT
+                // ---------------------------------------------
+
+                if (
+                    roleSelect.value === "Resident" &&
+                    residentYear.value === ""
+                ) {
+
+                    formIsValid = false;
+
+                }
+
+
+                // ---------------------------------------------
+                // SHOW ERROR
+                // ---------------------------------------------
+
                 if (!formIsValid) {
 
-                    demographicsError
-                        .style
-                        .display = "block";
+                    demographicsError.style.display =
+                        "block";
 
                     return;
 
                 }
 
 
-                // Valid
-                demographicsError
-                    .style
-                    .display = "none";
+                demographicsError.style.display =
+                    "none";
 
-                demographicsPage
-                    .classList
-                    .remove("active");
 
-                instructionsPage
-                    .classList
-                    .add("active");
-
-                window.scrollTo(0, 0);
+                startSurveyFromPersonalInfo();
 
             }
         );
 
 
         // =================================================
-        // START SURVEY
+        // START SURVEY DIRECTLY FROM PERSONAL INFORMATION
         // =================================================
 
-        startSurveyButton.addEventListener(
-            "click",
-            function () {
+        function startSurveyFromPersonalInfo() {
 
-                // Randomize question order
-                randomizedQuestions =
-                    shuffleArray(
-                        questionBank
-                    );
+            // Randomize questions
+            randomizedQuestions =
+                shuffleArray(questionBank);
 
-                // Start at question 1
-                currentQuestionIndex = 0;
 
-                // Clear previous responses
-                surveyResponses = [];
+            // Reset survey
+            currentQuestionIndex = 0;
+            selectedAnswer = null;
+            surveyResponses = [];
 
-                // Display survey
-                instructionsPage
-                    .classList
-                    .remove("active");
 
-                surveyQuestionPage
-                    .classList
-                    .add("active");
+            // Change pages
+            demographicsPage.classList.remove("active");
 
-                // Display first question
-                displayQuestion();
+            surveyQuestionPage.classList.add("active");
 
-                window.scrollTo(0, 0);
 
-            }
-        );
+            // Display Question 1
+            displayQuestion();
+
+            window.scrollTo(0, 0);
+
+        }
 
 
         // =================================================
-        // ANSWER CHOICE BUTTONS
+        // ANSWER CHOICES
         // =================================================
 
         const answerButtons =
@@ -658,24 +720,20 @@ document.addEventListener(
                     "click",
                     function () {
 
-                        // Remove previous selection
                         answerButtons.forEach(
                             function (otherButton) {
 
                                 otherButton
                                     .classList
-                                    .remove(
-                                        "selected"
-                                    );
+                                    .remove("selected");
 
                             }
                         );
 
 
-                        // Select this answer
-                        button
-                            .classList
-                            .add("selected");
+                        button.classList.add(
+                            "selected"
+                        );
 
 
                         selectedAnswer =
@@ -698,11 +756,7 @@ document.addEventListener(
             "click",
             function () {
 
-                // Don't allow proceeding
-                // without an answer
-                if (
-                    selectedAnswer === null
-                ) {
+                if (selectedAnswer === null) {
 
                     alert(
                         "Please select an answer before continuing."
@@ -713,11 +767,11 @@ document.addEventListener(
                 }
 
 
-                // Record response
+                // Record answer
                 recordCurrentResponse();
 
 
-                // Is this the last question?
+                // Last question
                 if (
                     currentQuestionIndex ===
                     TOTAL_QUESTIONS - 1
@@ -730,7 +784,7 @@ document.addEventListener(
                 }
 
 
-                // Move to next question
+                // Next question
                 currentQuestionIndex++;
 
                 displayQuestion();
@@ -740,13 +794,12 @@ document.addEventListener(
             }
         );
 
-
     }
 );
 
 
 // =====================================================
-// DISPLAY CURRENT QUESTION
+// DISPLAY QUESTION
 // =====================================================
 
 function displayQuestion() {
@@ -757,16 +810,15 @@ function displayQuestion() {
         ];
 
 
-    // Reset selected answer
     selectedAnswer = null;
 
 
     // Question number
-document.getElementById(
-    "survey-question-title"
-).textContent =
-    "Question " +
-    (currentQuestionIndex + 1);
+    document.getElementById(
+        "survey-question-title"
+    ).textContent =
+        "Question " +
+        (currentQuestionIndex + 1);
 
 
     // Question stem
@@ -782,8 +834,7 @@ document.getElementById(
             "question-image"
         );
 
-    image.src =
-        question.image;
+    image.src = question.image;
 
     image.alt =
         "Radiographic image for survey question";
@@ -802,9 +853,7 @@ document.getElementById(
             button.textContent =
                 question.choices[index];
 
-            button.classList.remove(
-                "selected"
-            );
+            button.classList.remove("selected");
 
         }
     );
@@ -815,6 +864,7 @@ document.getElementById(
         document.getElementById(
             "next-question-button"
         );
+
 
     if (
         currentQuestionIndex ===
@@ -836,8 +886,7 @@ document.getElementById(
     const progress =
         Math.round(
             (
-                (currentQuestionIndex + 1)
-                /
+                (currentQuestionIndex + 1) /
                 TOTAL_QUESTIONS
             ) * 100
         );
@@ -863,7 +912,7 @@ document.getElementById(
 
 
 // =====================================================
-// RECORD CURRENT RESPONSE
+// RECORD RESPONSE
 // =====================================================
 
 function recordCurrentResponse() {
@@ -873,17 +922,11 @@ function recordCurrentResponse() {
             currentQuestionIndex
         ];
 
-
     const endTime =
         performance.now();
 
-
     const timeOnQuestion =
-        (
-            endTime -
-            questionStartTime
-        ) / 1000;
-
+        (endTime - questionStartTime) / 1000;
 
     const isCorrect =
         selectedAnswer ===
@@ -892,16 +935,13 @@ function recordCurrentResponse() {
 
     const response = {
 
-        questionId:
-            question.id,
+        questionId: question.id,
 
         surveyQuestionNumber:
             currentQuestionIndex + 1,
 
         selectedAnswer:
-            question.choices[
-                selectedAnswer
-            ],
+            question.choices[selectedAnswer],
 
         correctAnswer:
             question.choices[
@@ -921,9 +961,7 @@ function recordCurrentResponse() {
     };
 
 
-    surveyResponses.push(
-        response
-    );
+    surveyResponses.push(response);
 
 
     console.log(
@@ -949,21 +987,17 @@ function finishSurvey() {
     document.getElementById(
         "survey-question-page"
     )
-    .classList
-    .remove("active");
+        .classList
+        .remove("active");
 
 
     document.getElementById(
         "completion-page"
     )
-    .classList
-    .add("active");
+        .classList
+        .add("active");
 
 
     window.scrollTo(0, 0);
-
-
-    // Later, this is where we will
-    // send the data to Google Sheets.
 
 }
