@@ -562,7 +562,7 @@ document.addEventListener(
                     }
 
                     if (
-                        yearsPracticeSelect.value === ""
+                        yearsExperienceSelect.value === ""
                     ) {
 
                         formIsValid = false;
