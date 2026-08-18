@@ -361,7 +361,7 @@ document.addEventListener(
 
         const yearsExperienceSelect =
             document.getElementById(
-                "years-Experience"
+                "years-experience"
             );
 
         const demographicsError =
