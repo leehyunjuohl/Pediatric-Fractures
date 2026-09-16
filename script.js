@@ -3,7 +3,20 @@
 // =====================================================
 
 const questionBank = [
-
+ {
+        id: "Q01",
+        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imagining, how would you clasify the distal radius fracture morphology?",
+        image: "images/xray1.png",
+        choices: [
+            "Torus/Buckle fracture",
+            "Greenstick fracture",
+            "Non/minimaly displaced Complete fracture",
+            "Physeal Fracture (Salter-Harris)",
+            "No Acute Fracture Identified"
+        ],
+        correctAnswer: 1
+    },
+    
     {
         id: "Q01",
         stem: "You have a patient that has the following XR.",
