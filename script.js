@@ -12,7 +12,7 @@ const questionBank = [
             "Greenstick fracture",
             "Non/minimaly displaced Complete fracture",
             "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
+            "No Acute FRracture Identified"
         ],
         correctAnswer: 1
     },
