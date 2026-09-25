@@ -398,7 +398,445 @@ const questionBank = [
             }
 
         ]
-    },    
+    },
+    
+ {
+        id: "9",
+        label: "Question 9",
+        subQuestions: [
+
+            {
+                id: "9.1",
+                label: "9.1",
+                image: "images/8M (3).png",
+                context: "Review the PA and lateral wrist X-rays of a 8-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "9.2",
+                label: "9.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "9.3",
+                label: "9.3",
+                stem: "Based on the following image, is this an acceptable reduction?",
+                image: "images/8M (3)_reduction.png",
+                choices: [
+                    "Yes",
+                    "No"
+                ]
+            },
+            
+            {
+                id: "9.4",
+                label: "9.4",
+                image: "images/8M (3)_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    }, 
+ {
+        id: "10",
+        label: "Question 10",
+        subQuestions: [
+
+            {
+                id: "10.1",
+                label: "10.1",
+                image: "images/5M.png",
+                context: "Review the PA and lateral wrist X-rays of a 5-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "10.2",
+                label: "10.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "10.3",
+                label: "10.3",
+                stem: "Based on the following image, is this an acceptable reduction?",
+                image: "images/5M_REDUCTION.png",
+                choices: [
+                    "Yes",
+                    "No"
+                ]
+            }
+
+        ]
+    }, 
+ {
+        id: "11",
+        label: "Question 11",
+        subQuestions: [
+
+            {
+                id: "11.1",
+                label: "11.1",
+                image: "images/15M.png",
+                context: "Review the PA and lateral wrist X-rays of a 15-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "11.2",
+                label: "11.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "11.3",
+                label: "11.3",
+                image: "images/15M_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    },  
+ {
+        id: "12",
+        label: "Question 12",
+        subQuestions: [
+
+            {
+                id: "12.1",
+                label: "12.1",
+                image: "images/6F (2).png",
+                context: "Review the PA and lateral wrist X-rays of a 6-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "12.2",
+                label: "12.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "12.3",
+                label: "12.3",
+                image: "images/6F(2)_5m.png",
+                stem: "Review the 5-month follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    }, 
+     {
+        id: "13",
+        label: "Question 13",
+        subQuestions: [
+
+            {
+                id: "13.1",
+                label: "13.1",
+                image: "images/15M (2).png",
+                context: "Review the PA and lateral wrist X-rays of a 11-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "13.2",
+                label: "13.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "13.3",
+                label: "13.3",
+                stem: "Based on the following image, is this an acceptable reduction?",
+                image: "images/15M (2)_reduction.png",
+                choices: [
+                    "Yes",
+                    "No"
+                ]
+            },
+            
+            {
+                id: "13.4",
+                label: "13.4",
+                image: "images/15M (2)_7m.png",
+                stem: "Review the 7-month follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    }, 
+     {
+        id: "14",
+        label: "Question 14",
+        subQuestions: [
+
+            {
+                id: "14.1",
+                label: "14.1",
+                image: "images/5M (2).png",
+                context: "Review the PA and lateral wrist X-rays of a 5-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "14.2",
+                label: "14.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "14.3",
+                label: "14.3",
+                stem: "Based on the following image, is this an acceptable reduction?",
+                image: "images/5M (2)_reduction.png",
+                choices: [
+                    "Yes",
+                    "No"
+                ]
+            },
+            
+            {
+                id: "14.4",
+                label: "14.4",
+                image: "images/5M (2)_8w.png",
+                stem: "Review the 8-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    }, 
+ {
+        id: "15",
+        label: "Question 15",
+        subQuestions: [
+
+            {
+                id: "15.1",
+                label: "15.1",
+                image: "images/4M.png",
+                context: "Review the PA and lateral wrist X-rays of a 4-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "15.2",
+                label: "15.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "15.3",
+                label: "15.3",
+                stem: "Based on the following image, is this an acceptable reduction?",
+                image: "images/4M_reduction.png",
+                choices: [
+                    "Yes",
+                    "No"
+                ]
+            },
+            
+            {
+                id: "15.4",
+                label: "15.4",
+                image: "images/4M_8w.png",
+                stem: "Review the 8-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    }, 
+     {
+        id: "16",
+        label: "Question 16",
+        subQuestions: [
+
+            {
+                id: "16.1",
+                label: "16.1",
+                image: "images/7F.png",
+                context: "Review the PA and lateral wrist X-rays of a 7-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "16.2",
+                label: "16.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+            
+            {
+                id: "16.3",
+                label: "16.3",
+                stem: "Based on the following image, is this an acceptable reduction?",
+                image: "images/7F_reduction.png",
+                choices: [
+                    "Yes",
+                    "No"
+                ]
+            },
+            
+            {
+                id: "16.4",
+                label: "16.4",
+                image: "images/7F_6m.png",
+                stem: "Review the 6-month follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
+        ]
+    }, 
 ];
 
 
