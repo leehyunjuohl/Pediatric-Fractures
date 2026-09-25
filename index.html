@@ -5,7 +5,6 @@
 
     <meta charset="UTF-8">
 
-    <!-- Makes the website display correctly on phones and tablets -->
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -13,7 +12,6 @@
 
     <title>Wrist Fracture Morphology</title>
 
-    <!-- Connects HTML to CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -30,9 +28,7 @@
 
         <section class="intro-container">
 
-            <h1>
-                Wrist Fracture Morphology
-            </h1>
+            <h1>Wrist Fracture Morphology</h1>
 
             <p class="intro-description">
                 Our goal is to test the knowledge of current
@@ -49,15 +45,12 @@
                 Estimated time to finish ~5 min
             </p>
 
-            <!-- Contact Information -->
-
             <p class="contact-information">
                 Questions? Contact Dr. Soroush Baghdadi at
                 <a href="mailto:sbaghdadi@mednet.ucla.edu">
                     sbaghdadi@mednet.ucla.edu
                 </a>
             </p>
-
 
             <button
                 id="begin-survey-button"
@@ -80,46 +73,21 @@
 
         <section class="content-container">
 
-            <h2>
-                Research Participant Information
-            </h2>
+            <h2>Research Participant Information</h2>
 
             <p class="consent-instruction">
                 Please read before proceeding.
             </p>
 
-
             <div class="consent-information">
 
+                <h3>Study Title</h3>
+                <p>Wrist Fracture Morphology Study</p>
 
-                <!-- Study Title -->
+                <h3>Principal Investigator</h3>
+                <p>Soroush Baghdadi, UCLA Department of Orthopedics</p>
 
-                <h3>
-                    Study Title
-                </h3>
-
-                <p>
-                    Wrist Fracture Morphology Study
-                </p>
-
-
-                <!-- Principal Investigator -->
-
-                <h3>
-                    Principal Investigator
-                </h3>
-
-                <p>
-                    Soroush Baghdadi, UCLA Department of Orthopedics
-                </p>
-
-
-                <!-- Purpose -->
-
-                <h3>
-                    Purpose
-                </h3>
-
+                <h3>Purpose</h3>
                 <p>
                     This survey will determine whether orthopedic
                     healthcare professionals can reach agreement
@@ -130,13 +98,7 @@
                     the span of four weeks.
                 </p>
 
-
-                <!-- What You'll Do -->
-
-                <h3>
-                    What You'll Do
-                </h3>
-
+                <h3>What You'll Do</h3>
                 <p>
                     You will answer the prompted questions for a set
                     of __ X-rays. Once complete, you will receive an
@@ -146,26 +108,14 @@
                     asked to complete the same survey a second time.
                 </p>
 
-
-                <!-- Voluntary Participation -->
-
-                <h3>
-                    Voluntary Participation
-                </h3>
-
+                <h3>Voluntary Participation</h3>
                 <p>
                     Your participation is entirely voluntary.
                     You may stop at any time without consequence.
                     You may also choose to participate anonymously.
                 </p>
 
-
-                <!-- Data Protection -->
-
-                <h3>
-                    Data Protection
-                </h3>
-
+                <h3>Data Protection</h3>
                 <p>
                     Your clinical opinions, not personal health
                     information, are collected. Responses are stored
@@ -178,13 +128,7 @@
                     collected.
                 </p>
 
-
-                <!-- How Results Will Be Used -->
-
-                <h3>
-                    How Results Will Be Used?
-                </h3>
-
+                <h3>How Results Will Be Used?</h3>
                 <p>
                     Aggregate results may be published in
                     peer-reviewed journals. Individual results will
@@ -192,24 +136,10 @@
                     report.
                 </p>
 
-
-                <!-- IRB Status -->
-
-                <h3>
-                    IRB Status
-                </h3>
-
-                <p>
-                    This study is under review by UCLA's BruinIRB.
-                </p>
-
+                <h3>IRB Status</h3>
+                <p>This study is under review by UCLA's BruinIRB.</p>
 
             </div>
-
-
-            <!-- =================================================
-                 CONTINUE BUTTON
-                 ================================================= -->
 
             <div class="consent-button-container">
 
@@ -223,633 +153,255 @@
 
             </div>
 
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         DEMOGRAPHICS / PERSONAL INFORMATION PAGE
+         ===================================================== -->
+
+    <main id="demographics-page" class="page">
+
+        <section class="content-container">
+
+            <h2>Personal Information</h2>
+
+            <p class="demographics-instruction">About You</p>
+
+            <div class="anonymous-option">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="anonymous-checkbox">
+                    <span class="checkbox-box"></span>
+                    <span class="checkbox-label">
+                        I prefer to participate anonymously
+                    </span>
+                </label>
+            </div>
+
+            <div
+                id="anonymous-message"
+                class="anonymous-message"
+                style="display: none;"
+            >
+                Anonymous participants won't receive a
+                personalized report, but your responses still count.
+            </div>
+
+            <div id="demographic-form" class="demographic-form">
+
+                <div class="form-group">
+                    <label for="participant-name">Name</label>
+                    <input
+                        type="text"
+                        id="participant-name"
+                        name="participant-name"
+                        placeholder="e.g. Tom Holland"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="participant-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="participant-email"
+                        name="participant-email"
+                        placeholder="e.g. name@example.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="institution">Institution</label>
+                    <select id="institution" name="institution">
+                        <option value="" selected disabled>Select your institution...</option>
+                        <option value="UCLA">UCLA</option>
+                        <option value="Northwestern">Northwestern</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div
+                    id="other-institution-group"
+                    class="form-group"
+                    style="display: none;"
+                >
+                    <label for="other-institution">Other</label>
+                    <input
+                        type="text"
+                        id="other-institution"
+                        name="other-institution"
+                        placeholder="Enter your institution"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role">
+                        <option value="" selected disabled>Select your role...</option>
+                        <option value="Physician Assistant">Physician Assistant (PA)</option>
+                        <option value="Nurse Practitioner">Nurse Practitioner (NP)</option>
+                        <option value="Medical Student">Medical Student</option>
+                        <option value="Resident">Resident</option>
+                        <option value="Fellow">Fellow</option>
+                        <option value="Attending">Attending</option>
+                    </select>
+                </div>
+
+                <div
+                    id="attending-fields"
+                    class="attending-fields"
+                    style="display: none;"
+                >
+                    <div class="form-group">
+                        <p class="form-label">
+                            Fellowship
+                            <span class="optional-label">(Optional)</span>
+                        </p>
+                        <div class="fellowship-checkboxes">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="fellowship" value="Pediatrics">
+                                Pediatrics
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="fellowship" value="Sports">
+                                Sports
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="fellowship" value="Hand">
+                                Hand
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="fellowship" value="Other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="years-experience">Years of Experience</label>
+                        <select id="years-experience" name="years-experience">
+                            <option value="" selected disabled>Select years of experience...</option>
+                            <option value="0 to 5 years">0 to 5 years</option>
+                            <option value="6 to 10 years">6 to 10 years</option>
+                            <option value="over 10 years">Over 10 years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div
+                    id="pa-np-fields"
+                    class="conditional-fields"
+                    style="display: none;"
+                >
+                    <div class="form-group">
+                        <label for="pa-np-years-experience">Years of Experience</label>
+                        <select id="pa-np-years-experience" name="pa-np-years-experience">
+                            <option value="" selected disabled>Select years of experience...</option>
+                            <option value="0 to 5 years">0 to 5 years</option>
+                            <option value="6 to 10 years">6 to 10 years</option>
+                            <option value="over 10 years">Over 10 years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div
+                    id="medical-student-fields"
+                    class="conditional-fields"
+                    style="display: none;"
+                >
+                    <div class="form-group">
+                        <label for="medical-student-year">Medical Student Year</label>
+                        <select id="medical-student-year" name="medical-student-year">
+                            <option value="" selected disabled>Select your medical student year...</option>
+                            <option value="MS1">MS1</option>
+                            <option value="MS2">MS2</option>
+                            <option value="MS3">MS3</option>
+                            <option value="MS4">MS4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div
+                    id="resident-fields"
+                    class="conditional-fields"
+                    style="display: none;"
+                >
+                    <div class="form-group">
+                        <label for="resident-year">Resident Year</label>
+                        <select id="resident-year" name="resident-year">
+                            <option value="" selected disabled>Select your resident year...</option>
+                            <option value="PGY-1">PGY-1</option>
+                            <option value="PGY-2">PGY-2</option>
+                            <option value="PGY-3">PGY-3</option>
+                            <option value="PGY-4">PGY-4</option>
+                            <option value="PGY-5">PGY-5</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="personal-information-button-container">
+                <button
+                    id="demographics-next-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    Next
+                </button>
+            </div>
+
+            <p
+                id="demographics-error"
+                class="form-error"
+                style="display: none;"
+            >
+                Please complete all required fields before continuing.
+            </p>
 
         </section>
 
     </main>
 
 
-  <!-- =====================================================
-     DEMOGRAPHICS / PERSONAL INFORMATION PAGE
-     ===================================================== -->
+    <!-- =====================================================
+         SURVEY QUESTION PAGE
+         ===================================================== -->
 
-<main id="demographics-page" class="page">
+    <main id="survey-question-page" class="page">
 
-    <section class="content-container">
-
-        <!-- Page Title -->
-
-        <h2>
-            Personal Information
-        </h2>
-
-
-        <!-- Section Label -->
-
-        <p class="demographics-instruction">
-            About You
-        </p>
-
-
-        <!-- =================================================
-             ANONYMOUS PARTICIPATION
-             ================================================= -->
-
-        <div class="anonymous-option">
-
-            <label class="checkbox-container">
-
-                <input
-                    type="checkbox"
-                    id="anonymous-checkbox"
-                >
-
-                <span class="checkbox-box"></span>
-
-                <span class="checkbox-label">
-                    I prefer to participate anonymously
-                </span>
-
-            </label>
-
-        </div>
-
-
-        <!-- =================================================
-             ANONYMOUS MESSAGE
-             ================================================= -->
-
-        <div
-            id="anonymous-message"
-            class="anonymous-message"
-            style="display: none;"
+        <section
+            class="survey-question-container"
+            id="survey-question-container"
         >
+        </section>
 
-            Anonymous participants won't receive a
-            personalized report, but your responses still count.
-
-        </div>
-
-
-        <!-- =================================================
-             DEMOGRAPHIC INFORMATION
-             ================================================= -->
-
-        <div
-            id="demographic-form"
-            class="demographic-form"
-        >
-
-
-            <!-- =========================
-                 NAME
-                 ========================= -->
-
-            <div class="form-group">
-
-                <label for="participant-name">
-                    Name
-                </label>
-
-                <input
-                    type="text"
-                    id="participant-name"
-                    name="participant-name"
-                    placeholder="e.g. Tom Holland"
-                >
-
-            </div>
-
-<!-- =========================
-     EMAIL ADDRESS
-     ========================= -->
-
-<div class="form-group">
-
-    <label for="participant-email">
-        Email Address
-    </label>
-
-    <input
-        type="email"
-        id="participant-email"
-        name="participant-email"
-        placeholder="e.g. name@example.com"
-    >
-
-</div>
-            
-            <!-- =========================
-                 INSTITUTION
-                 ========================= -->
-
-            <div class="form-group">
-
-                <label for="institution">
-                    Institution
-                </label>
-
-                <select
-                    id="institution"
-                    name="institution"
-                >
-
-                    <option value="" selected disabled>
-                        Select your institution...
-                    </option>
-
-                    <option value="UCLA">
-                        UCLA
-                    </option>
-
-                    <option value="Northwestern">
-                        Northwestern
-                    </option>
-
-                    <option value="Other">
-                        Other
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- =========================
-                 OTHER INSTITUTION
-                 ========================= -->
-
-            <div
-                id="other-institution-group"
-                class="form-group"
-                style="display: none;"
-            >
-
-                <label for="other-institution">
-                    Other
-                </label>
-
-                <input
-                    type="text"
-                    id="other-institution"
-                    name="other-institution"
-                    placeholder="Enter your institution"
-                >
-
-            </div>
-
-
-            <!-- =========================
-                 ROLE
-                 ========================= -->
-
-            <div class="form-group">
-
-                <label for="role">
-                    Role
-                </label>
-
-                <select
-                    id="role"
-                    name="role"
-                >
-
-                    <option value="" selected disabled>
-                        Select your role...
-                    </option>
-
-                    <option value="Physician Assistant">
-                        Physician Assistant (PA)
-                    </option>
-
-                    <option value="Nurse Practitioner">
-                        Nurse Practitioner (NP)
-                    </option>
-
-                    <option value="Medical Student">
-                        Medical Student
-                    </option>
-
-                    <option value="Resident">
-                        Resident
-                    </option>
-
-                    <option value="Fellow">
-                        Fellow
-                    </option>
-
-                    <option value="Attending">
-                        Attending
-                    </option>
-
-                </select>
-
-            </div>
-
-<!-- =================================================
-     FELLOWSHIP / ATTENDING INFORMATION
-     ================================================= -->
-
-<div
-    id="attending-fields"
-    class="attending-fields"
-    style="display: none;"
->
-
-    <!-- Fellowship is OPTIONAL -->
-
-    <div class="form-group">
-
-        <p class="form-label">
-            Fellowship
-            <span class="optional-label">
-                (Optional)
-            </span>
-        </p>
-
-        <div class="fellowship-checkboxes">
-
-            <label class="checkbox-option">
-                <input
-                    type="checkbox"
-                    name="fellowship"
-                    value="Pediatrics"
-                >
-                Pediatrics
-            </label>
-
-            <label class="checkbox-option">
-                <input
-                    type="checkbox"
-                    name="fellowship"
-                    value="Sports"
-                >
-                Sports
-            </label>
-
-            <label class="checkbox-option">
-                <input
-                    type="checkbox"
-                    name="fellowship"
-                    value="Hand"
-                >
-                Hand
-            </label>
-
-            <label class="checkbox-option">
-                <input
-                    type="checkbox"
-                    name="fellowship"
-                    value="Other"
-                >
-                Other
-            </label>
-
-        </div>
-
-    </div>
-
-
-    <!-- Attending Years of Experience -->
-
-    <div class="form-group">
-
-        <label for="years-experience">
-            Years of Experience
-        </label>
-
-        <select
-            id="years-experience"
-            name="years-experience"
-        >
-
-            <option value="" selected disabled>
-                Select years of experience...
-            </option>
-
-            <option value="0 to 5 years">
-                0 to 5 years
-            </option>
-
-            <option value="6 to 10 years">
-                6 to 10 years
-            </option>
-
-            <option value="over 10 years">
-                Over 10 years
-            </option>
-
-        </select>
-
-    </div>
-
-</div>
-
-
-<!-- =================================================
-     PA / NP YEARS OF EXPERIENCE
-     ================================================= -->
-
-<div
-    id="pa-np-fields"
-    class="conditional-fields"
-    style="display: none;"
->
-
-    <div class="form-group">
-
-        <label for="pa-np-years-experience">
-            Years of Experience
-        </label>
-
-        <select
-            id="pa-np-years-experience"
-            name="pa-np-years-experience"
-        >
-
-            <option value="" selected disabled>
-                Select years of experience...
-            </option>
-
-            <option value="0 to 5 years">
-                0 to 5 years
-            </option>
-
-            <option value="6 to 10 years">
-                6 to 10 years
-            </option>
-
-            <option value="over 10 years">
-                Over 10 years
-            </option>
-
-        </select>
-
-    </div>
-
-</div>
-
-
-<!-- =================================================
-     MEDICAL STUDENT YEAR
-     ================================================= -->
-
-<div
-    id="medical-student-fields"
-    class="conditional-fields"
-    style="display: none;"
->
-
-    <div class="form-group">
-
-        <label for="medical-student-year">
-            Medical Student Year
-        </label>
-
-        <select
-            id="medical-student-year"
-            name="medical-student-year"
-        >
-
-            <option value="" selected disabled>
-                Select your medical student year...
-            </option>
-
-            <option value="MS1">MS1</option>
-            <option value="MS2">MS2</option>
-            <option value="MS3">MS3</option>
-            <option value="MS4">MS4</option>
-
-        </select>
-
-    </div>
-
-</div>
-
-
-<!-- =================================================
-     RESIDENT YEAR
-     ================================================= -->
-
-<div
-    id="resident-fields"
-    class="conditional-fields"
-    style="display: none;"
->
-
-    <div class="form-group">
-
-        <label for="resident-year">
-            Resident Year
-        </label>
-
-        <select
-            id="resident-year"
-            name="resident-year"
-        >
-
-            <option value="" selected disabled>
-                Select your resident year...
-            </option>
-
-            <option value="PGY-1">PGY-1</option>
-            <option value="PGY-2">PGY-2</option>
-            <option value="PGY-3">PGY-3</option>
-            <option value="PGY-4">PGY-4</option>
-            <option value="PGY-5">PGY-5</option>
-
-        </select>
-
-    </div>
-
-</div>
-        <!-- =================================================
-     NEXT BUTTON
-     ================================================= -->
-
-<div class="personal-information-button-container">
-
-    <button
-        id="demographics-next-button"
-        class="primary-button"
-        type="button"
-    >
-        Next
-    </button>
-
-</div>
-
-<p
-    id="demographics-error"
-    class="form-error"
-    style="display: none;"
->
-    Please complete all required fields before continuing.
-</p>
-
-
-    </section>
-
-</main>
-
-
-<!-- =====================================================
-     SURVEY QUESTION PAGE
-     ===================================================== -->
-
-<main id="survey-question-page" class="page">
-
-    <section class="survey-question-container">
-
-        <!-- Question Title -->
-
-        <h2 id="survey-question-title">
-            Question 1
-        </h2>
-
-
-        <!-- Question Stem -->
-
-        <p
-            id="question-stem"
-            class="question-stem"
-        >
-            You have a patient that has the following XR.
-        </p>
-
-
-        <!-- =================================================
-             X-RAY IMAGE
-             ================================================= -->
-
-        <div class="question-image-container">
-
-            <img
-                id="question-image"
-                src=""
-                alt="Radiographic image for survey question"
-            >
-
-        </div>
-
-
-        <!-- =================================================
-             ANSWER CHOICES
-             ================================================= -->
-
-        <div
-            id="answer-choices"
-            class="answer-grid"
-        >
-
-            <button
-                class="answer-choice answer-choice-1"
-                data-answer="0"
-                type="button"
-            >
-                Answer Choice 1
-            </button>
-
-            <button
-                class="answer-choice answer-choice-2"
-                data-answer="1"
-                type="button"
-            >
-                Answer Choice 2
-            </button>
-
-            <button
-                class="answer-choice answer-choice-3"
-                data-answer="2"
-                type="button"
-            >
-                Answer Choice 3
-            </button>
-
-            <button
-                class="answer-choice answer-choice-4"
-                data-answer="3"
-                type="button"
-            >
-                Answer Choice 4
-            </button>
-
-        </div>
-
-
-        <!-- =================================================
-             NEXT QUESTION BUTTON
-             ================================================= -->
-
-        <div class="survey-next-button-container">
-
-            <button
-                id="next-question-button"
-                class="primary-button"
-                type="button"
-            >
-                Start Survey
-            </button>
-
-        </div>
-
-
-        <!-- =================================================
-             PROGRESS BAR
-             ================================================= -->
-
-        <div class="survey-progress-container">
-
-            <div class="progress-bar-wrapper">
-
-                <div
-                    id="survey-progress-bar"
-                    class="survey-progress-bar"
-                ></div>
-
-            </div>
-
-            <span
-                id="survey-progress-text"
-                class="survey-progress-text"
-            >
-                10%
-            </span>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- =====================================================
-     CONGRATULATIONS PAGE
-     ===================================================== -->
-
-<main id="completion-page" class="page">
-
-    <section class="content-container">
-
-        <h2>
-            Congratulations! You are done
-        </h2>
-
-        <p class="completion-message">
-            Thank you for completing the survey. We will email you the results of your survey alongside a Quick Sheet 
-            for categorizing different fractures that is ready to print! 
-
-            We will email you in approximately 4 weeks to recomplete the survey. Thank you so much for your time! 
-        </p>
-
-    </section>
-
-</main>
+    </main>
 
 
     <!-- =====================================================
-         JAVASCRIPT
+         CONGRATULATIONS PAGE
          ===================================================== -->
+
+    <main id="completion-page" class="page">
+
+        <section class="content-container">
+
+            <h2>Congratulations! You are done</h2>
+
+            <p class="completion-message">
+                Thank you for completing the survey. We will email you
+                the results of your survey alongside a Quick Sheet for
+                categorizing different fractures that is ready to print!
+                We will email you in approximately 4 weeks to recomplete
+                the survey. Thank you so much for your time!
+            </p>
+
+        </section>
+
+    </main>
+
 
     <script src="script.js"></script>
 
