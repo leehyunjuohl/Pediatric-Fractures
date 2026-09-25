@@ -4,10 +4,6 @@
 
 const questionBank = [
 
-    // -------------------------------------------------
-    // QUESTION 1 — grouped (1.1, 1.2, 1.3 on one screen)
-    // -------------------------------------------------
-
     {
         id: "1",
         label: "Question 1",
@@ -60,15 +56,11 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 2 — single
-    // -------------------------------------------------
-
     {
         id: "Q02",
         label: "Question 2",
         context: null,
-        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imaging, how would you classify the distal radius fracture morphology?",
+        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
         image: "images/11F.png",
         choices: [
             "Torus / Buckle fracture",
@@ -79,15 +71,11 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 3 — single
-    // -------------------------------------------------
-
     {
         id: "Q03",
         label: "Question 3",
         context: null,
-        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imaging, how would you classify the distal radius fracture morphology?",
+        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
         image: "images/11M.png",
         choices: [
             "Torus / Buckle fracture",
@@ -98,15 +86,11 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 4 — single
-    // -------------------------------------------------
-
     {
         id: "Q04",
         label: "Question 4",
         context: null,
-        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imaging, how would you classify the distal radius fracture morphology?",
+        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
         image: "images/12M (2).png",
         choices: [
             "Torus / Buckle fracture",
@@ -117,15 +101,11 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 5 — single
-    // -------------------------------------------------
-
     {
         id: "Q05",
         label: "Question 5",
         context: null,
-        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imaging, how would you classify the distal radius fracture morphology?",
+        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
         image: "images/12M.png",
         choices: [
             "Torus / Buckle fracture",
@@ -136,15 +116,11 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 6 — single
-    // -------------------------------------------------
-
     {
         id: "Q06",
         label: "Question 6",
         context: null,
-        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imaging, how would you classify the distal radius fracture morphology?",
+        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
         image: "images/15M (2).png",
         choices: [
             "Torus / Buckle fracture",
@@ -155,15 +131,11 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 7 — single
-    // -------------------------------------------------
-
     {
         id: "Q07",
         label: "Question 7",
         context: null,
-        stem: "Review the PA and lateral wrist X-Rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID. Based on the imaging, how would you classify the distal radius fracture morphology?",
+        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
         image: "images/15M.png",
         choices: [
             "Torus / Buckle fracture",
@@ -173,10 +145,6 @@ const questionBank = [
             "No Acute Fracture Identified"
         ]
     },
-
-    // -------------------------------------------------
-    // QUESTION 8 — single (placeholder)
-    // -------------------------------------------------
 
     {
         id: "Q08",
@@ -192,10 +160,6 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 9 — single (placeholder)
-    // -------------------------------------------------
-
     {
         id: "Q09",
         label: "Question 9",
@@ -209,10 +173,6 @@ const questionBank = [
             "Answer Choice 4"
         ]
     },
-
-    // -------------------------------------------------
-    // QUESTION 10 — single (placeholder)
-    // -------------------------------------------------
 
     {
         id: "Q10",
@@ -228,10 +188,6 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 11 — single (placeholder)
-    // -------------------------------------------------
-
     {
         id: "Q11",
         label: "Question 11",
@@ -245,10 +201,6 @@ const questionBank = [
             "Answer Choice 4"
         ]
     },
-
-    // -------------------------------------------------
-    // QUESTION 12 — single (placeholder)
-    // -------------------------------------------------
 
     {
         id: "Q12",
@@ -264,10 +216,6 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 13 — single (placeholder)
-    // -------------------------------------------------
-
     {
         id: "Q13",
         label: "Question 13",
@@ -281,10 +229,6 @@ const questionBank = [
             "Answer Choice 4"
         ]
     },
-
-    // -------------------------------------------------
-    // QUESTION 14 — single (placeholder)
-    // -------------------------------------------------
 
     {
         id: "Q14",
@@ -300,10 +244,6 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 15 — single (placeholder)
-    // -------------------------------------------------
-
     {
         id: "Q15",
         label: "Question 15",
@@ -318,10 +258,6 @@ const questionBank = [
         ]
     },
 
-    // -------------------------------------------------
-    // QUESTION 16 — single (placeholder)
-    // -------------------------------------------------
-
     {
         id: "Q16",
         label: "Question 16",
@@ -335,10 +271,6 @@ const questionBank = [
             "Answer Choice 4"
         ]
     },
-
-    // -------------------------------------------------
-    // QUESTION 17 — single (placeholder)
-    // -------------------------------------------------
 
     {
         id: "Q17",
@@ -358,15 +290,13 @@ const questionBank = [
 
 
 // =====================================================
-// GLOBAL SURVEY VARIABLES
+// GLOBAL STATE
 // =====================================================
 
-const TOTAL_QUESTIONS = questionBank.length;
-
-let currentQuestionIndex = 0;
-let selectedAnswers = {};
-let questionStartTime = null;
-let surveyResponses = [];
+var currentQuestionIndex = 0;
+var selectedAnswers = {};
+var questionStartTime = null;
+var surveyResponses = [];
 
 
 // =====================================================
@@ -375,316 +305,201 @@ let surveyResponses = [];
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =================================================
-    // PAGES
-    // =================================================
-
-    const introductionPage =
-        document.getElementById("introduction-page");
-    const consentPage =
-        document.getElementById("consent-page");
-    const demographicsPage =
-        document.getElementById("demographics-page");
-    const surveyQuestionPage =
-        document.getElementById("survey-question-page");
-
-    // =================================================
-    // NAVIGATION BUTTONS
-    // =================================================
-
-    const beginSurveyButton =
-        document.getElementById("begin-survey-button");
-    const consentNextButton =
-        document.getElementById("consent-next-button");
-    const demographicsNextButton =
-        document.getElementById("demographics-next-button");
-
-    // =================================================
+    // -------------------------------------------------
     // INTRODUCTION → CONSENT
-    // =================================================
+    // -------------------------------------------------
 
-    beginSurveyButton.addEventListener("click", function () {
-        introductionPage.classList.remove("active");
-        consentPage.classList.add("active");
-        window.scrollTo(0, 0);
-    });
+    document.getElementById("begin-survey-button")
+        .addEventListener("click", function () {
+            showPage("consent-page");
+        });
 
-    // =================================================
-    // CONSENT → PERSONAL INFORMATION
-    // =================================================
+    // -------------------------------------------------
+    // CONSENT → DEMOGRAPHICS
+    // -------------------------------------------------
 
-    consentNextButton.addEventListener("click", function () {
-        consentPage.classList.remove("active");
-        demographicsPage.classList.add("active");
-        window.scrollTo(0, 0);
-    });
+    document.getElementById("consent-next-button")
+        .addEventListener("click", function () {
+            showPage("demographics-page");
+        });
 
-    // =================================================
-    // PERSONAL INFORMATION ELEMENTS
-    // =================================================
+    // -------------------------------------------------
+    // ANONYMOUS CHECKBOX
+    // -------------------------------------------------
 
-    const anonymousCheckbox =
-        document.getElementById("anonymous-checkbox");
-    const demographicForm =
-        document.getElementById("demographic-form");
-    const anonymousMessage =
-        document.getElementById("anonymous-message");
-    const participantName =
-        document.getElementById("participant-name");
-    const participantEmail =
-        document.getElementById("participant-email");
-    const institutionSelect =
-        document.getElementById("institution");
-    const otherInstitutionGroup =
-        document.getElementById("other-institution-group");
-    const otherInstitution =
-        document.getElementById("other-institution");
-    const roleSelect =
-        document.getElementById("role");
-    const attendingFields =
-        document.getElementById("attending-fields");
-    const yearsExperienceSelect =
-        document.getElementById("years-experience");
-    const paNpFields =
-        document.getElementById("pa-np-fields");
-    const paNpYearsExperience =
-        document.getElementById("pa-np-years-experience");
-    const medicalStudentFields =
-        document.getElementById("medical-student-fields");
-    const medicalStudentYear =
-        document.getElementById("medical-student-year");
-    const residentFields =
-        document.getElementById("resident-fields");
-    const residentYear =
-        document.getElementById("resident-year");
-    const demographicsError =
-        document.getElementById("demographics-error");
+    document.getElementById("anonymous-checkbox")
+        .addEventListener("change", function () {
+            if (this.checked) {
+                document.getElementById("demographic-form").style.display = "none";
+                document.getElementById("anonymous-message").style.display = "block";
+                document.getElementById("demographics-error").style.display = "none";
+            } else {
+                document.getElementById("demographic-form").style.display = "block";
+                document.getElementById("anonymous-message").style.display = "none";
+            }
+        });
 
-    // =================================================
-    // ANONYMOUS PARTICIPATION
-    // =================================================
-
-    anonymousCheckbox.addEventListener("change", function () {
-        if (anonymousCheckbox.checked) {
-            demographicForm.style.display = "none";
-            anonymousMessage.style.display = "block";
-            demographicsError.style.display = "none";
-        } else {
-            demographicForm.style.display = "block";
-            anonymousMessage.style.display = "none";
-        }
-    });
-
-    // =================================================
+    // -------------------------------------------------
     // INSTITUTION → OTHER FIELD
-    // =================================================
+    // -------------------------------------------------
 
-    institutionSelect.addEventListener("change", function () {
-        if (institutionSelect.value === "Other") {
-            otherInstitutionGroup.style.display = "block";
-        } else {
-            otherInstitutionGroup.style.display = "none";
-            otherInstitution.value = "";
-        }
-    });
+    document.getElementById("institution")
+        .addEventListener("change", function () {
+            if (this.value === "Other") {
+                document.getElementById("other-institution-group").style.display = "block";
+            } else {
+                document.getElementById("other-institution-group").style.display = "none";
+                document.getElementById("other-institution").value = "";
+            }
+        });
 
-    // =================================================
-    // HELPER: HIDE CONDITIONAL FIELDS
-    // =================================================
-
-    function hideConditionalFields() {
-        attendingFields.style.display = "none";
-        paNpFields.style.display = "none";
-        medicalStudentFields.style.display = "none";
-        residentFields.style.display = "none";
-        yearsExperienceSelect.value = "";
-        paNpYearsExperience.value = "";
-        medicalStudentYear.value = "";
-        residentYear.value = "";
-    }
-
-    // =================================================
+    // -------------------------------------------------
     // ROLE → CONDITIONAL FIELDS
-    // =================================================
+    // -------------------------------------------------
 
-    roleSelect.addEventListener("change", function () {
-        hideConditionalFields();
-        if (roleSelect.value === "Attending")
-            attendingFields.style.display = "block";
-        if (roleSelect.value === "Physician Assistant" ||
-            roleSelect.value === "Nurse Practitioner")
-            paNpFields.style.display = "block";
-        if (roleSelect.value === "Medical Student")
-            medicalStudentFields.style.display = "block";
-        if (roleSelect.value === "Resident")
-            residentFields.style.display = "block";
-    });
+    document.getElementById("role")
+        .addEventListener("change", function () {
 
-    // =================================================
-    // PERSONAL INFORMATION → START SURVEY
-    // =================================================
+            document.getElementById("attending-fields").style.display = "none";
+            document.getElementById("pa-np-fields").style.display = "none";
+            document.getElementById("medical-student-fields").style.display = "none";
+            document.getElementById("resident-fields").style.display = "none";
 
-    demographicsNextButton.addEventListener("click", function () {
+            if (this.value === "Attending")
+                document.getElementById("attending-fields").style.display = "block";
+            if (this.value === "Physician Assistant" || this.value === "Nurse Practitioner")
+                document.getElementById("pa-np-fields").style.display = "block";
+            if (this.value === "Medical Student")
+                document.getElementById("medical-student-fields").style.display = "block";
+            if (this.value === "Resident")
+                document.getElementById("resident-fields").style.display = "block";
 
-        if (anonymousCheckbox.checked) {
+        });
+
+    // -------------------------------------------------
+    // DEMOGRAPHICS → SURVEY
+    // -------------------------------------------------
+
+    document.getElementById("demographics-next-button")
+        .addEventListener("click", function () {
+
+            var anonymous = document.getElementById("anonymous-checkbox").checked;
+
+            if (anonymous) {
+                startSurvey();
+                return;
+            }
+
+            var valid = true;
+
+            if (document.getElementById("participant-name").value.trim() === "") valid = false;
+            if (document.getElementById("participant-email").value.trim() === "") valid = false;
+            if (document.getElementById("institution").value === "") valid = false;
+            if (document.getElementById("institution").value === "Other" &&
+                document.getElementById("other-institution").value.trim() === "") valid = false;
+            if (document.getElementById("role").value === "") valid = false;
+            if (document.getElementById("role").value === "Attending" &&
+                document.getElementById("years-experience").value === "") valid = false;
+            if ((document.getElementById("role").value === "Physician Assistant" ||
+                 document.getElementById("role").value === "Nurse Practitioner") &&
+                document.getElementById("pa-np-years-experience").value === "") valid = false;
+            if (document.getElementById("role").value === "Medical Student" &&
+                document.getElementById("medical-student-year").value === "") valid = false;
+            if (document.getElementById("role").value === "Resident" &&
+                document.getElementById("resident-year").value === "") valid = false;
+
+            if (!valid) {
+                document.getElementById("demographics-error").style.display = "block";
+                return;
+            }
+
+            document.getElementById("demographics-error").style.display = "none";
             startSurvey();
-            return;
-        }
 
-        let formIsValid = true;
-
-        if (participantName.value.trim() === "")    formIsValid = false;
-        if (participantEmail.value.trim() === "")   formIsValid = false;
-        if (institutionSelect.value === "")         formIsValid = false;
-        if (institutionSelect.value === "Other" &&
-            otherInstitution.value.trim() === "")   formIsValid = false;
-        if (roleSelect.value === "")                formIsValid = false;
-        if (roleSelect.value === "Attending" &&
-            yearsExperienceSelect.value === "")     formIsValid = false;
-        if ((roleSelect.value === "Physician Assistant" ||
-             roleSelect.value === "Nurse Practitioner") &&
-            paNpYearsExperience.value === "")       formIsValid = false;
-        if (roleSelect.value === "Medical Student" &&
-            medicalStudentYear.value === "")        formIsValid = false;
-        if (roleSelect.value === "Resident" &&
-            residentYear.value === "")              formIsValid = false;
-
-        if (!formIsValid) {
-            demographicsError.style.display = "block";
-            return;
-        }
-
-        demographicsError.style.display = "none";
-        startSurvey();
-
-    });
-
-    // =================================================
-    // START SURVEY
-    // =================================================
-
-    function startSurvey() {
-        currentQuestionIndex = 0;
-        selectedAnswers = {};
-        surveyResponses = [];
-
-        demographicsPage.classList.remove("active");
-        surveyQuestionPage.classList.add("active");
-
-        displayQuestion();
-        window.scrollTo(0, 0);
-    }
+        });
 
 });
 
 
 // =====================================================
-// DISPLAY QUESTION
+// SHOW PAGE
 // =====================================================
 
-function displayQuestion() {
+function showPage(pageId) {
+    var pages = document.querySelectorAll(".page");
+    pages.forEach(function (page) {
+        page.classList.remove("active");
+    });
+    document.getElementById(pageId).classList.add("active");
+    window.scrollTo(0, 0);
+}
 
-    const question = questionBank[currentQuestionIndex];
-    const isGrouped = !!question.subQuestions;
-    const container =
-        document.getElementById("survey-question-container");
 
+// =====================================================
+// START SURVEY
+// =====================================================
+
+function startSurvey() {
+    currentQuestionIndex = 0;
+    selectedAnswers = {};
+    surveyResponses = [];
+    showPage("survey-question-page");
+    renderQuestion();
+}
+
+
+// =====================================================
+// RENDER QUESTION
+// =====================================================
+
+function renderQuestion() {
+
+    var question = questionBank[currentQuestionIndex];
+    var isGrouped = question.subQuestions !== undefined;
+    var container = document.getElementById("survey-question-container");
+
+    selectedAnswers = {};
     container.innerHTML = "";
 
-    // -------------------------------------------------
-    // QUESTION TITLE
-    // -------------------------------------------------
-
-    const title = document.createElement("h2");
+    // Title
+    var title = document.createElement("h2");
     title.textContent = question.label;
     container.appendChild(title);
 
-    // -------------------------------------------------
-    // RENDER SUB-QUESTIONS OR SINGLE QUESTION
-    // -------------------------------------------------
-
+    // Build sub-questions or single question
     if (isGrouped) {
-        question.subQuestions.forEach(function (sub) {
-            container.appendChild(buildQuestionBlock(sub, true));
-        });
+        for (var i = 0; i < question.subQuestions.length; i++) {
+            container.appendChild(buildBlock(question.subQuestions[i], true));
+        }
     } else {
-        container.appendChild(buildQuestionBlock(question, false));
+        container.appendChild(buildBlock(question, false));
     }
 
-    // -------------------------------------------------
-    // NEXT BUTTON
-    // -------------------------------------------------
+    // Next button
+    var btnDiv = document.createElement("div");
+    btnDiv.className = "survey-next-button-container";
 
-    const btnWrapper = document.createElement("div");
-    btnWrapper.className = "survey-next-button-container";
+    var btn = document.createElement("button");
+    btn.className = "primary-button";
+    btn.type = "button";
+    btn.textContent = (currentQuestionIndex === questionBank.length - 1)
+        ? "Submit Survey"
+        : "Next";
 
-    const nextBtn = document.createElement("button");
-    nextBtn.id = "next-question-button";
-    nextBtn.className = "primary-button";
-    nextBtn.type = "button";
-    nextBtn.textContent =
-        currentQuestionIndex === TOTAL_QUESTIONS - 1
-            ? "Submit Survey"
-            : "Next";
+    btn.addEventListener("click", handleNext);
+    btnDiv.appendChild(btn);
+    container.appendChild(btnDiv);
 
-    nextBtn.addEventListener("click", function () {
-
-        // Validate all answers are selected
-        if (isGrouped) {
-            const unanswered = question.subQuestions.some(
-                function (sub) {
-                    return selectedAnswers[sub.id] === undefined;
-                }
-            );
-            if (unanswered) {
-                alert("Please answer all parts before continuing.");
-                return;
-            }
-        } else {
-            if (selectedAnswers[question.id] === undefined) {
-                alert("Please select an answer before continuing.");
-                return;
-            }
-        }
-
-        recordCurrentResponse();
-
-        if (currentQuestionIndex === TOTAL_QUESTIONS - 1) {
-            finishSurvey();
-            return;
-        }
-
-        currentQuestionIndex++;
-        selectedAnswers = {};
-        displayQuestion();
-        window.scrollTo(0, 0);
-
-    });
-
-    btnWrapper.appendChild(nextBtn);
-    container.appendChild(btnWrapper);
-
-    // -------------------------------------------------
-    // PROGRESS BAR
-    // -------------------------------------------------
-
-    const progress = Math.round(
-        ((currentQuestionIndex + 1) / TOTAL_QUESTIONS) * 100
-    );
-
-    const progressContainer = document.createElement("div");
-    progressContainer.className = "survey-progress-container";
-    progressContainer.innerHTML = `
-        <div class="progress-bar-wrapper">
-            <div class="survey-progress-bar"
-                 style="width: ${progress}%">
-            </div>
-        </div>
-        <span class="survey-progress-text">
-            ${progress}%
-        </span>
-    `;
-    container.appendChild(progressContainer);
+    // Progress bar
+    var progress = Math.round(((currentQuestionIndex + 1) / questionBank.length) * 100);
+    var progressDiv = document.createElement("div");
+    progressDiv.className = "survey-progress-container";
+    progressDiv.innerHTML =
+        '<div class="progress-bar-wrapper">' +
+            '<div class="survey-progress-bar" style="width:' + progress + '%"></div>' +
+        '</div>' +
+        '<span class="survey-progress-text">' + progress + '%</span>';
+    container.appendChild(progressDiv);
 
     questionStartTime = performance.now();
 
@@ -695,69 +510,69 @@ function displayQuestion() {
 // BUILD A QUESTION BLOCK
 // =====================================================
 
-function buildQuestionBlock(q, showSubLabel) {
+function buildBlock(q, showLabel) {
 
-    const block = document.createElement("div");
+    var block = document.createElement("div");
     block.className = "sub-question-block";
 
-    // Sub-label (e.g. "1.1") for grouped questions
-    if (showSubLabel) {
-        const subLabel = document.createElement("h3");
-        subLabel.className = "sub-question-label";
-        subLabel.textContent = q.label;
-        block.appendChild(subLabel);
+    // Sub-label
+    if (showLabel) {
+        var label = document.createElement("h3");
+        label.className = "sub-question-label";
+        label.textContent = q.label;
+        block.appendChild(label);
     }
 
     // Context
     if (q.context) {
-        const context = document.createElement("p");
+        var context = document.createElement("p");
         context.className = "question-context";
         context.textContent = q.context;
         block.appendChild(context);
     }
 
     // Stem
-    const stem = document.createElement("p");
+    var stem = document.createElement("p");
     stem.className = "question-stem";
     stem.textContent = q.stem;
     block.appendChild(stem);
 
     // Image
     if (q.image) {
-        const imgContainer = document.createElement("div");
-        imgContainer.className = "question-image-container";
-        const img = document.createElement("img");
+        var imgDiv = document.createElement("div");
+        imgDiv.className = "question-image-container";
+        var img = document.createElement("img");
         img.src = q.image;
         img.alt = "Radiographic image for survey question";
-        imgContainer.appendChild(img);
-        block.appendChild(imgContainer);
+        imgDiv.appendChild(img);
+        block.appendChild(imgDiv);
     }
 
     // Answer choices
-    const answerGrid = document.createElement("div");
-    answerGrid.className = "answer-grid";
+    var grid = document.createElement("div");
+    grid.className = "answer-grid";
 
-    q.choices.forEach(function (choiceText, index) {
-
-        const btn = document.createElement("button");
-        btn.className = "answer-choice";
-        btn.type = "button";
-        btn.textContent = choiceText;
-
-        btn.addEventListener("click", function () {
-            answerGrid.querySelectorAll(".answer-choice")
-                .forEach(function (b) {
-                    b.classList.remove("selected");
+    (function (questionId, choices, answerGrid) {
+        for (var i = 0; i < choices.length; i++) {
+            (function (index) {
+                var btn = document.createElement("button");
+                btn.className = "answer-choice";
+                btn.type = "button";
+                btn.textContent = choices[index];
+                btn.addEventListener("click", function () {
+                    var allBtns = answerGrid.querySelectorAll(".answer-choice");
+                    for (var j = 0; j < allBtns.length; j++) {
+                        allBtns[j].classList.remove("selected");
+                    }
+                    btn.classList.add("selected");
+                    selectedAnswers[questionId] = index;
                 });
-            btn.classList.add("selected");
-            selectedAnswers[q.id] = index;
-        });
+                answerGrid.appendChild(btn);
+            })(i);
+        }
+    })(q.id, q.choices, grid);
 
-        answerGrid.appendChild(btn);
-
-    });
-
-    block.appendChild(answerGrid);
+    block.appendChild(grid);
 
     return block;
 
@@ -765,61 +580,61 @@ function buildQuestionBlock(q, showSubLabel) {
 
 
 // =====================================================
-// RECORD RESPONSE
+// HANDLE NEXT BUTTON
 // =====================================================
 
-function recordCurrentResponse() {
+function handleNext() {
 
-    const question = questionBank[currentQuestionIndex];
-    const isGrouped = !!question.subQuestions;
-    const timeOnQuestion =
-        (performance.now() - questionStartTime) / 1000;
+    var question = questionBank[currentQuestionIndex];
+    var isGrouped = question.subQuestions !== undefined;
 
+    // Validate
     if (isGrouped) {
-
-        question.subQuestions.forEach(function (sub) {
-            const answerIndex = selectedAnswers[sub.id];
-            surveyResponses.push({
-                questionId:           sub.id,
-                questionLabel:        sub.label,
-                surveyQuestionNumber: currentQuestionIndex + 1,
-                selectedAnswer:       sub.choices[answerIndex],
-                timeSeconds:          Number(timeOnQuestion.toFixed(2))
-            });
-        });
-
+        for (var i = 0; i < question.subQuestions.length; i++) {
+            if (selectedAnswers[question.subQuestions[i].id] === undefined) {
+                alert("Please answer all parts before continuing.");
+                return;
+            }
+        }
     } else {
-
-        const answerIndex = selectedAnswers[question.id];
-        surveyResponses.push({
-            questionId:           question.id,
-            questionLabel:        question.label,
-            surveyQuestionNumber: currentQuestionIndex + 1,
-            selectedAnswer:       question.choices[answerIndex],
-            timeSeconds:          Number(timeOnQuestion.toFixed(2))
-        });
-
+        if (selectedAnswers[question.id] === undefined) {
+            alert("Please select an answer before continuing.");
+            return;
+        }
     }
 
-    console.log("Recorded responses so far:", surveyResponses);
+    // Record
+    var timeSeconds = Number(((performance.now() - questionStartTime) / 1000).toFixed(2));
 
-}
+    if (isGrouped) {
+        for (var i = 0; i < question.subQuestions.length; i++) {
+            var sub = question.subQuestions[i];
+            surveyResponses.push({
+                questionId: sub.id,
+                questionLabel: sub.label,
+                selectedAnswer: sub.choices[selectedAnswers[sub.id]],
+                timeSeconds: timeSeconds
+            });
+        }
+    } else {
+        surveyResponses.push({
+            questionId: question.id,
+            questionLabel: question.label,
+            selectedAnswer: question.choices[selectedAnswers[question.id]],
+            timeSeconds: timeSeconds
+        });
+    }
 
+    console.log("Responses so far:", surveyResponses);
 
-// =====================================================
-// FINISH SURVEY
-// =====================================================
-
-function finishSurvey() {
-
-    console.log("Complete survey data:", surveyResponses);
-
-    document.getElementById("survey-question-page")
-        .classList.remove("active");
-
-    document.getElementById("completion-page")
-        .classList.add("active");
-
-    window.scrollTo(0, 0);
+    // Advance
+    if (currentQuestionIndex === questionBank.length - 1) {
+        console.log("Final responses:", surveyResponses);
+        showPage("completion-page");
+    } else {
+        currentQuestionIndex++;
+        renderQuestion();
+        window.scrollTo(0, 0);
+    }
 
 }
