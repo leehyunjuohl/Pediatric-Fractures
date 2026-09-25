@@ -12,9 +12,9 @@ const questionBank = [
             {
                 id: "1.1",
                 label: "1.1",
+                image: "images/10M.png",
                 context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
-                image: "images/10M.png",
                 choices: [
                     "Torus / Buckle fracture",
                     "Greenstick fracture",
@@ -27,9 +27,7 @@ const questionBank = [
             {
                 id: "1.2",
                 label: "1.2",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
                 stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
-                image: "images/10M.png",
                 choices: [
                     "Removable brace",
                     "Cast (no reduction)",
@@ -42,9 +40,8 @@ const questionBank = [
             {
                 id: "1.3",
                 label: "1.3",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
-                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
                 image: "images/10M_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
                 choices: [
                     "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
                     "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
