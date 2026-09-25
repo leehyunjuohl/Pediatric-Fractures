@@ -13,7 +13,7 @@ const questionBank = [
                 id: "1.1",
                 label: "1.1",
                 image: "images/10M.png",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "Review the PA and lateral wrist X-rays of a 10-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: [
                     "Torus / Buckle fracture",
@@ -52,237 +52,150 @@ const questionBank = [
 
         ]
     },
-
-    {
-        id: "Q02",
+ {
+        id: "2",
         label: "Question 2",
-        context: null,
-        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
-        image: "images/11F.png",
-        choices: [
-            "Torus / Buckle fracture",
-            "Greenstick fracture",
-            "Non/minimally displaced Complete Fracture",
-            "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
+        subQuestions: [
+
+            {
+                id: "2.1",
+                label: "2.1",
+                image: "images/7M.png",
+                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "2.2",
+                label: "2.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+
+            {
+                id: "2.3",
+                label: "2.3",
+                image: "images/7M_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
         ]
     },
-
-    {
-        id: "Q03",
+     {
+        id: "3",
         label: "Question 3",
-        context: null,
-        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
-        image: "images/11M.png",
-        choices: [
-            "Torus / Buckle fracture",
-            "Greenstick fracture",
-            "Non/minimally displaced Complete Fracture",
-            "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
+        subQuestions: [
+
+            {
+                id: "3.1",
+                label: "3.1",
+                image: "images/8M.png",
+                context: "Review the PA and lateral wrist X-rays of a 8-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
+
+            {
+                id: "3.2",
+                label: "3.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
+
+            {
+                id: "3.3",
+                label: "3.3",
+                image: "images/8M_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
+
         ]
     },
-
-    {
-        id: "Q04",
+     {
+        id: "4",
         label: "Question 4",
-        context: null,
-        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
-        image: "images/12M (2).png",
-        choices: [
-            "Torus / Buckle fracture",
-            "Greenstick fracture",
-            "Non/minimally displaced Complete Fracture",
-            "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
-        ]
-    },
+        subQuestions: [
 
-    {
-        id: "Q05",
-        label: "Question 5",
-        context: null,
-        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
-        image: "images/12M.png",
-        choices: [
-            "Torus / Buckle fracture",
-            "Greenstick fracture",
-            "Non/minimally displaced Complete Fracture",
-            "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
-        ]
-    },
+            {
+                id: "4.1",
+                label: "4.1",
+                image: "images/8M (2).png",
+                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: [
+                    "Torus / Buckle fracture",
+                    "Greenstick fracture",
+                    "Non/minimally displaced Complete Fracture",
+                    "Physeal Fracture (Salter-Harris)",
+                    "No Acute Fracture Identified"
+                ]
+            },
 
-    {
-        id: "Q06",
-        label: "Question 6",
-        context: null,
-        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
-        image: "images/15M (2).png",
-        choices: [
-            "Torus / Buckle fracture",
-            "Greenstick fracture",
-            "Non/minimally displaced Complete Fracture",
-            "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
-        ]
-    },
+            {
+                id: "4.2",
+                label: "4.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: [
+                    "Removable brace",
+                    "Cast (no reduction)",
+                    "Closed reduction and casting",
+                    "Closed reduction in the OR and pinning",
+                    "Open reduction and internal fixation"
+                ]
+            },
 
-    {
-        id: "Q07",
-        label: "Question 7",
-        context: null,
-        stem: "Review the PA and lateral wrist X-Rays. Based on the imaging, how would you classify the distal radius fracture morphology?",
-        image: "images/15M.png",
-        choices: [
-            "Torus / Buckle fracture",
-            "Greenstick fracture",
-            "Non/minimally displaced Complete Fracture",
-            "Physeal Fracture (Salter-Harris)",
-            "No Acute Fracture Identified"
-        ]
-    },
+            {
+                id: "4.3",
+                label: "4.3",
+                image: "images/8M (2)_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: [
+                    "Continue current immobilization (cast/rigid brace) for another 3-4 weeks",
+                    "Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks",
+                    "Can return to non-contact sports with a protective brace for 6 weeks",
+                    "Full clearance: Can return to all activities and sports without limitations"
+                ]
+            }
 
-    {
-        id: "Q08",
-        label: "Question 8",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question1.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q09",
-        label: "Question 9",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question2.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q10",
-        label: "Question 10",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question3.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q11",
-        label: "Question 11",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question4.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q12",
-        label: "Question 12",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question5.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q13",
-        label: "Question 13",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question6.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q14",
-        label: "Question 14",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question7.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q15",
-        label: "Question 15",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question8.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q16",
-        label: "Question 16",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question9.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
-        ]
-    },
-
-    {
-        id: "Q17",
-        label: "Question 17",
-        context: null,
-        stem: "You have a patient that has the following XR.",
-        image: "images/question10.jpg",
-        choices: [
-            "Answer Choice 1",
-            "Answer Choice 2",
-            "Answer Choice 3",
-            "Answer Choice 4"
         ]
     }
-
 ];
 
 
