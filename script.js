@@ -626,7 +626,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var anonymous = document.getElementById("anonymous-checkbox").checked;
 
             if (anonymous) {
-                participantInfo = { name: "Anonymous", email: "", institution: "", role: "", yearsExp: "" };
+                participantInfo = { name: "Anonymous", email: "", institution: "", role: "", yearsExp: "", fellowship: "" };
                 startSurvey();
                 return;
             }
@@ -661,12 +661,24 @@ document.addEventListener("DOMContentLoaded", function () {
             if (role === "Physician Assistant" || role === "Nurse Practitioner")
                 yearsExp = document.getElementById("pa-np-years-experience").value;
 
+            // Collect fellowship checkboxes
+            var fellowship = "";
+            if (role === "Attending") {
+                var checked = document.querySelectorAll('input[name="fellowship"]:checked');
+                var fellowshipValues = [];
+                for (var i = 0; i < checked.length; i++) {
+                    fellowshipValues.push(checked[i].value);
+                }
+                fellowship = fellowshipValues.join(", ");
+            }
+
             participantInfo = {
                 name:        document.getElementById("participant-name").value.trim(),
                 email:       document.getElementById("participant-email").value.trim(),
                 institution: document.getElementById("institution").value,
                 role:        role,
-                yearsExp:    yearsExp
+                yearsExp:    yearsExp,
+                fellowship:  fellowship
             };
 
             document.getElementById("demographics-error").style.display = "none";
@@ -930,6 +942,7 @@ function submitToGoogleSheets() {
         institution: participantInfo.institution,
         role:        participantInfo.role,
         yearsExp:    participantInfo.yearsExp,
+        fellowship:  participantInfo.fellowship,
         responses:   surveyResponses
     };
 
