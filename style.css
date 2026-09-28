@@ -23,8 +23,8 @@ body {
         Arial,
         sans-serif;
 
-    background: #f7f8fa;
-    color: #172033;
+    background: #e8f0fe;
+    color: #0a2540;
 }
 
 
@@ -71,7 +71,7 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.04em;
 
-    color: #101828;
+    color: #0a2540;
 }
 
 
@@ -87,7 +87,29 @@ h1 {
     font-size: 18px;
     line-height: 1.7;
 
-    color: #475467;
+    color: #1e3a5f;
+}
+
+
+/* =====================================================
+   TIME / CONTACT
+   ===================================================== */
+
+.time-description {
+    font-size: 16px;
+    color: #2d5f8a;
+    margin-bottom: 12px;
+}
+
+.contact-information {
+    font-size: 15px;
+    color: #2d5f8a;
+    margin-bottom: 32px;
+}
+
+.contact-information a {
+    color: #1a56db;
+    text-decoration: underline;
 }
 
 
@@ -104,7 +126,7 @@ h1 {
     font-size: 16px;
     font-weight: 600;
 
-    background: #172033;
+    background: #0a2540;
     color: white;
 
     cursor: pointer;
@@ -116,12 +138,12 @@ h1 {
 }
 
 .primary-button:hover {
-    background: #273449;
+    background: #1a3a5c;
 
     transform: translateY(-1px);
 
     box-shadow:
-        0 6px 18px rgba(16, 24, 40, 0.15);
+        0 6px 18px rgba(10, 37, 64, 0.2);
 }
 
 .primary-button:active {
@@ -158,7 +180,7 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.04em;
 
-    color: #101828;
+    color: #0a2540;
 }
 
 
@@ -172,7 +194,7 @@ h1 {
     font-size: 16px;
     line-height: 1.5;
 
-    color: #667085;
+    color: #2d5f8a;
 }
 
 
@@ -184,7 +206,7 @@ h1 {
     margin-left: 28px;
     padding-left: 28px;
 
-    border-left: 2px solid #e4e7ec;
+    border-left: 2px solid #b8d0f0;
 }
 
 .consent-information h3 {
@@ -194,7 +216,7 @@ h1 {
     line-height: 1.4;
     font-weight: 700;
 
-    color: #172033;
+    color: #0a2540;
 }
 
 .consent-information p {
@@ -203,7 +225,7 @@ h1 {
     font-size: 16px;
     line-height: 1.7;
 
-    color: #475467;
+    color: #1e3a5f;
 }
 
 
@@ -219,6 +241,7 @@ h1 {
 #consent-next-button {
     min-width: 120px;
 }
+
 
 /* =====================================================
    PERSONAL INFORMATION PAGE
@@ -249,7 +272,7 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.04em;
 
-    color: #101828;
+    color: #0a2540;
 }
 
 
@@ -264,7 +287,7 @@ h1 {
     line-height: 1.5;
     font-weight: 500;
 
-    color: #667085;
+    color: #2d5f8a;
 }
 
 
@@ -288,17 +311,11 @@ h1 {
     user-select: none;
 }
 
-
-/* Hide the browser's default checkbox */
-
 .checkbox-container input {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
-
-
-/* Custom checkbox */
 
 .checkbox-box {
     display: inline-flex;
@@ -308,7 +325,7 @@ h1 {
 
     margin-right: 12px;
 
-    border: 2px solid #98a2b3;
+    border: 2px solid #7aa7d4;
     border-radius: 5px;
 
     background: white;
@@ -318,16 +335,10 @@ h1 {
         border-color 0.15s ease;
 }
 
-
-/* Checked checkbox */
-
 .checkbox-container input:checked + .checkbox-box {
-    background: #172033;
-    border-color: #172033;
+    background: #0a2540;
+    border-color: #0a2540;
 }
-
-
-/* Checkmark */
 
 .checkbox-container input:checked + .checkbox-box::after {
     content: "✓";
@@ -342,14 +353,11 @@ h1 {
     font-weight: 700;
 }
 
-
-/* Checkbox text */
-
 .checkbox-label {
     font-size: 16px;
     font-weight: 500;
 
-    color: #172033;
+    color: #0a2540;
 }
 
 
@@ -366,14 +374,14 @@ h1 {
 
     border-radius: 10px;
 
-    background: #eef2f6;
+    background: #d0e4f7;
 
     font-size: 16px;
     line-height: 1.6;
 
     text-align: center;
 
-    color: #475467;
+    color: #1e3a5f;
 }
 
 
@@ -405,7 +413,7 @@ h1 {
     font-size: 16px;
     font-weight: 600;
 
-    color: #172033;
+    color: #0a2540;
 }
 
 
@@ -414,6 +422,7 @@ h1 {
    ===================================================== */
 
 .form-group input[type="text"],
+.form-group input[type="email"],
 .form-group select {
     width: 100%;
 
@@ -421,7 +430,7 @@ h1 {
 
     padding: 12px 14px;
 
-    border: 1px solid #d0d5dd;
+    border: 1px solid #7aa7d4;
     border-radius: 8px;
 
     background: white;
@@ -429,7 +438,7 @@ h1 {
     font-family: inherit;
     font-size: 16px;
 
-    color: #172033;
+    color: #0a2540;
 
     outline: none;
 
@@ -438,26 +447,17 @@ h1 {
         box-shadow 0.15s ease;
 }
 
-
-/* =====================================================
-   INPUT FOCUS
-   ===================================================== */
-
 .form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
 .form-group select:focus {
-    border-color: #667085;
+    border-color: #1a56db;
 
     box-shadow:
-        0 0 0 3px rgba(102, 112, 133, 0.12);
+        0 0 0 3px rgba(26, 86, 219, 0.12);
 }
 
-
-/* =====================================================
-   SELECT PLACEHOLDER
-   ===================================================== */
-
 .form-group select:invalid {
-    color: #98a2b3;
+    color: #7aa7d4;
 }
 
 
@@ -467,6 +467,26 @@ h1 {
 
 .attending-fields {
     padding-top: 4px;
+}
+
+
+/* =====================================================
+   FELLOWSHIP CHECKBOXES
+   ===================================================== */
+
+.fellowship-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #0a2540;
+    cursor: pointer;
 }
 
 
@@ -506,82 +526,6 @@ h1 {
     color: #b42318;
 }
 
-/* =====================================================
-   INSTRUCTIONS FOR SURVEY
-   ===================================================== */
-
-#instructions-page {
-    align-items: flex-start;
-    justify-content: center;
-
-    padding: 60px 24px;
-}
-
-#instructions-page .content-container {
-    width: 100%;
-    max-width: 760px;
-}
-
-#instructions-page h2 {
-    margin: 0;
-
-    font-size: clamp(36px, 6vw, 56px);
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-
-    color: #101828;
-}
-
-
-/* =====================================================
-   SURVEY INSTRUCTIONS BOX
-   ===================================================== */
-
-.survey-instructions-box {
-    width: 100%;
-    max-width: 650px;
-
-    margin: 40px auto 0 auto;
-
-    padding: 28px 32px;
-
-    border: 1px solid #e4e7ec;
-    border-radius: 12px;
-
-    background: white;
-
-    box-shadow:
-        0 2px 8px rgba(16, 24, 40, 0.05);
-
-    box-sizing: border-box;
-}
-
-.survey-instructions-box p {
-    margin: 0;
-
-    font-size: 18px;
-    line-height: 1.7;
-
-    text-align: center;
-
-    color: #475467;
-}
-
-
-/* =====================================================
-   START SURVEY BUTTON
-   ===================================================== */
-
-.instructions-button-container {
-    margin-top: 40px;
-
-    text-align: center;
-}
-
-#start-survey-button {
-    min-width: 160px;
-}
 
 /* =====================================================
    SURVEY QUESTION PAGE
@@ -614,7 +558,51 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.04em;
 
-    color: #101828;
+    color: #0a2540;
+}
+
+
+/* =====================================================
+   SUB QUESTION BLOCK
+   ===================================================== */
+
+.sub-question-block {
+    margin-top: 40px;
+
+    padding: 32px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 2px 12px rgba(10, 37, 64, 0.08);
+}
+
+.sub-question-label {
+    margin: 0 0 12px 0;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #1a56db;
+}
+
+
+/* =====================================================
+   QUESTION CONTEXT
+   ===================================================== */
+
+.question-context {
+    margin: 0 0 14px 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #2d5f8a;
+
+    font-style: italic;
 }
 
 
@@ -623,12 +611,13 @@ h1 {
    ===================================================== */
 
 .question-stem {
-    margin: 28px 0 30px 0;
+    margin: 0 0 24px 0;
 
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.6;
+    font-weight: 600;
 
-    color: #475467;
+    color: #0a2540;
 }
 
 
@@ -639,7 +628,7 @@ h1 {
 .question-image-container {
     width: 100%;
 
-    margin: 0 auto 35px auto;
+    margin: 0 auto 28px auto;
 
     display: flex;
     justify-content: center;
@@ -670,7 +659,7 @@ h1 {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 18px;
+    gap: 14px;
 
     width: 100%;
 }
@@ -681,64 +670,49 @@ h1 {
    ===================================================== */
 
 .answer-choice {
-    min-height: 100px;
+    min-height: 90px;
 
-    padding: 20px;
+    padding: 18px;
 
-    border: 2px solid transparent;
+    border: 2px solid #d0e4f7;
     border-radius: 10px;
 
+    background: #f0f6ff;
+
     font-family: inherit;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 
     line-height: 1.4;
+
+    color: #0a2540;
 
     cursor: pointer;
 
     transition:
         transform 0.15s ease,
         border-color 0.15s ease,
+        background 0.15s ease,
         box-shadow 0.15s ease;
 }
 
-
-/* Four pastel boxes */
-
-.answer-choice-1 {
-    background: #fce8e6;
-}
-
-.answer-choice-2 {
-    background: #e8f1fb;
-}
-
-.answer-choice-3 {
-    background: #e9f5e9;
-}
-
-.answer-choice-4 {
-    background: #fff3d9;
-}
-
-
-/* Hover */
-
 .answer-choice:hover {
+    background: #dceeff;
+    border-color: #7aa7d4;
+
     transform: translateY(-2px);
 
     box-shadow:
-        0 5px 14px rgba(16, 24, 40, 0.10);
+        0 5px 14px rgba(10, 37, 64, 0.10);
 }
 
-
-/* Selected answer */
-
 .answer-choice.selected {
-    border-color: #172033;
+    background: #0a2540;
+    border-color: #0a2540;
+    color: white;
 
     box-shadow:
-        0 0 0 3px rgba(23, 32, 51, 0.10);
+        0 0 0 3px rgba(10, 37, 64, 0.15);
 }
 
 
@@ -770,7 +744,6 @@ h1 {
     margin-top: 45px;
 }
 
-
 .progress-bar-wrapper {
     flex: 1;
 
@@ -780,9 +753,8 @@ h1 {
 
     border-radius: 999px;
 
-    background: #e4e7ec;
+    background: #c2d9f0;
 }
-
 
 .survey-progress-bar {
     width: 10%;
@@ -790,12 +762,11 @@ h1 {
 
     border-radius: 999px;
 
-    background: #172033;
+    background: #0a2540;
 
     transition:
         width 0.3s ease;
 }
-
 
 .survey-progress-text {
     width: 50px;
@@ -805,7 +776,7 @@ h1 {
     font-size: 15px;
     font-weight: 600;
 
-    color: #475467;
+    color: #2d5f8a;
 }
 
 
@@ -835,7 +806,7 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.04em;
 
-    color: #101828;
+    color: #0a2540;
 }
 
 .completion-message {
@@ -844,7 +815,7 @@ h1 {
     font-size: 18px;
     line-height: 1.7;
 
-    color: #475467;
+    color: #1e3a5f;
 }
 
 
@@ -858,51 +829,26 @@ h1 {
         padding: 40px 20px;
     }
 
+    .sub-question-block {
+        padding: 22px 18px;
+    }
+
     .question-stem {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .answer-grid {
         grid-template-columns: 1fr;
 
-        gap: 14px;
+        gap: 12px;
     }
 
     .answer-choice {
-        min-height: 75px;
+        min-height: 70px;
     }
 
     .survey-progress-container {
         margin-top: 35px;
-    }
-
-}
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 600px) {
-
-    #instructions-page,
-    #question-1-page {
-        padding: 40px 20px;
-    }
-
-    .survey-instructions-box {
-        margin-top: 32px;
-
-        padding: 22px 20px;
-    }
-
-    .survey-instructions-box p {
-        font-size: 16px;
-        line-height: 1.65;
-    }
-
-    #start-survey-button {
-        width: 100%;
-        max-width: 320px;
     }
 
 }
