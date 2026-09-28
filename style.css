@@ -1,32 +1,44 @@
 /* =====================================================
-   GENERAL SETTINGS
+   DESIGN TOKENS
+   Light sky blue + warm yellow accent
+   Clean, clinical-but-friendly for medical survey
    ===================================================== */
 
-* {
-    box-sizing: border-box;
+:root {
+    --sky:        #deeeff;
+    --sky-mid:    #b8d9f8;
+    --sky-deep:   #4a90d9;
+    --navy:       #0c2340;
+    --navy-soft:  #1e3a5f;
+    --yellow:     #f5c842;
+    --yellow-hover: #e6b820;
+    --white:      #ffffff;
+    --grey-soft:  #f0f6ff;
+    --text-muted: #3d6080;
+    --border:     #c2d9f0;
+    --error:      #b42318;
+    --radius-sm:  8px;
+    --radius-md:  14px;
+    --radius-lg:  20px;
 }
 
-html,
-body {
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* { box-sizing: border-box; }
+
+html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
 }
 
 body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    background: #e8f0fe;
-    color: #0a2540;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--sky);
+    color: var(--navy);
 }
-
 
 /* =====================================================
    PAGE SYSTEM
@@ -41,7 +53,6 @@ body {
     display: flex;
 }
 
-
 /* =====================================================
    INTRODUCTION PAGE
    ===================================================== */
@@ -49,107 +60,96 @@ body {
 #introduction-page {
     align-items: center;
     justify-content: center;
-    padding: 40px 24px;
+    padding: 60px 24px;
+    background: linear-gradient(160deg, #deeeff 0%, #c5e0ff 60%, #b8d9f8 100%);
 }
 
 .intro-container {
     width: 100%;
-    max-width: 760px;
+    max-width: 700px;
     text-align: center;
 }
 
-
-/* =====================================================
-   INTRODUCTION TITLE
-   ===================================================== */
+/* Badge above title */
+.intro-container::before {
+    content: "UCLA Orthopedics Research";
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 6px 16px;
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
 
 h1 {
-    margin: 0;
-
-    font-size: clamp(42px, 7vw, 72px);
+    margin: 0 0 24px 0;
+    font-size: clamp(38px, 7vw, 68px);
     line-height: 1.05;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-
-    color: #0a2540;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--navy);
 }
-
-
-/* =====================================================
-   INTRODUCTION DESCRIPTION
-   ===================================================== */
 
 .intro-description {
-    max-width: 680px;
-
-    margin: 32px auto 36px auto;
-
-    font-size: 18px;
-    line-height: 1.7;
-
-    color: #1e3a5f;
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--navy-soft);
 }
 
-
-/* =====================================================
-   TIME / CONTACT
-   ===================================================== */
-
 .time-description {
-    font-size: 16px;
-    color: #2d5f8a;
-    margin-bottom: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.55);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy-soft);
 }
 
 .contact-information {
-    font-size: 15px;
-    color: #2d5f8a;
-    margin-bottom: 32px;
+    margin: 12px 0 36px 0;
+    font-size: 14px;
+    color: var(--text-muted);
 }
 
 .contact-information a {
-    color: #1a56db;
+    color: var(--sky-deep);
     text-decoration: underline;
 }
 
-
 /* =====================================================
-   BUTTON
+   PRIMARY BUTTON
+   Yellow CTA — the one bold accent
    ===================================================== */
 
 .primary-button {
     border: none;
-    border-radius: 10px;
-
-    padding: 15px 28px;
-
+    border-radius: var(--radius-sm);
+    padding: 15px 32px;
     font-size: 16px;
-    font-weight: 600;
-
-    background: #0a2540;
-    color: white;
-
+    font-weight: 700;
+    background: var(--yellow);
+    color: var(--navy);
     cursor: pointer;
-
-    transition:
-        transform 0.15s ease,
-        background 0.15s ease,
-        box-shadow 0.15s ease;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(245, 200, 66, 0.35);
 }
 
 .primary-button:hover {
-    background: #1a3a5c;
-
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 6px 18px rgba(10, 37, 64, 0.2);
+    background: var(--yellow-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 200, 66, 0.4);
 }
 
 .primary-button:active {
     transform: translateY(0);
 }
-
 
 /* =====================================================
    CONSENT PAGE
@@ -158,8 +158,8 @@ h1 {
 #consent-page {
     align-items: flex-start;
     justify-content: center;
-
     padding: 60px 24px;
+    background: var(--sky);
 }
 
 #consent-page .content-container {
@@ -167,147 +167,104 @@ h1 {
     max-width: 760px;
 }
 
-
-/* =====================================================
-   CONSENT TITLE
-   ===================================================== */
-
 #consent-page h2 {
     margin: 0;
-
-    font-size: clamp(36px, 6vw, 56px);
+    font-size: clamp(32px, 5vw, 52px);
     line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-
-    color: #0a2540;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--navy);
 }
-
-
-/* =====================================================
-   CONSENT INSTRUCTION
-   ===================================================== */
 
 .consent-instruction {
-    margin: 18px 0 30px 0;
-
+    margin: 16px 0 28px 0;
     font-size: 16px;
-    line-height: 1.5;
-
-    color: #2d5f8a;
+    color: var(--text-muted);
 }
 
-
-/* =====================================================
-   CONSENT INFORMATION
-   ===================================================== */
-
 .consent-information {
-    margin-left: 28px;
-    padding-left: 28px;
-
-    border-left: 2px solid #b8d0f0;
+    margin-left: 0;
+    padding: 28px 32px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(12, 35, 64, 0.06);
 }
 
 .consent-information h3 {
-    margin: 0 0 8px 0;
-
-    font-size: 18px;
-    line-height: 1.4;
+    margin: 24px 0 6px 0;
+    font-size: 15px;
     font-weight: 700;
+    color: var(--navy);
+    text-transform: none;
+    letter-spacing: 0;
+}
 
-    color: #0a2540;
+.consent-information h3:first-child {
+    margin-top: 0;
 }
 
 .consent-information p {
-    margin: 0 0 28px 0;
-
-    font-size: 16px;
+    margin: 0 0 4px 0;
+    font-size: 15px;
     line-height: 1.7;
-
-    color: #1e3a5f;
+    color: var(--navy-soft);
 }
 
-
-/* =====================================================
-   CONSENT NEXT BUTTON
-   ===================================================== */
-
 .consent-button-container {
-    margin-top: 36px;
-    margin-left: 28px;
+    margin-top: 32px;
 }
 
 #consent-next-button {
-    min-width: 120px;
+    min-width: 180px;
 }
 
-
 /* =====================================================
-   PERSONAL INFORMATION PAGE
+   DEMOGRAPHICS PAGE
    ===================================================== */
 
 #demographics-page {
     align-items: flex-start;
     justify-content: center;
-
     padding: 60px 24px;
+    background: var(--sky);
 }
 
 #demographics-page .content-container {
     width: 100%;
-    max-width: 760px;
+    max-width: 680px;
 }
-
-
-/* =====================================================
-   PERSONAL INFORMATION TITLE
-   ===================================================== */
 
 #demographics-page h2 {
     margin: 0;
-
-    font-size: clamp(36px, 6vw, 56px);
+    font-size: clamp(32px, 5vw, 52px);
     line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-
-    color: #0a2540;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--navy);
 }
-
-
-/* =====================================================
-   ABOUT YOU
-   ===================================================== */
 
 .demographics-instruction {
-    margin: 16px 0 40px 0;
-
+    margin: 14px 0 36px 0;
     font-size: 16px;
-    line-height: 1.5;
     font-weight: 500;
-
-    color: #2d5f8a;
+    color: var(--text-muted);
 }
 
-
 /* =====================================================
-   ANONYMOUS PARTICIPATION
+   ANONYMOUS OPTION
    ===================================================== */
 
 .anonymous-option {
     display: flex;
     justify-content: center;
-
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .checkbox-container {
     display: inline-flex;
     align-items: center;
-
     cursor: pointer;
-
     user-select: none;
 }
 
@@ -319,160 +276,117 @@ h1 {
 
 .checkbox-box {
     display: inline-flex;
-
     width: 22px;
     height: 22px;
-
     margin-right: 12px;
-
-    border: 2px solid #7aa7d4;
+    border: 2px solid var(--sky-deep);
     border-radius: 5px;
-
     background: white;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
 .checkbox-container input:checked + .checkbox-box {
-    background: #0a2540;
-    border-color: #0a2540;
+    background: var(--navy);
+    border-color: var(--navy);
 }
 
 .checkbox-container input:checked + .checkbox-box::after {
     content: "✓";
-
     display: block;
-
     margin: auto;
-
     color: white;
-
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .checkbox-label {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
-
-    color: #0a2540;
+    color: var(--navy);
 }
-
-
-/* =====================================================
-   ANONYMOUS MESSAGE
-   ===================================================== */
 
 .anonymous-message {
-    max-width: 600px;
-
-    margin: 0 auto;
-
-    padding: 18px 20px;
-
-    border-radius: 10px;
-
-    background: #d0e4f7;
-
-    font-size: 16px;
+    max-width: 560px;
+    margin: 0 auto 24px auto;
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    background: #fff8d6;
+    border: 1px solid var(--yellow);
+    font-size: 15px;
     line-height: 1.6;
-
     text-align: center;
-
-    color: #1e3a5f;
+    color: var(--navy-soft);
 }
 
-
 /* =====================================================
-   DEMOGRAPHIC FORM
+   FORM
    ===================================================== */
 
 .demographic-form {
     width: 100%;
-    max-width: 560px;
-
-    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(12, 35, 64, 0.06);
 }
-
-
-/* =====================================================
-   FORM GROUP
-   ===================================================== */
 
 .form-group {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
-.form-group label {
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label,
+.form-label {
     display: block;
-
     margin-bottom: 8px;
-
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-
-    color: #0a2540;
+    color: var(--navy);
 }
-
-
-/* =====================================================
-   TEXT INPUTS
-   ===================================================== */
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group select {
     width: 100%;
-
-    min-height: 50px;
-
-    padding: 12px 14px;
-
-    border: 1px solid #7aa7d4;
-    border-radius: 8px;
-
-    background: white;
-
+    min-height: 48px;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--grey-soft);
     font-family: inherit;
-    font-size: 16px;
-
-    color: #0a2540;
-
+    font-size: 15px;
+    color: var(--navy);
     outline: none;
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group select:focus {
-    border-color: #1a56db;
-
-    box-shadow:
-        0 0 0 3px rgba(26, 86, 219, 0.12);
+    border-color: var(--sky-deep);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
 }
 
-.form-group select:invalid {
-    color: #7aa7d4;
+.form-group select option:disabled {
+    color: #aaa;
 }
 
+.optional-label {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-left: 4px;
+}
 
-/* =====================================================
-   ATTENDING FIELDS
-   ===================================================== */
-
-.attending-fields {
+.attending-fields,
+.conditional-fields {
     padding-top: 4px;
 }
-
-
-/* =====================================================
-   FELLOWSHIP CHECKBOXES
-   ===================================================== */
 
 .fellowship-checkboxes {
     display: flex;
@@ -485,47 +399,21 @@ h1 {
     align-items: center;
     gap: 8px;
     font-size: 15px;
-    color: #0a2540;
+    color: var(--navy);
     cursor: pointer;
 }
 
-
-/* =====================================================
-   PERSONAL INFORMATION NEXT BUTTON
-   ===================================================== */
-
 .personal-information-button-container {
-    width: 100%;
-    max-width: 560px;
-
-    margin: 36px auto 0 auto;
-
+    margin-top: 32px;
     text-align: center;
 }
-
-#demographics-next-button {
-    min-width: 120px;
-}
-
-
-/* =====================================================
-   FORM ERROR MESSAGE
-   ===================================================== */
 
 .form-error {
-    width: 100%;
-    max-width: 560px;
-
-    margin: 16px auto 0 auto;
-
+    margin: 14px auto 0 auto;
     font-size: 14px;
-    line-height: 1.5;
-
     text-align: center;
-
-    color: #b42318;
+    color: var(--error);
 }
-
 
 /* =====================================================
    SURVEY QUESTION PAGE
@@ -534,102 +422,77 @@ h1 {
 #survey-question-page {
     align-items: flex-start;
     justify-content: center;
-
-    padding: 50px 24px 40px 24px;
+    padding: 50px 24px 60px 24px;
+    background: var(--sky);
 }
 
 .survey-question-container {
     width: 100%;
-    max-width: 850px;
-
+    max-width: 860px;
     margin: 0 auto;
 }
 
-
-/* =====================================================
-   QUESTION TITLE
-   ===================================================== */
-
-#survey-question-title {
-    margin: 0;
-
-    font-size: clamp(36px, 6vw, 56px);
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-
-    color: #0a2540;
+/* Main question title */
+.survey-question-container > h2 {
+    margin: 0 0 8px 0;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--navy);
 }
 
-
 /* =====================================================
-   SUB QUESTION BLOCK
+   SUB-QUESTION BLOCK
    ===================================================== */
 
 .sub-question-block {
-    margin-top: 40px;
-
+    margin-top: 24px;
     padding: 32px;
-
-    background: white;
-
-    border-radius: 14px;
-
-    box-shadow: 0 2px 12px rgba(10, 37, 64, 0.08);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 14px rgba(12, 35, 64, 0.07);
 }
 
 .sub-question-label {
-    margin: 0 0 12px 0;
-
-    font-size: 15px;
+    display: inline-block;
+    margin: 0 0 14px 0;
+    padding: 4px 12px;
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 999px;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-    color: #1a56db;
+    letter-spacing: 0.02em;
 }
 
-
-/* =====================================================
-   QUESTION CONTEXT
-   ===================================================== */
-
 .question-context {
-    margin: 0 0 14px 0;
-
-    font-size: 15px;
-    line-height: 1.6;
-
-    color: #2d5f8a;
-
+    margin: 0 0 12px 0;
+    padding: 12px 16px;
+    background: var(--grey-soft);
+    border-left: 3px solid var(--sky-deep);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-muted);
     font-style: italic;
 }
 
-
-/* =====================================================
-   QUESTION STEM
-   ===================================================== */
-
 .question-stem {
-    margin: 0 0 24px 0;
-
-    font-size: 18px;
+    margin: 0 0 22px 0;
+    font-size: 17px;
     line-height: 1.6;
     font-weight: 600;
-
-    color: #0a2540;
+    color: var(--navy);
 }
 
-
 /* =====================================================
-   QUESTION IMAGE
+   IMAGE
    ===================================================== */
 
 .question-image-container {
     width: 100%;
-
-    margin: 0 auto 28px auto;
-
+    margin: 0 auto 24px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -637,18 +500,14 @@ h1 {
 
 .question-image-container img {
     display: block;
-
     max-width: 100%;
-    max-height: 450px;
-
+    max-height: 420px;
     width: auto;
     height: auto;
-
-    border-radius: 10px;
-
+    border-radius: var(--radius-sm);
     object-fit: contain;
+    box-shadow: 0 2px 10px rgba(12, 35, 64, 0.1);
 }
-
 
 /* =====================================================
    ANSWER GRID
@@ -656,80 +515,49 @@ h1 {
 
 .answer-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
-    gap: 14px;
-
+    gap: 12px;
     width: 100%;
 }
 
-
-/* =====================================================
-   ANSWER CHOICES
-   ===================================================== */
-
 .answer-choice {
-    min-height: 90px;
-
-    padding: 18px;
-
-    border: 2px solid #d0e4f7;
-    border-radius: 10px;
-
-    background: #f0f6ff;
-
+    min-height: 80px;
+    padding: 16px 18px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--grey-soft);
     font-family: inherit;
     font-size: 15px;
-    font-weight: 600;
-
+    font-weight: 500;
     line-height: 1.4;
-
-    color: #0a2540;
-
+    color: var(--navy);
     cursor: pointer;
-
-    transition:
-        transform 0.15s ease,
-        border-color 0.15s ease,
-        background 0.15s ease,
-        box-shadow 0.15s ease;
+    text-align: left;
+    transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .answer-choice:hover {
-    background: #dceeff;
-    border-color: #7aa7d4;
-
+    background: var(--sky-mid);
+    border-color: var(--sky-deep);
     transform: translateY(-2px);
-
-    box-shadow:
-        0 5px 14px rgba(10, 37, 64, 0.10);
+    box-shadow: 0 4px 12px rgba(12, 35, 64, 0.1);
 }
 
 .answer-choice.selected {
-    background: #0a2540;
-    border-color: #0a2540;
+    background: var(--navy);
+    border-color: var(--navy);
     color: white;
-
-    box-shadow:
-        0 0 0 3px rgba(10, 37, 64, 0.15);
+    box-shadow: 0 4px 14px rgba(12, 35, 64, 0.2);
 }
-
 
 /* =====================================================
    NEXT BUTTON
    ===================================================== */
 
 .survey-next-button-container {
-    margin-top: 35px;
-
+    margin-top: 36px;
     text-align: center;
 }
-
-#next-question-button {
-    min-width: 170px;
-}
-
 
 /* =====================================================
    PROGRESS BAR
@@ -738,47 +566,32 @@ h1 {
 .survey-progress-container {
     display: flex;
     align-items: center;
-
     width: 100%;
-
-    margin-top: 45px;
+    margin-top: 44px;
 }
 
 .progress-bar-wrapper {
     flex: 1;
-
-    height: 14px;
-
+    height: 10px;
     overflow: hidden;
-
     border-radius: 999px;
-
-    background: #c2d9f0;
+    background: var(--sky-mid);
 }
 
 .survey-progress-bar {
-    width: 10%;
     height: 100%;
-
     border-radius: 999px;
-
-    background: #0a2540;
-
-    transition:
-        width 0.3s ease;
+    background: linear-gradient(90deg, var(--sky-deep), var(--yellow));
+    transition: width 0.4s ease;
 }
 
 .survey-progress-text {
-    width: 50px;
-
+    width: 46px;
     margin-left: 12px;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    color: #2d5f8a;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy-soft);
 }
-
 
 /* =====================================================
    COMPLETION PAGE
@@ -787,37 +600,38 @@ h1 {
 #completion-page {
     align-items: center;
     justify-content: center;
-
-    padding: 40px 24px;
+    padding: 60px 24px;
+    background: linear-gradient(160deg, #deeeff 0%, #c5e0ff 60%, #b8d9f8 100%);
 }
 
 #completion-page .content-container {
     width: 100%;
-    max-width: 760px;
+    max-width: 680px;
+    text-align: center;
+}
 
+#completion-page::before {
+    content: "🎉";
+    display: block;
+    font-size: 56px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 #completion-page h2 {
     margin: 0;
-
-    font-size: clamp(36px, 6vw, 56px);
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-
-    color: #0a2540;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--navy);
 }
 
 .completion-message {
     margin-top: 24px;
-
-    font-size: 18px;
-    line-height: 1.7;
-
-    color: #1e3a5f;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--navy-soft);
 }
-
 
 /* =====================================================
    MOBILE
@@ -826,29 +640,31 @@ h1 {
 @media (max-width: 600px) {
 
     #survey-question-page {
-        padding: 40px 20px;
+        padding: 32px 16px 48px 16px;
     }
 
     .sub-question-block {
         padding: 22px 18px;
     }
 
-    .question-stem {
-        font-size: 16px;
+    .demographic-form {
+        padding: 24px 18px;
     }
 
     .answer-grid {
         grid-template-columns: 1fr;
-
-        gap: 12px;
+        gap: 10px;
     }
 
     .answer-choice {
-        min-height: 70px;
+        min-height: 60px;
     }
 
     .survey-progress-container {
-        margin-top: 35px;
+        margin-top: 32px;
     }
 
+    .consent-information {
+        padding: 22px 20px;
+    }
 }
