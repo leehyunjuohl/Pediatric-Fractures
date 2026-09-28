@@ -716,7 +716,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var anonymous = document.getElementById("anonymous-checkbox").checked;
 
             if (anonymous) {
-                participantInfo = { name: "Anonymous", email: "", institution: "", role: "" };
+                participantInfo = { name: "Anonymous", email: "", institution: "", role: "", yearsExp: "" };
                 startSurvey();
                 return;
             }
@@ -744,11 +744,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Save participant info
+            var role = document.getElementById("role").value;
+            var yearsExp = "";
+            if (role === "Attending")
+                yearsExp = document.getElementById("years-experience").value;
+            if (role === "Physician Assistant" || role === "Nurse Practitioner")
+                yearsExp = document.getElementById("pa-np-years-experience").value;
+
             participantInfo = {
                 name:        document.getElementById("participant-name").value.trim(),
                 email:       document.getElementById("participant-email").value.trim(),
                 institution: document.getElementById("institution").value,
-                role:        document.getElementById("role").value
+                role:        role,
+                yearsExp:    yearsExp
             };
 
             document.getElementById("demographics-error").style.display = "none";
@@ -949,10 +957,13 @@ function handleNext() {
 
     var timeSeconds = Number(((performance.now() - questionStartTime) / 1000).toFixed(2));
 
+    var presentedQuestionNumber = currentQuestionIndex + 1;
+
     if (isGrouped) {
         for (var i = 0; i < question.subQuestions.length; i++) {
             var sub = question.subQuestions[i];
             surveyResponses.push({
+                presentedAs:    "Q" + presentedQuestionNumber + "." + (i + 1),
                 questionId:     sub.id,
                 questionLabel:  sub.label,
                 selectedAnswer: sub.choices[selectedAnswers[sub.id]],
@@ -961,6 +972,7 @@ function handleNext() {
         }
     } else {
         surveyResponses.push({
+            presentedAs:    "Q" + presentedQuestionNumber,
             questionId:     question.id,
             questionLabel:  question.label,
             selectedAnswer: question.choices[selectedAnswers[question.id]],
@@ -992,6 +1004,7 @@ function submitToGoogleSheets() {
         email:       participantInfo.email,
         institution: participantInfo.institution,
         role:        participantInfo.role,
+        yearsExp:    participantInfo.yearsExp,
         responses:   surveyResponses
     };
 
