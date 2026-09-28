@@ -827,7 +827,7 @@ function renderQuestion() {
     container.innerHTML = "";
 
     var title = document.createElement("h2");
-    title.textContent = question.label;
+    title.textContent = "Question " + (currentQuestionIndex + 1);
     container.appendChild(title);
 
     if (isGrouped) {
