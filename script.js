@@ -257,7 +257,7 @@ const questionBank = [
             },
             {
                 id: "10.3",
-                image: "images/5M_reduction.png",
+                image: "images/5M_REDUCTION.png",
                 stem: "Based on the following image, is this an acceptable reduction?",
                 choices: ["Yes","No"]
             }
@@ -700,26 +700,9 @@ function showPage(pageId) {
 
 
 // =====================================================
-// SHUFFLE FUNCTION
-// =====================================================
-
-function shuffleArray(array) {
-    var shuffled = array.slice();
-    for (var i = shuffled.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = shuffled[i];
-        shuffled[i] = shuffled[j];
-        shuffled[j] = temp;
-    }
-    return shuffled;
-}
-
-
-// =====================================================
 // START SURVEY
 // =====================================================
 
-// Holds the 10 randomly selected questions for this session
 var activeQuestions = [];
 
 function startSurvey() {
@@ -727,8 +710,8 @@ function startSurvey() {
     selectedAnswers = {};
     surveyResponses = [];
 
-    // Pick 10 random questions from the full bank
-    activeQuestions = shuffleArray(questionBank).slice(0, 10);
+    // Show all questions in fixed order
+    activeQuestions = questionBank.slice();
 
     showPage("survey-question-page");
     renderQuestion();
