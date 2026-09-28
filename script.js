@@ -305,7 +305,7 @@ const questionBank = [
             },
             {
                 id: "12.3",
-                image: "images/6F (2)_5m.png",
+                image: "images/6F(2)_5m.png",
                 stem: "Review the 5-month follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
                 choices: ["Continue current immobilization (cast/rigid brace) for another 3-4 weeks","Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks","Can return to non-contact sports with a protective brace for 6 weeks","Full clearance: Can return to all activities and sports without limitations"]
             }
@@ -831,6 +831,21 @@ function buildBlock(q, showLabel, questionNumber, subNumber) {
                     }
                     btn.classList.add("selected");
                     selectedAnswers[questionId] = index;
+
+                    // Auto-scroll to next block or Next button
+                    var blocks = document.querySelectorAll(".sub-question-block");
+                    var currentBlock = answerGrid.closest(".sub-question-block");
+                    var blockIndex = Array.prototype.indexOf.call(blocks, currentBlock);
+                    var nextBlock = blocks[blockIndex + 1];
+
+                    setTimeout(function () {
+                        if (nextBlock) {
+                            nextBlock.scrollIntoView({ behavior: "smooth", block: "start" });
+                        } else {
+                            document.querySelector(".survey-next-button-container")
+                                .scrollIntoView({ behavior: "smooth", block: "center" });
+                        }
+                    }, 200);
                 });
                 answerGrid.appendChild(btn);
             })(i);
