@@ -770,13 +770,36 @@ function showPage(pageId) {
 
 
 // =====================================================
+// SHUFFLE FUNCTION
+// =====================================================
+
+function shuffleArray(array) {
+    var shuffled = array.slice();
+    for (var i = shuffled.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = shuffled[i];
+        shuffled[i] = shuffled[j];
+        shuffled[j] = temp;
+    }
+    return shuffled;
+}
+
+
+// =====================================================
 // START SURVEY
 // =====================================================
+
+// Holds the 10 randomly selected questions for this session
+var activeQuestions = [];
 
 function startSurvey() {
     currentQuestionIndex = 0;
     selectedAnswers = {};
     surveyResponses = [];
+
+    // Pick 10 random questions from the full bank
+    activeQuestions = shuffleArray(questionBank).slice(0, 10);
+
     showPage("survey-question-page");
     renderQuestion();
 }
@@ -788,7 +811,7 @@ function startSurvey() {
 
 function renderQuestion() {
 
-    var question = questionBank[currentQuestionIndex];
+    var question = activeQuestions[currentQuestionIndex];
     var isGrouped = question.subQuestions !== undefined;
     var container = document.getElementById("survey-question-container");
 
@@ -813,7 +836,7 @@ function renderQuestion() {
     var btn = document.createElement("button");
     btn.className = "primary-button";
     btn.type = "button";
-    btn.textContent = (currentQuestionIndex === questionBank.length - 1)
+    btn.textContent = (currentQuestionIndex === activeQuestions.length - 1)
         ? "Submit Survey"
         : "Next";
 
@@ -821,7 +844,7 @@ function renderQuestion() {
     btnDiv.appendChild(btn);
     container.appendChild(btnDiv);
 
-    var progress = Math.round(((currentQuestionIndex + 1) / questionBank.length) * 100);
+    var progress = Math.round(((currentQuestionIndex + 1) / activeQuestions.length) * 100);
     var progressDiv = document.createElement("div");
     progressDiv.className = "survey-progress-container";
     progressDiv.innerHTML =
@@ -907,7 +930,7 @@ function buildBlock(q, showLabel) {
 
 function handleNext() {
 
-    var question = questionBank[currentQuestionIndex];
+    var question = activeQuestions[currentQuestionIndex];
     var isGrouped = question.subQuestions !== undefined;
 
     if (isGrouped) {
@@ -945,7 +968,7 @@ function handleNext() {
         });
     }
 
-    if (currentQuestionIndex === questionBank.length - 1) {
+    if (currentQuestionIndex === activeQuestions.length - 1) {
         submitToGoogleSheets();
     } else {
         currentQuestionIndex++;
