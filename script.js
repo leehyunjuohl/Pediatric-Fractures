@@ -522,13 +522,13 @@ const questionBank = [
         ]
     },
 
-    {
+        {
         id: "20",
         subQuestions: [
             {
                 id: "20.1",
-                image: "images/4M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 4-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                image: "images/12F.png",
+                context: "Review the PA and lateral wrist X-rays of a 12-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -539,12 +539,36 @@ const questionBank = [
             },
             {
                 id: "20.3",
+                image: "images/12F_6w.png",
+                stem: "Review the 6-week follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
+                choices: ["Continue current immobilization (cast/rigid brace) for another 3-4 weeks","Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks","Can return to non-contact sports with a protective brace for 6 weeks","Full clearance: Can return to all activities and sports without limitations"]
+            }
+        ]
+    },
+    
+    {
+        id: "21",
+        subQuestions: [
+            {
+                id: "21.1",
+                image: "images/4M (2).png",
+                context: "Review the PA and lateral wrist X-rays of a 4-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
+                choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
+            },
+            {
+                id: "21.2",
+                stem: "Based on the clinical history and imaging findings, which treatment options are acceptable for this fracture pattern?",
+                choices: ["Removable brace","Cast (no reduction)","Closed reduction and casting","Closed reduction in the OR and pinning","Open reduction and internal fixation"]
+            },
+            {
+                id: "21.3",
                 image: "images/4M (2)_reduction.png",
                 stem: "Based on the following image, is this an acceptable reduction?",
                 choices: ["Yes","No"]
             },
             {
-                id: "20.4",
+                id: "21.4",
                 image: "images/4M (2)_5m.png",
                 stem: "Review the 5-month follow-up wrist X-rays provided. The patient and parents are asking about returning to activities. What is your recommended plan?",
                 choices: ["Continue current immobilization (cast/rigid brace) for another 3-4 weeks","Transition to removable splint for daily wear (restrict contact sports & high-risk play) for another 6 weeks","Can return to non-contact sports with a protective brace for 6 weeks","Full clearance: Can return to all activities and sports without limitations"]
