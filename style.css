@@ -633,3 +633,40 @@ h1 {
     .answer-choice { min-height: 60px; }
     .survey-progress-container { margin-top: 32px; }
 }
+
+/* =====================================================
+   INSTRUCTIONS PAGE
+   ===================================================== */
+
+#instructions-page {
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    background: var(--bg);
+}
+
+#instructions-page .content-container {
+    width: 100%;
+    max-width: 680px;
+    text-align: center;
+}
+
+#instructions-page h2 {
+    margin: 0 0 24px 0;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.instructions-text {
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+    color: var(--text-soft);
+    margin: 0 0 40px 0;
+}
+
+.instructions-button-container {
+    text-align: center;
+}
