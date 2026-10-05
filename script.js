@@ -18,7 +18,7 @@ const questionBank = [
             {
                 id: "1.1",
                 image: "images/10M.png",
-                context: "Review the PA and lateral wrist X-rays of a 10-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "10-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -42,7 +42,7 @@ const questionBank = [
             {
                 id: "2.1",
                 image: "images/7M.png",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "7-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -66,7 +66,7 @@ const questionBank = [
             {
                 id: "3.1",
                 image: "images/8M.png",
-                context: "Review the PA and lateral wrist X-rays of a 8-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "8-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -90,7 +90,7 @@ const questionBank = [
             {
                 id: "4.1",
                 image: "images/8M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "7-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -114,7 +114,7 @@ const questionBank = [
             {
                 id: "5.1",
                 image: "images/12M.png",
-                context: "Review the PA and lateral wrist X-rays of a 12-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "12-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -138,7 +138,7 @@ const questionBank = [
             {
                 id: "6.1",
                 image: "images/7M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "7-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -162,7 +162,7 @@ const questionBank = [
             {
                 id: "7.1",
                 image: "images/9M.png",
-                context: "Review the PA and lateral wrist X-rays of a 9-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "9-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -186,7 +186,7 @@ const questionBank = [
             {
                 id: "8.1",
                 image: "images/11F.png",
-                context: "Review the PA and lateral wrist X-rays of a 11-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "11-year old female:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -216,7 +216,7 @@ const questionBank = [
             {
                 id: "9.1",
                 image: "images/8M (3).png",
-                context: "Review the PA and lateral wrist X-rays of a 8-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "8-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -246,7 +246,7 @@ const questionBank = [
             {
                 id: "10.1",
                 image: "images/5M.png",
-                context: "Review the PA and lateral wrist X-rays of a 5-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "5-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -270,7 +270,7 @@ const questionBank = [
             {
                 id: "11.1",
                 image: "images/15M.png",
-                context: "Review the PA and lateral wrist X-rays of a 15-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "15-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -294,7 +294,7 @@ const questionBank = [
             {
                 id: "12.1",
                 image: "images/6F (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 6-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "6-year old female:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -318,7 +318,7 @@ const questionBank = [
             {
                 id: "13.1",
                 image: "images/15M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 11-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "11-year old female:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -348,7 +348,7 @@ const questionBank = [
             {
                 id: "14.1",
                 image: "images/5M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 5-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "5-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -378,7 +378,7 @@ const questionBank = [
             {
                 id: "15.1",
                 image: "images/4M.png",
-                context: "Review the PA and lateral wrist X-rays of a 4-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "4-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -408,7 +408,7 @@ const questionBank = [
             {
                 id: "16.1",
                 image: "images/7F.png",
-                context: "Review the PA and lateral wrist X-rays of a 7-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "7-year old female:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -438,7 +438,7 @@ const questionBank = [
             {
                 id: "17.1",
                 image: "images/12M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 12-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "12-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -468,7 +468,7 @@ const questionBank = [
             {
                 id: "18.1",
                 image: "images/6F (3).png",
-                context: "Review the PA and lateral wrist X-rays of a 6-year old female who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "6-year old female:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -498,7 +498,7 @@ const questionBank = [
             {
                 id: "19.1",
                 image: "images/11M.png",
-                context: "Review the PA and lateral wrist X-rays of a 11-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "11-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
@@ -528,7 +528,7 @@ const questionBank = [
             {
                 id: "20.1",
                 image: "images/4M (2).png",
-                context: "Review the PA and lateral wrist X-rays of a 4-year old male who fell at the playground, has pain but mild swelling, no skin issues, NVID.",
+                context: "4-year old male:",
                 stem: "Based on the imaging, how would you classify the distal radius fracture morphology?",
                 choices: ["Torus / Buckle fracture","Greenstick fracture","Non/minimally displaced Complete Fracture","Physeal Fracture (Salter-Harris)","No Acute Fracture Identified"]
             },
