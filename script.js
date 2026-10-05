@@ -582,6 +582,11 @@ document.addEventListener("DOMContentLoaded", function () {
             showPage("demographics-page");
         });
 
+    document.getElementById("begin-survey-button-2")
+        .addEventListener("click", function () {
+            startSurvey();
+        });
+
     document.getElementById("anonymous-checkbox")
         .addEventListener("change", function () {
             if (this.checked) {
@@ -627,7 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (anonymous) {
                 participantInfo = { name: "Anonymous", email: "", institution: "", role: "", yearsExp: "", fellowship: "" };
-                startSurvey();
+                showPage("instructions-page");
                 return;
             }
 
@@ -682,7 +687,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             document.getElementById("demographics-error").style.display = "none";
-            startSurvey();
+            showPage("instructions-page");
         });
 });
 
