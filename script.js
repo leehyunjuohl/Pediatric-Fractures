@@ -587,17 +587,7 @@ document.addEventListener("DOMContentLoaded", function () {
             startSurvey();
         });
 
-    document.getElementById("anonymous-checkbox")
-        .addEventListener("change", function () {
-            if (this.checked) {
-                document.getElementById("demographic-form").style.display = "none";
-                document.getElementById("anonymous-message").style.display = "block";
-                document.getElementById("demographics-error").style.display = "none";
-            } else {
-                document.getElementById("demographic-form").style.display = "block";
-                document.getElementById("anonymous-message").style.display = "none";
-            }
-        });
+
 
     document.getElementById("institution")
         .addEventListener("change", function () {
@@ -628,13 +618,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("demographics-next-button")
         .addEventListener("click", function () {
 
-            var anonymous = document.getElementById("anonymous-checkbox").checked;
-
-            if (anonymous) {
-                participantInfo = { name: "Anonymous", email: "", institution: "", role: "", yearsExp: "", fellowship: "" };
-                showPage("instructions-page");
-                return;
-            }
 
             var valid = true;
             if (document.getElementById("participant-name").value.trim() === "") valid = false;
