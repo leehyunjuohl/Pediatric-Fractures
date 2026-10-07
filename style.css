@@ -293,7 +293,7 @@ h1 {
 
 .anonymous-message {
     max-width: 560px;
-    margin: 0 auto 24px auto;
+    margin: 28px auto 24px auto;
     padding: 16px 20px;
     border-radius: var(--radius-sm);
     background: rgba(245, 200, 66, 0.12);
