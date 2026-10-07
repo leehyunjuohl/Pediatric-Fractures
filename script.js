@@ -736,9 +736,7 @@ function renderQuestion() {
     selectedAnswers = {};
     container.innerHTML = "";
 
-    var title = document.createElement("h2");
-    title.textContent = "Question " + (currentQuestionIndex + 1);
-    container.appendChild(title);
+    // Question title hidden — sub-question labels show numbering instead
 
     if (isGrouped) {
         for (var i = 0; i < question.subQuestions.length; i++) {
