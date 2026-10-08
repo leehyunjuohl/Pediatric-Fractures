@@ -1,6 +1,5 @@
 // =====================================================
 // GOOGLE APPS SCRIPT URL
-// Paste your Apps Script URL here after deploying
 // =====================================================
 
 var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxBBDN4UwbnkmO26-y48f5wsVnHJJNR_LV4boTwlQ8t8Th-y3i0T1NPONY0bsJ-SUYGBQ/exec";
@@ -587,8 +586,6 @@ document.addEventListener("DOMContentLoaded", function () {
             startSurvey();
         });
 
-
-
     document.getElementById("institution")
         .addEventListener("change", function () {
             if (this.value === "Other") {
@@ -618,9 +615,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("demographics-next-button")
         .addEventListener("click", function () {
 
-
             var valid = true;
-            if (document.getElementById("participant-name").value.trim() === "") valid = false;
             if (document.getElementById("participant-email").value.trim() === "") valid = false;
             if (document.getElementById("institution").value === "") valid = false;
             if (document.getElementById("institution").value === "Other" &&
@@ -641,7 +636,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Save participant info
             var role = document.getElementById("role").value;
             var yearsExp = "";
             if (role === "Attending")
@@ -649,7 +643,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (role === "Physician Assistant" || role === "Nurse Practitioner")
                 yearsExp = document.getElementById("pa-np-years-experience").value;
 
-            // Collect fellowship checkboxes
             var fellowship = "";
             if (role === "Attending") {
                 var checked = document.querySelectorAll('input[name="fellowship"]:checked');
@@ -693,14 +686,22 @@ function showPage(pageId) {
 
 var activeQuestions = [];
 
+function shuffleArray(array) {
+    var shuffled = array.slice();
+    for (var i = shuffled.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = shuffled[i];
+        shuffled[i] = shuffled[j];
+        shuffled[j] = temp;
+    }
+    return shuffled;
+}
+
 function startSurvey() {
     currentQuestionIndex = 0;
     selectedAnswers = {};
     surveyResponses = [];
-
-    // Show all questions in fixed order
-    activeQuestions = questionBank.slice();
-
+    activeQuestions = shuffleArray(questionBank).slice(0, 10);
     showPage("survey-question-page");
     renderQuestion();
 }
@@ -719,8 +720,6 @@ function renderQuestion() {
     selectedAnswers = {};
     container.innerHTML = "";
 
-    // Question title hidden — sub-question labels show numbering instead
-
     if (isGrouped) {
         for (var i = 0; i < question.subQuestions.length; i++) {
             container.appendChild(buildBlock(question.subQuestions[i], true, currentQuestionIndex + 1, i + 1));
@@ -728,8 +727,6 @@ function renderQuestion() {
     } else {
         container.appendChild(buildBlock(question, false, currentQuestionIndex + 1, null));
     }
-
-    // No Next button — auto-advances when all answers selected
 
     var progress = Math.round(((currentQuestionIndex + 1) / activeQuestions.length) * 100);
     var progressDiv = document.createElement("div");
@@ -801,7 +798,6 @@ function buildBlock(q, showLabel, questionNumber, subNumber) {
                     btn.classList.add("selected");
                     selectedAnswers[questionId] = index;
 
-                    // Auto-scroll to next block
                     var blocks = document.querySelectorAll(".sub-question-block");
                     var currentBlock = answerGrid.closest(".sub-question-block");
                     var blockIndex = Array.prototype.indexOf.call(blocks, currentBlock);
@@ -812,7 +808,6 @@ function buildBlock(q, showLabel, questionNumber, subNumber) {
                             nextBlock.scrollIntoView({ behavior: "smooth", block: "start" });
                         }, 200);
                     } else {
-                        // Last sub-question answered — check if all are done then auto-advance
                         setTimeout(function () {
                             handleNext();
                         }, 600);
@@ -837,11 +832,10 @@ function handleNext() {
     var question = activeQuestions[currentQuestionIndex];
     var isGrouped = question.subQuestions !== undefined;
 
-    // Verify all answers are selected before advancing
     if (isGrouped) {
         for (var i = 0; i < question.subQuestions.length; i++) {
             if (selectedAnswers[question.subQuestions[i].id] === undefined) {
-                return; // Not all answered yet, wait
+                return;
             }
         }
     } else {
@@ -851,7 +845,6 @@ function handleNext() {
     }
 
     var timeSeconds = Number(((performance.now() - questionStartTime) / 1000).toFixed(2));
-
     var presentedQuestionNumber = currentQuestionIndex + 1;
 
     if (isGrouped) {
@@ -860,7 +853,6 @@ function handleNext() {
             surveyResponses.push({
                 presentedAs:    "Q" + presentedQuestionNumber + "." + (i + 1),
                 questionId:     sub.id,
-                questionLabel:  sub.label,
                 selectedAnswer: sub.choices[selectedAnswers[sub.id]],
                 timeSeconds:    timeSeconds
             });
@@ -869,7 +861,6 @@ function handleNext() {
         surveyResponses.push({
             presentedAs:    "Q" + presentedQuestionNumber,
             questionId:     question.id,
-            questionLabel:  question.label,
             selectedAnswer: question.choices[selectedAnswers[question.id]],
             timeSeconds:    timeSeconds
         });
@@ -878,9 +869,15 @@ function handleNext() {
     if (currentQuestionIndex === activeQuestions.length - 1) {
         submitToGoogleSheets();
     } else {
-        currentQuestionIndex++;
-        renderQuestion();
-        window.scrollTo(0, 0);
+        var container = document.getElementById("survey-question-container");
+        container.style.transition = "opacity 0.3s ease";
+        container.style.opacity = "0";
+        setTimeout(function () {
+            currentQuestionIndex++;
+            renderQuestion();
+            window.scrollTo(0, 0);
+            container.style.opacity = "1";
+        }, 300);
     }
 }
 
@@ -891,7 +888,6 @@ function handleNext() {
 
 function submitToGoogleSheets() {
 
-    // Show completion page immediately so user isn't waiting
     showPage("completion-page");
 
     var payload = {
