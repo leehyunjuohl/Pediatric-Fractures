@@ -257,7 +257,7 @@ const questionBank = [
             },
             {
                 id: "10.3",
-                image: "images/5M_REDUCTION.png",
+                image: "images/5M_reduction.png",
                 stem: "Based on the following image, is this an acceptable reduction?",
                 choices: ["Yes","No"]
             }
